@@ -1,0 +1,8 @@
+.admin-reports > .admin-panel { margin-bottom: 20px; }
+.admin-reports .report-stats { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.admin-reports .report-search { max-width: 480px; }
+.admin-reports .table th { white-space: nowrap; }
+.admin-reports .table td { min-width: 85px; }
+.admin-reports .admin-chart-grid { margin-bottom: 20px; }
+@media (max-width: 991px) { .admin-reports .admin-chart-grid { grid-template-columns: 1fr; } }
+@media (max-width: 575px) { .admin-reports .report-stats { grid-template-columns: 1fr; } }

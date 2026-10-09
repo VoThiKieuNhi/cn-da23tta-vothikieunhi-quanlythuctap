@@ -1,0 +1,12 @@
+/* Reuse student-admin.css; only company-specific content needs sizing. */
+.company-address {
+  display: block;
+  max-width: 210px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.company-detail-title { font-size: 16px; font-weight: 600; margin-bottom: 18px; }
+.company-supervisor-heading { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin: 28px 0 18px; }
+.company-supervisor-heading .company-detail-title { margin: 0; }
+.company-supervisor-modal { width: 540px; }

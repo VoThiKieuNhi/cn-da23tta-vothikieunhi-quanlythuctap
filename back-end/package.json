@@ -1,0 +1,29 @@
+{
+  "name": "internship-management-api",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Internship Management REST API",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "tao-admin": "node scripts/taoAdmin.js",
+    "dat-lai-mat-khau-admin": "node scripts/datLaiMatKhauAdmin.js",
+    "import-tvu-reference": "node scripts/importTvuReference.js",
+    "seed-demo": "node scripts/seed-demo.js",
+    "clear-demo": "node scripts/clear-demo.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.3",
+    "exceljs": "^4.4.0",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "multer": "^2.4.0",
+    "pg": "^8.23.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}

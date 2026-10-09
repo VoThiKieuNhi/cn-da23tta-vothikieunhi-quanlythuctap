@@ -1,0 +1,5 @@
+BEGIN;
+SET LOCAL lock_timeout='5s';
+ALTER TABLE giang_vien ADD COLUMN IF NOT EXISTS chuc_vu VARCHAR(120);
+ALTER TABLE giang_vien ADD COLUMN IF NOT EXISTS linh_vuc TEXT;
+COMMIT;

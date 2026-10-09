@@ -1,0 +1,7 @@
+.progress-content{white-space:pre-wrap;overflow-wrap:anywhere}
+.progress-modal .form-label{font-size:13px;font-weight:600}
+.progress-modal .form-control{font-size:14px}
+.student-app .progress-toolbar{display:flex;gap:12px;justify-content:flex-end;margin-bottom:16px}
+.student-app .progress-time{margin:16px 0 24px}
+.student-app .progress-time .progress{height:10px;background:#e8edf5;border-radius:14px}
+.student-app .progress-time .progress-bar{background:#1677ff}

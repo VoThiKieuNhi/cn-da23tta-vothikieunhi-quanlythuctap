@@ -1,0 +1,59 @@
+.admin-app .admin-sidebar {
+  width: var(--sidebar-width); background: var(--navy-dark); border: 0;
+  padding: 26px 12px 20px; color: rgba(255,255,255,.82);
+  background-image: repeating-radial-gradient(ellipse at -90% 105%,transparent 0 22px,rgba(255,255,255,.035) 23px 24px,transparent 25px 38px);
+}
+.admin-app .admin-brand { flex-direction: column; text-align: center; gap: 10px; padding: 0 4px 26px; text-decoration: none; }
+.admin-app .admin-brand img { width: 58px; height: 58px; object-fit: contain; }
+.admin-app .admin-brand strong { color: var(--surface); font-size: 14px; }
+.admin-app .admin-brand span { color: rgba(255,255,255,.66); font-size: 12px; line-height: 1.5; }
+.admin-app .admin-nav-caption { color: rgba(255,255,255,.5); font-size: 10px; padding: 0 10px 14px; }
+.admin-app .admin-sidebar nav { gap: 5px; }
+.admin-app .admin-sidebar nav a { color: rgba(255,255,255,.82); font-size: 13.5px; gap: 10px; padding: 11px 10px; border-radius: 7px; min-height: 43px; }
+.admin-app .admin-sidebar nav a i { flex-shrink: 0; font-size: 16px; }
+.admin-app .admin-sidebar nav a:hover { background: rgba(255,255,255,.08); }
+.admin-app .admin-sidebar nav a.active { color: var(--navy); background: var(--gold); font-weight: 600; }
+.admin-app :is(.admin-sidebar-footer,.sw-sidebar-note) { color: rgba(255,255,255,.6); border-color: rgba(255,255,255,.12); font-size: 12px; }
+.admin-app .sw-sidebar-note strong { color: var(--gold-soft); }
+.admin-app .sw-sidebar-note .sw-stat-icon { display: none; }
+.admin-app.sidebar-open .admin-main, .admin-app .sw-main { margin-left: var(--sidebar-width); }
+.admin-app .admin-topbar { background: var(--surface); height: 74px; position: sticky; top: 0; z-index: 1020; border-color: var(--border); padding-inline: 26px; gap: 18px; }
+.admin-app .admin-topbar-left { flex: 1; }
+.admin-app .admin-content { padding: 26px; }
+.admin-app .admin-avatar { background: var(--gold-soft); color: var(--navy); }
+.portal-search { position: relative; flex: 1; max-width: 470px; min-width: 100px; }
+.portal-search>i { position: absolute; left: 12px; top: 11px; color: var(--text-muted); }
+.portal-search input, .admin-app .sw-search input { width: 100%; height: 39px; border: 1px solid var(--border); border-radius: 8px; background: var(--surface); padding: 0 12px 0 36px; font-size: 13px; }
+.admin-app .sw-search>i { top: 10px; left: 12px; }
+.portal-search input:focus { outline: 2px solid var(--blue-soft); border-color: var(--primary); }
+.portal-search-results { position: absolute; top: 46px; left: 0; right: 0; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; box-shadow: var(--shadow-soft); padding: 8px; max-height: 60vh; overflow: auto; }
+.portal-search-results a { display: block; padding: 11px; border-radius: 6px; text-decoration: none; color: var(--text); }
+.portal-search-results a:hover { background: var(--bg); }
+.portal-search-results p { margin: 10px; color: var(--text-muted); }
+.portal-notification { position: relative; }
+.portal-notification summary { cursor: pointer; list-style: none; font-size: 20px; color: var(--navy); padding: 6px; }
+.portal-notification summary::-webkit-details-marker { display: none; }
+.portal-notification .admin-dropdown { padding: 16px; font-size: 13px; }
+.portal-notification-count { position: absolute; right: -3px; top: -4px; border-radius: 20px; background: var(--danger-text); color: white; font-size: 10px; padding: 1px 5px; }
+@media(min-width:768px) and (max-width:1199px) {
+  .admin-app .sw-sidebar { width: 78px; padding-inline: 10px; }
+  .admin-app .sw-main { margin-left: 78px; }
+  .admin-app .sw-sidebar .admin-brand img { width: 43px; height: 43px; }
+}
+@media(min-width:768px) and (max-width:991px) {
+  .admin-app:not(.student-app) .admin-sidebar { width: 78px; }
+  .admin-app:not(.student-app) .admin-brand>div, .admin-app:not(.student-app) .admin-nav-caption,
+  .admin-app:not(.student-app) .admin-sidebar nav a>span, .admin-app:not(.student-app) .admin-sidebar-footer { display: none; }
+  .admin-app:not(.student-app) .admin-sidebar nav a { justify-content: center; }
+  .admin-app.sidebar-open:not(.student-app) .admin-main { margin-left: 78px; }
+  .admin-app:not(.student-app) .admin-overlay { display: none; }
+}
+@media(max-width:767px) {
+  .admin-app .admin-main, .admin-app.sidebar-open .admin-main { margin-left: 0; }
+  .admin-app .admin-topbar { height: auto; min-height: 70px; padding: 14px 16px; flex-wrap: wrap; gap: 12px; }
+  .admin-app .admin-content { padding: 20px 14px; }
+  .admin-app .admin-topbar-left { flex-basis: 100%; order: 2; }
+  .admin-app .admin-topbar-right { margin-left: auto; }
+  .portal-search { max-width: none; }
+  .admin-app .admin-user-label strong { max-width: 165px; }
+}

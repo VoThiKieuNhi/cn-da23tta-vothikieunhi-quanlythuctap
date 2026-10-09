@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.env
+.env.*
+!.env.example
+*.log
+back-end/.demo/
+back-end/uploads/*
+!back-end/uploads/.gitkeep
+!back-end/uploads/reports/
+back-end/uploads/reports/*
+!back-end/uploads/reports/.gitkeep

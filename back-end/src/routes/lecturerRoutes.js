@@ -1,0 +1,18 @@
+const router=require('express').Router();
+const progress=require('../controllers/progressController');
+router.use(require('../middleware/xacThuc'),require('../middleware/phanQuyen')('GIANG_VIEN'));
+const evaluations=require('../controllers/evaluationController');
+router.get('/evaluations',evaluations.list);
+router.get('/evaluations/:registrationId',evaluations.detail);
+router.post('/evaluations/:registrationId',evaluations.write);
+router.put('/evaluations/:registrationId',evaluations.write);
+const reports=require('../controllers/reportController');
+router.get('/reports',reports.lecturerList);
+router.get('/reports/:id',reports.lecturerDetail);
+router.get('/reports/:id/download',reports.download);
+router.put('/reports/:id/request-revision',reports.lecturerWrite);
+router.put('/reports/:id/approve',reports.lecturerWrite);
+router.get('/students',progress.lecturerStudents);
+router.get('/students/:registrationId/progress',progress.lecturerList);
+router.put('/students/:registrationId/progress/:progressId/comment',progress.comment);
+module.exports=router;

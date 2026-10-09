@@ -1,0 +1,6 @@
+.report-badge{display:inline-block;padding:5px 9px;border-radius:7px;font-size:12px;font-weight:500;white-space:nowrap}
+.report-DA_NOP{background:#eaf3ff;color:#1677ff}.report-CAN_CHINH_SUA{background:#fff3e5;color:#ad650e}.report-DA_DUYET{background:#e8f8f0;color:#14875f}.report-empty{background:#f0f2f6;color:#738096}
+.report-comment{margin-top:20px}.report-comment p{white-space:pre-wrap;overflow-wrap:anywhere;margin:8px 0 0}
+.report-actions{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.report-selected-file{overflow-wrap:anywhere;margin:16px 0}.report-upload-form .form-label{font-size:13px;font-weight:600}.report-upload-form .form-control{font-size:14px}
+.report-filters{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:20px}.report-filters input{flex:1 1 220px}.report-filters select{flex:0 1 200px}.report-filters .form-control,.report-filters .form-select{font-size:13.5px}

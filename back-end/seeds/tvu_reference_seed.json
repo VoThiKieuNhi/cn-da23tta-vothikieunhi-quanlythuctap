@@ -1,0 +1,3961 @@
+{
+  "metadata": {
+    "ten_bo_du_lieu": "TVU Reference Seed - Hệ thống quản lý thực tập",
+    "ngay_tao": "2026-10-02",
+    "nguon_file": [
+      "Danh_sach_nganh_ma_lop_TVU.xlsx",
+      "Tong_hop_ma_MSSV_cac_nganh_TVU.xlsx",
+      "Thong_tin_giang_vien_TVU_2026.xlsx"
+    ],
+    "thong_ke": {
+      "so_nganh": 49,
+      "so_lop": 159,
+      "so_quy_tac_prefix_mssv": 139,
+      "so_giang_vien_tham_chieu": 86,
+      "so_khoa_don_vi_giang_vien": 6
+    },
+    "luu_y": [
+      "Không tự tạo tài khoản đăng nhập cho toàn bộ giảng viên tham chiếu.",
+      "Ba lớp DA23TTA, DA23TTB, DA23TTC được bổ sung từ thông tin người dùng cung cấp để phục vụ dữ liệu khóa 2023; trường nguồn để NULL và có ghi chú cần đối chiếu TVU nếu dùng làm dữ liệu chính thức.",
+      "Các ngành chưa có prefix MSSV xác minh không được dùng prefix suy đoán.",
+      "Các ngành chưa có mã lớp xác minh không được tự sinh mã lớp.",
+      "Hóa dược khóa 2023 có dấu hiệu nhiều prefix; dữ liệu được biểu diễn bằng bảng quy tắc prefix theo khóa thay vì ép một prefix duy nhất."
+    ]
+  },
+  "nhom_nganh": [
+    "Xã hội – Tâm lý – Thể thao",
+    "Kỹ thuật – Công nghệ",
+    "Lý luận chính trị",
+    "Nông nghiệp – Sinh học – Thủy sản",
+    "Kinh tế – Luật – Logistics – Quản trị",
+    "Ngôn ngữ – Văn hóa – Nghệ thuật – Du lịch",
+    "Khoa học sức khỏe – Y Dược",
+    "Môi trường – Tài nguyên"
+  ],
+  "nganh_hoc": [
+    {
+      "ma_nganh": "7810301",
+      "ten_nganh": "Quản lý thể dục thể thao",
+      "nhom_nganh": "Xã hội – Tâm lý – Thể thao",
+      "ma_viet_tat_lop": "QLTD",
+      "ghi_chu_lop": null,
+      "nguon_lop": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "prefix_mssv_mac_dinh": "1178",
+      "ghi_chu_mssv": "Đã đối chiếu",
+      "nguon_mssv": "https://www.scribd.com/document/1071301782/GKYT-2-7-%C4%90%E1%BA%A1i-H%E1%BB%99i-Th%E1%BB%83-D%E1%BB%A5c-Th%E1%BB%83-Thao-Ph%C6%B0%E1%BB%9Dng-Long-%C4%90%E1%BB%A9c",
+      "dang_hoat_dong": true
+    },
+    {
+      "ma_nganh": "7760101",
+      "ten_nganh": "Công tác xã hội",
+      "nhom_nganh": "Xã hội – Tâm lý – Thể thao",
+      "ma_viet_tat_lop": "CXH",
+      "ghi_chu_lop": null,
+      "nguon_lop": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "prefix_mssv_mac_dinh": "1151",
+      "ghi_chu_mssv": "Đã đối chiếu",
+      "nguon_mssv": "https://www.studocu.vn/vn/document/tra-vinh-university/ngon-ngu-hoc/danh-sach-sinh-vien-tham-gia-hoat-dong-truyen-phong-chong-ma-tuy-dh-tra-vinh/155712409",
+      "dang_hoat_dong": true
+    },
+    {
+      "ma_nganh": "7310401",
+      "ten_nganh": "Tâm lý học",
+      "nhom_nganh": "Xã hội – Tâm lý – Thể thao",
+      "ma_viet_tat_lop": null,
+      "ghi_chu_lop": "Ngành mới 2026; chưa xác minh mã lớp DA26",
+      "nguon_lop": null,
+      "prefix_mssv_mac_dinh": null,
+      "ghi_chu_mssv": "Ngành mới 2026",
+      "nguon_mssv": "https://tuyensinh.tvu.edu.vn/",
+      "dang_hoat_dong": true
+    },
+    {
+      "ma_nganh": "7510102",
+      "ten_nganh": "Công nghệ kỹ thuật công trình xây dựng",
+      "nhom_nganh": "Kỹ thuật – Công nghệ",
+      "ma_viet_tat_lop": "XD",
+      "ghi_chu_lop": null,
+      "nguon_lop": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "prefix_mssv_mac_dinh": "1117",
+      "ghi_chu_mssv": "Đã đối chiếu",
+      "nguon_mssv": "https://www.studocu.vn/vn/document/truong-dai-hoc-tra-vinh/truong-dai-hoc-tra-vinh/danh-sach-tham-gia-ra-quan-ve-sinh-ntvt-21/140618029",
+      "dang_hoat_dong": true
+    },
+    {
+      "ma_nganh": "7580205",
+      "ten_nganh": "Kỹ thuật xây dựng công trình giao thông",
+      "nhom_nganh": "Kỹ thuật – Công nghệ",
+      "ma_viet_tat_lop": "XDGT",
+      "ghi_chu_lop": null,
+      "nguon_lop": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "prefix_mssv_mac_dinh": "1168",
+      "ghi_chu_mssv": "Đã đối chiếu",
+      "nguon_mssv": "https://www.scribd.com/document/802308532/DS-A-ia-n-form9-16-2024-DS-Tham-gia-chuong-trinh-van-nghe-chao-doan-tan-SV",
+      "dang_hoat_dong": true
+    },
+    {
+      "ma_nganh": "7510303",
+      "ten_nganh": "Công nghệ kỹ thuật điều khiển và tự động hóa",
+      "nhom_nganh": "Kỹ thuật – Công nghệ",
+      "ma_viet_tat_lop": "DT",
+      "ghi_chu_lop": null,
+      "nguon_lop": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "prefix_mssv_mac_dinh": "1152",
+      "ghi_chu_mssv": "Đã đối chiếu",
+      "nguon_mssv": "https://www.studocu.vn/vn/document/truong-dai-hoc-tra-vinh/quan-tri-kinh-doanh-tvu-onschool/phu-luc-1-nguyen-kien-trung/115165162",
+      "dang_hoat_dong": true
+    },
+    {
+      "ma_nganh": "7510301",
+      "ten_nganh": "Công nghệ kỹ thuật điện, điện tử",
+      "nhom_nganh": "Kỹ thuật – Công nghệ",
+      "ma_viet_tat_lop": "KD",
+      "ghi_chu_lop": null,
+      "nguon_lop": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "prefix_mssv_mac_dinh": "1121",
+      "ghi_chu_mssv": "Đã đối chiếu",
+      "nguon_mssv": "https://www.scribd.com/document/1077914540/Dssv-Tham-Du-Cong-Bo-Dhtv-pdf-145928-1",
+      "dang_hoat_dong": true
+    },
+    {
+      "ma_nganh": "7510201",
+      "ten_nganh": "Công nghệ kỹ thuật cơ khí",
+      "nhom_nganh": "Kỹ thuật – Công nghệ",
+      "ma_viet_tat_lop": "CK",
+      "ghi_chu_lop": null,
+      "nguon_lop": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "prefix_mssv_mac_dinh": "1118",
+      "ghi_chu_mssv": "Đã đối chiếu",
+      "nguon_mssv": "https://www.scribd.com/document/1077914533/Dssv-Tham-Du-Le-Phat-Dong-Sh-Chinh-Tri-pdf-15147-1",
+      "dang_hoat_dong": true
+    },
+    {
+      "ma_nganh": "7510203",
+      "ten_nganh": "Công nghệ kỹ thuật cơ điện tử",
+      "nhom_nganh": "Kỹ thuật – Công nghệ",
+      "ma_viet_tat_lop": "CDT",
+      "ghi_chu_lop": null,
+      "nguon_lop": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "prefix_mssv_mac_dinh": "1196",
+      "ghi_chu_mssv": "Đã đối chiếu",
+      "nguon_mssv": "https://ctsv.tvu.edu.vn/wp-content/uploads/2025/10/Thong-bao-Trung-tuyen-Hoc-bong-tai-tro-Fondation-Dela-Cheneliere-2025-2026.pdf",
+      "dang_hoat_dong": true
+    },
+    {
+      "ma_nganh": "7510205",
+      "ten_nganh": "Công nghệ kỹ thuật ô tô",
+      "nhom_nganh": "Kỹ thuật – Công nghệ",
+      "ma_viet_tat_lop": "CNOT",
+      "ghi_chu_lop": null,
+      "nguon_lop": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "prefix_mssv_mac_dinh": "1180",
+      "ghi_chu_mssv": "Đã đối chiếu",
+      "nguon_mssv": "https://www.scribd.com/document/1077914533/Dssv-Tham-Du-Le-Phat-Dong-Sh-Chinh-Tri-pdf-15147-1",
+      "dang_hoat_dong": true
+    },
+    {
+      "ma_nganh": "7510401",
+      "ten_nganh": "Công nghệ kỹ thuật hóa học",
+      "nhom_nganh": "Kỹ thuật – Công nghệ",
+      "ma_viet_tat_lop": "HH",
+      "ghi_chu_lop": null,
+      "nguon_lop": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "prefix_mssv_mac_dinh": "1126",
+      "ghi_chu_mssv": "Đã đối chiếu",
+      "nguon_mssv": "https://www.scribd.com/document/1071301957/2026-05-27-1",
+      "dang_hoat_dong": true
+    },
+    {
+      "ma_nganh": "7480107",
+      "ten_nganh": "Trí tuệ nhân tạo",
+      "nhom_nganh": "Kỹ thuật – Công nghệ",
+      "ma_viet_tat_lop": "TTNT",
+      "ghi_chu_lop": null,
+      "nguon_lop": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "prefix_mssv_mac_dinh": "1195",
+      "ghi_chu_mssv": "Đã đối chiếu",
+      "nguon_mssv": "https://www.scribd.com/document/1071301782/GKYT-2-7-%C4%90%E1%BA%A1i-H%E1%BB%99i-Th%E1%BB%83-D%E1%BB%A5c-Th%E1%BB%83-Thao-Ph%C6%B0%E1%BB%9Dng-Long-%C4%90%E1%BB%A9c",
+      "dang_hoat_dong": true
+    },
+    {
+      "ma_nganh": "7480201",
+      "ten_nganh": "Công nghệ thông tin",
+      "nhom_nganh": "Kỹ thuật – Công nghệ",
+      "ma_viet_tat_lop": "TT",
+      "ghi_chu_lop": "Có chương trình tích hợp tiếng Anh: DA25TT_EIP",
+      "nguon_lop": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "prefix_mssv_mac_dinh": "1101",
+      "ghi_chu_mssv": "Đã đối chiếu",
+      "nguon_mssv": "https://www.studocu.vn/vn/document/truong-dai-hoc-tra-vinh/quan-tri-quan-he-kh/bao-cao-tuan-2-thiet-ke-co-so-du-lieu-he-thong-dat-phong-da23ttd/164106797",
+      "dang_hoat_dong": true
+    },
+    {
+      "ma_nganh": "7310201",
+      "ten_nganh": "Chính trị học",
+      "nhom_nganh": "Lý luận chính trị",
+      "ma_viet_tat_lop": "CTH",
+      "ghi_chu_lop": null,
+      "nguon_lop": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "prefix_mssv_mac_dinh": "1165",
+      "ghi_chu_mssv": "Đã đối chiếu",
+      "nguon_mssv": "https://www.studocu.vn/vn/document/tra-vinh-university/ngon-ngu-hoc/danh-sach-sinh-vien-tham-gia-hoat-dong-truyen-phong-chong-ma-tuy-dh-tra-vinh/155712409",
+      "dang_hoat_dong": true
+    },
+    {
+      "ma_nganh": "7540101",
+      "ten_nganh": "Công nghệ thực phẩm",
+      "nhom_nganh": "Nông nghiệp – Sinh học – Thủy sản",
+      "ma_viet_tat_lop": "CNTP",
+      "ghi_chu_lop": null,
+      "nguon_lop": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "prefix_mssv_mac_dinh": "1162",
+      "ghi_chu_mssv": "Đã đối chiếu",
+      "nguon_mssv": "https://www.scribd.com/document/1077914540/Dssv-Tham-Du-Cong-Bo-Dhtv-pdf-145928-1",
+      "dang_hoat_dong": true
+    },
+    {
+      "ma_nganh": "7420201",
+      "ten_nganh": "Công nghệ sinh học",
+      "nhom_nganh": "Nông nghiệp – Sinh học – Thủy sản",
+      "ma_viet_tat_lop": "CNSH",
+      "ghi_chu_lop": null,
+      "nguon_lop": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "prefix_mssv_mac_dinh": "1177",
+      "ghi_chu_mssv": "Đã đối chiếu",
+      "nguon_mssv": "https://www.scribd.com/document/1077914540/Dssv-Tham-Du-Cong-Bo-Dhtv-pdf-145928-1",
+      "dang_hoat_dong": true
+    },
+    {
+      "ma_nganh": "7620112",
+      "ten_nganh": "Bảo vệ thực vật",
+      "nhom_nganh": "Nông nghiệp – Sinh học – Thủy sản",
+      "ma_viet_tat_lop": "BVTV",
+      "ghi_chu_lop": null,
+      "nguon_lop": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "prefix_mssv_mac_dinh": "1115",
+      "ghi_chu_mssv": "Đã đối chiếu",
+      "nguon_mssv": "https://www.scribd.com/document/1077914533/Dssv-Tham-Du-Le-Phat-Dong-Sh-Chinh-Tri-pdf-15147-1",
+      "dang_hoat_dong": true
+    },
+    {
+      "ma_nganh": "7620101",
+      "ten_nganh": "Nông nghiệp",
+      "nhom_nganh": "Nông nghiệp – Sinh học – Thủy sản",
+      "ma_viet_tat_lop": "NN",
+      "ghi_chu_lop": null,
+      "nguon_lop": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "prefix_mssv_mac_dinh": "1147",
+      "ghi_chu_mssv": "Đã đối chiếu",
+      "nguon_mssv": "https://www.scribd.com/document/1077914533/Dssv-Tham-Du-Le-Phat-Dong-Sh-Chinh-Tri-pdf-15147-1",
+      "dang_hoat_dong": true
+    },
+    {
+      "ma_nganh": "7620301",
+      "ten_nganh": "Nuôi trồng thủy sản",
+      "nhom_nganh": "Nông nghiệp – Sinh học – Thủy sản",
+      "ma_viet_tat_lop": "TS",
+      "ghi_chu_lop": null,
+      "nguon_lop": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "prefix_mssv_mac_dinh": "1103",
+      "ghi_chu_mssv": "Đã đối chiếu",
+      "nguon_mssv": "https://www.studocu.vn/vn/document/truong-dai-hoc-tra-vinh/truong-dai-hoc-tra-vinh/danh-sach-tham-gia-ra-quan-ve-sinh-ntvt-21/140618029",
+      "dang_hoat_dong": true
+    },
+    {
+      "ma_nganh": "7640101",
+      "ten_nganh": "Thú y",
+      "nhom_nganh": "Nông nghiệp – Sinh học – Thủy sản",
+      "ma_viet_tat_lop": "TY",
+      "ghi_chu_lop": null,
+      "nguon_lop": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "prefix_mssv_mac_dinh": "1113",
+      "ghi_chu_mssv": "Đã đối chiếu",
+      "nguon_mssv": "https://www.scribd.com/document/802308532/DS-A-ia-n-form9-16-2024-DS-Tham-gia-chuong-trinh-van-nghe-chao-doan-tan-SV",
+      "dang_hoat_dong": true
+    },
+    {
+      "ma_nganh": "7519002",
+      "ten_nganh": "Công nghệ nông nghiệp",
+      "nhom_nganh": "Nông nghiệp – Sinh học – Thủy sản",
+      "ma_viet_tat_lop": null,
+      "ghi_chu_lop": "Ngành mới 2026; chưa xác minh mã lớp DA26",
+      "nguon_lop": null,
+      "prefix_mssv_mac_dinh": null,
+      "ghi_chu_mssv": "Ngành mới 2026",
+      "nguon_mssv": "https://tuyensinh.tvu.edu.vn/nganh-cong-nghe-nong-nghiep/",
+      "dang_hoat_dong": true
+    },
+    {
+      "ma_nganh": "7510605",
+      "ten_nganh": "Logistics và Quản lý chuỗi cung ứng",
+      "nhom_nganh": "Kinh tế – Luật – Logistics – Quản trị",
+      "ma_viet_tat_lop": "LQLC",
+      "ghi_chu_lop": null,
+      "nguon_lop": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "prefix_mssv_mac_dinh": "1192",
+      "ghi_chu_mssv": "Đã đối chiếu",
+      "nguon_mssv": "https://www.scribd.com/document/802308532/DS-A-ia-n-form9-16-2024-DS-Tham-gia-chuong-trinh-van-nghe-chao-doan-tan-SV",
+      "dang_hoat_dong": true
+    },
+    {
+      "ma_nganh": "7380101",
+      "ten_nganh": "Luật",
+      "nhom_nganh": "Kinh tế – Luật – Logistics – Quản trị",
+      "ma_viet_tat_lop": "L",
+      "ghi_chu_lop": null,
+      "nguon_lop": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "prefix_mssv_mac_dinh": "1141",
+      "ghi_chu_mssv": "Đã đối chiếu; mã lớp có nhiều nhánh",
+      "nguon_mssv": "https://www.scribd.com/document/1071301957/2026-05-27-1",
+      "dang_hoat_dong": true
+    },
+    {
+      "ma_nganh": "7340101",
+      "ten_nganh": "Quản trị kinh doanh",
+      "nhom_nganh": "Kinh tế – Luật – Logistics – Quản trị",
+      "ma_viet_tat_lop": "QKD",
+      "ghi_chu_lop": null,
+      "nguon_lop": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "prefix_mssv_mac_dinh": "1122",
+      "ghi_chu_mssv": "Đã đối chiếu",
+      "nguon_mssv": "https://www.scribd.com/document/802308532/DS-A-ia-n-form9-16-2024-DS-Tham-gia-chuong-trinh-van-nghe-chao-doan-tan-SV",
+      "dang_hoat_dong": true
+    },
+    {
+      "ma_nganh": "7340301",
+      "ten_nganh": "Kế toán",
+      "nhom_nganh": "Kinh tế – Luật – Logistics – Quản trị",
+      "ma_viet_tat_lop": "KT",
+      "ghi_chu_lop": null,
+      "nguon_lop": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "prefix_mssv_mac_dinh": "1119",
+      "ghi_chu_mssv": "Đã đối chiếu",
+      "nguon_mssv": "https://www.scribd.com/document/1077914533/Dssv-Tham-Du-Le-Phat-Dong-Sh-Chinh-Tri-pdf-15147-1",
+      "dang_hoat_dong": true
+    },
+    {
+      "ma_nganh": "7310101",
+      "ten_nganh": "Kinh tế",
+      "nhom_nganh": "Kinh tế – Luật – Logistics – Quản trị",
+      "ma_viet_tat_lop": "K",
+      "ghi_chu_lop": null,
+      "nguon_lop": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "prefix_mssv_mac_dinh": "1146",
+      "ghi_chu_mssv": "Đã đối chiếu",
+      "nguon_mssv": "https://www.scribd.com/document/1071302050/DA24LDS-114124024-Le-Qui-Xuan-Dang-1",
+      "dang_hoat_dong": true
+    },
+    {
+      "ma_nganh": "7340201",
+      "ten_nganh": "Tài chính – Ngân hàng",
+      "nhom_nganh": "Kinh tế – Luật – Logistics – Quản trị",
+      "ma_viet_tat_lop": "TCNH",
+      "ghi_chu_lop": null,
+      "nguon_lop": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "prefix_mssv_mac_dinh": "1145",
+      "ghi_chu_mssv": "Đã đối chiếu",
+      "nguon_mssv": "https://ctsv.tvu.edu.vn/wp-content/uploads/2025/10/Thong-bao-Trung-tuyen-Hoc-bong-tai-tro-Fondation-Dela-Cheneliere-2025-2026.pdf",
+      "dang_hoat_dong": true
+    },
+    {
+      "ma_nganh": "7340406",
+      "ten_nganh": "Quản trị văn phòng",
+      "nhom_nganh": "Kinh tế – Luật – Logistics – Quản trị",
+      "ma_viet_tat_lop": "QV",
+      "ghi_chu_lop": null,
+      "nguon_lop": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "prefix_mssv_mac_dinh": "1109",
+      "ghi_chu_mssv": "Đã đối chiếu",
+      "nguon_mssv": "https://www.scribd.com/document/1077914533/Dssv-Tham-Du-Le-Phat-Dong-Sh-Chinh-Tri-pdf-15147-1",
+      "dang_hoat_dong": true
+    },
+    {
+      "ma_nganh": "7310205",
+      "ten_nganh": "Quản lý nhà nước",
+      "nhom_nganh": "Kinh tế – Luật – Logistics – Quản trị",
+      "ma_viet_tat_lop": "QLNN",
+      "ghi_chu_lop": null,
+      "nguon_lop": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "prefix_mssv_mac_dinh": "1174",
+      "ghi_chu_mssv": "Đã đối chiếu",
+      "nguon_mssv": "https://ctsv.tvu.edu.vn/wp-content/uploads/2025/10/Thong-bao-Trung-tuyen-Hoc-bong-tai-tro-Fondation-Dela-Cheneliere-2025-2026.pdf",
+      "dang_hoat_dong": true
+    },
+    {
+      "ma_nganh": "7340122",
+      "ten_nganh": "Thương mại điện tử",
+      "nhom_nganh": "Kinh tế – Luật – Logistics – Quản trị",
+      "ma_viet_tat_lop": "TMDT",
+      "ghi_chu_lop": null,
+      "nguon_lop": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "prefix_mssv_mac_dinh": "1176",
+      "ghi_chu_mssv": "Đã đối chiếu",
+      "nguon_mssv": "https://www.scribd.com/document/1077914533/Dssv-Tham-Du-Le-Phat-Dong-Sh-Chinh-Tri-pdf-15147-1",
+      "dang_hoat_dong": true
+    },
+    {
+      "ma_nganh": "7210201",
+      "ten_nganh": "Âm nhạc học",
+      "nhom_nganh": "Ngôn ngữ – Văn hóa – Nghệ thuật – Du lịch",
+      "ma_viet_tat_lop": "ANH",
+      "ghi_chu_lop": null,
+      "nguon_lop": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "prefix_mssv_mac_dinh": "1171",
+      "ghi_chu_mssv": "Đã đối chiếu",
+      "nguon_mssv": "https://ctsv.tvu.edu.vn/wp-content/uploads/2025/11/Tms.-Thong-bao-KQ-trung-tuyen-HB-HKH-Thuong-gia-Dai-Loan-tai-Viet-Nam-2025.pdf",
+      "dang_hoat_dong": true
+    },
+    {
+      "ma_nganh": "7210210",
+      "ten_nganh": "Biểu diễn nhạc cụ truyền thống",
+      "nhom_nganh": "Ngôn ngữ – Văn hóa – Nghệ thuật – Du lịch",
+      "ma_viet_tat_lop": "NCT",
+      "ghi_chu_lop": null,
+      "nguon_lop": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "prefix_mssv_mac_dinh": "1155",
+      "ghi_chu_mssv": "Đã đối chiếu",
+      "nguon_mssv": "https://www.scribd.com/document/1077914535/shgk-truong-claska-pdf-15434-1",
+      "dang_hoat_dong": true
+    },
+    {
+      "ma_nganh": "7220201",
+      "ten_nganh": "Ngôn ngữ Anh",
+      "nhom_nganh": "Ngôn ngữ – Văn hóa – Nghệ thuật – Du lịch",
+      "ma_viet_tat_lop": "NNA",
+      "ghi_chu_lop": null,
+      "nguon_lop": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "prefix_mssv_mac_dinh": "1104",
+      "ghi_chu_mssv": "Đã đối chiếu",
+      "nguon_mssv": "https://ctsv.tvu.edu.vn/wp-content/uploads/2025/10/Thong-bao-Trung-tuyen-Hoc-bong-tai-tro-Fondation-Dela-Cheneliere-2025-2026.pdf",
+      "dang_hoat_dong": true
+    },
+    {
+      "ma_nganh": "7220106",
+      "ten_nganh": "Ngôn ngữ Khmer",
+      "nhom_nganh": "Ngôn ngữ – Văn hóa – Nghệ thuật – Du lịch",
+      "ma_viet_tat_lop": "NNK",
+      "ghi_chu_lop": null,
+      "nguon_lop": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "prefix_mssv_mac_dinh": "1148",
+      "ghi_chu_mssv": "Đã đối chiếu",
+      "nguon_mssv": "https://www.scribd.com/document/1077914535/shgk-truong-claska-pdf-15434-1",
+      "dang_hoat_dong": true
+    },
+    {
+      "ma_nganh": "7220204",
+      "ten_nganh": "Ngôn ngữ Trung Quốc",
+      "nhom_nganh": "Ngôn ngữ – Văn hóa – Nghệ thuật – Du lịch",
+      "ma_viet_tat_lop": "NNTQ",
+      "ghi_chu_lop": null,
+      "nguon_lop": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "prefix_mssv_mac_dinh": "1187",
+      "ghi_chu_mssv": "Đã đối chiếu",
+      "nguon_mssv": "https://ctsv.tvu.edu.vn/wp-content/uploads/2025/11/Tms.-Thong-bao-KQ-trung-tuyen-HB-HKH-Thuong-gia-Dai-Loan-tai-Viet-Nam-2025.pdf",
+      "dang_hoat_dong": true
+    },
+    {
+      "ma_nganh": "7810103",
+      "ten_nganh": "Quản trị dịch vụ du lịch và lữ hành",
+      "nhom_nganh": "Ngôn ngữ – Văn hóa – Nghệ thuật – Du lịch",
+      "ma_viet_tat_lop": "QDL",
+      "ghi_chu_lop": null,
+      "nguon_lop": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "prefix_mssv_mac_dinh": "1166",
+      "ghi_chu_mssv": "Đã đối chiếu",
+      "nguon_mssv": "https://www.scribd.com/document/1077914535/shgk-truong-claska-pdf-15434-1",
+      "dang_hoat_dong": true
+    },
+    {
+      "ma_nganh": "7229040",
+      "ten_nganh": "Văn hóa học",
+      "nhom_nganh": "Ngôn ngữ – Văn hóa – Nghệ thuật – Du lịch",
+      "ma_viet_tat_lop": "VH",
+      "ghi_chu_lop": null,
+      "nguon_lop": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "prefix_mssv_mac_dinh": "1125",
+      "ghi_chu_mssv": "Đã đối chiếu",
+      "nguon_mssv": "https://www.scribd.com/document/1077914533/Dssv-Tham-Du-Le-Phat-Dong-Sh-Chinh-Tri-pdf-15147-1",
+      "dang_hoat_dong": true
+    },
+    {
+      "ma_nganh": "7720101",
+      "ten_nganh": "Y khoa",
+      "nhom_nganh": "Khoa học sức khỏe – Y Dược",
+      "ma_viet_tat_lop": "YK",
+      "ghi_chu_lop": null,
+      "nguon_lop": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "prefix_mssv_mac_dinh": "1160",
+      "ghi_chu_mssv": "Đã đối chiếu",
+      "nguon_mssv": "https://www.scribd.com/document/971926940/Da23yka-n1-1-1-t%E1%BB%95-3-%C6%B0u-Nh%C6%B0%E1%BB%A3c-%C4%90i%E1%BB%83m-C%E1%BB%A7a-%C4%90%C6%B0%E1%BB%9Dng-Tiem-B%E1%BA%AFp",
+      "dang_hoat_dong": true
+    },
+    {
+      "ma_nganh": "7720501",
+      "ten_nganh": "Răng – Hàm – Mặt",
+      "nhom_nganh": "Khoa học sức khỏe – Y Dược",
+      "ma_viet_tat_lop": "RHM",
+      "ghi_chu_lop": null,
+      "nguon_lop": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "prefix_mssv_mac_dinh": "1164",
+      "ghi_chu_mssv": "Đã đối chiếu",
+      "nguon_mssv": "https://www.scribd.com/document/1023168829/Danh-Sach-%C4%90a-K%C3%BD-12-Mar-2026-14-23-40-1-1",
+      "dang_hoat_dong": true
+    },
+    {
+      "ma_nganh": "7720301",
+      "ten_nganh": "Điều dưỡng",
+      "nhom_nganh": "Khoa học sức khỏe – Y Dược",
+      "ma_viet_tat_lop": "DD",
+      "ghi_chu_lop": null,
+      "nguon_lop": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "prefix_mssv_mac_dinh": "1154",
+      "ghi_chu_mssv": "Đã đối chiếu",
+      "nguon_mssv": "https://www.studocu.vn/vn/document/tra-vinh-university/ngon-ngu-hoc/danh-sach-sinh-vien-tham-gia-hoat-dong-truyen-phong-chong-ma-tuy-dh-tra-vinh/155712409",
+      "dang_hoat_dong": true
+    },
+    {
+      "ma_nganh": "7720110",
+      "ten_nganh": "Y học dự phòng",
+      "nhom_nganh": "Khoa học sức khỏe – Y Dược",
+      "ma_viet_tat_lop": "YHDP",
+      "ghi_chu_lop": null,
+      "nguon_lop": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "prefix_mssv_mac_dinh": "1183",
+      "ghi_chu_mssv": "Đã đối chiếu",
+      "nguon_mssv": "https://www.scribd.com/document/872525853/Danh-Sach-C%E1%BB%95-V%C5%A9-Bong-%C4%90a-02032025",
+      "dang_hoat_dong": true
+    },
+    {
+      "ma_nganh": "7720602",
+      "ten_nganh": "Kỹ thuật hình ảnh y học",
+      "nhom_nganh": "Khoa học sức khỏe – Y Dược",
+      "ma_viet_tat_lop": "KTHY",
+      "ghi_chu_lop": null,
+      "nguon_lop": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "prefix_mssv_mac_dinh": "1184",
+      "ghi_chu_mssv": "Đã đối chiếu",
+      "nguon_mssv": "https://www.scribd.com/document/802308532/DS-A-ia-n-form9-16-2024-DS-Tham-gia-chuong-trinh-van-nghe-chao-doan-tan-SV",
+      "dang_hoat_dong": true
+    },
+    {
+      "ma_nganh": "7720603",
+      "ten_nganh": "Kỹ thuật phục hồi chức năng",
+      "nhom_nganh": "Khoa học sức khỏe – Y Dược",
+      "ma_viet_tat_lop": "PHCN",
+      "ghi_chu_lop": null,
+      "nguon_lop": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "prefix_mssv_mac_dinh": "1173",
+      "ghi_chu_mssv": "Đã đối chiếu",
+      "nguon_mssv": "https://www.scribd.com/document/872525853/Danh-Sach-C%E1%BB%95-V%C5%A9-Bong-%C4%90a-02032025",
+      "dang_hoat_dong": true
+    },
+    {
+      "ma_nganh": "7720601",
+      "ten_nganh": "Kỹ thuật xét nghiệm y học",
+      "nhom_nganh": "Khoa học sức khỏe – Y Dược",
+      "ma_viet_tat_lop": "XYH",
+      "ghi_chu_lop": null,
+      "nguon_lop": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "prefix_mssv_mac_dinh": "1153",
+      "ghi_chu_mssv": "Đã đối chiếu",
+      "nguon_mssv": "https://www.scribd.com/document/802308532/DS-A-ia-n-form9-16-2024-DS-Tham-gia-chuong-trinh-van-nghe-chao-doan-tan-SV",
+      "dang_hoat_dong": true
+    },
+    {
+      "ma_nganh": "7720701",
+      "ten_nganh": "Y tế công cộng",
+      "nhom_nganh": "Khoa học sức khỏe – Y Dược",
+      "ma_viet_tat_lop": "YTC",
+      "ghi_chu_lop": null,
+      "nguon_lop": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "prefix_mssv_mac_dinh": "1161",
+      "ghi_chu_mssv": "Đã đối chiếu",
+      "nguon_mssv": "https://www.scribd.com/document/1071301957/2026-05-27-1",
+      "dang_hoat_dong": true
+    },
+    {
+      "ma_nganh": "7720201",
+      "ten_nganh": "Dược học",
+      "nhom_nganh": "Khoa học sức khỏe – Y Dược",
+      "ma_viet_tat_lop": "D",
+      "ghi_chu_lop": null,
+      "nguon_lop": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "prefix_mssv_mac_dinh": "1156",
+      "ghi_chu_mssv": "Đã đối chiếu",
+      "nguon_mssv": "https://www.scribd.com/document/1077914533/Dssv-Tham-Du-Le-Phat-Dong-Sh-Chinh-Tri-pdf-15147-1",
+      "dang_hoat_dong": true
+    },
+    {
+      "ma_nganh": "7720203",
+      "ten_nganh": "Hóa dược",
+      "nhom_nganh": "Khoa học sức khỏe – Y Dược",
+      "ma_viet_tat_lop": "HD",
+      "ghi_chu_lop": null,
+      "nguon_lop": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "prefix_mssv_mac_dinh": "1188",
+      "ghi_chu_mssv": "Đã đối chiếu; khóa 23 có tài liệu xuất hiện thêm 112623xxx",
+      "nguon_mssv": "https://www.scribd.com/document/1070700988/SHGK-Truong-Y-Duoc",
+      "dang_hoat_dong": true
+    },
+    {
+      "ma_nganh": "7520320",
+      "ten_nganh": "Kỹ thuật môi trường",
+      "nhom_nganh": "Môi trường – Tài nguyên",
+      "ma_viet_tat_lop": "KTMT",
+      "ghi_chu_lop": null,
+      "nguon_lop": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "prefix_mssv_mac_dinh": null,
+      "ghi_chu_mssv": "Chưa đủ dữ liệu công khai để kết luận prefix",
+      "nguon_mssv": "https://cet.tvu.edu.vn/index.php/tuyen-sinh/thongbao-tuyensinh/xac-nhan-nhap-hoc-va-lam-thu-tuc-nhap-hoc-doi-voi-thi-sinh-trung-tuyen-dh-he-cq-dot-1-nam-2026",
+      "dang_hoat_dong": true
+    },
+    {
+      "ma_nganh": "7850101",
+      "ten_nganh": "Quản lý tài nguyên và môi trường",
+      "nhom_nganh": "Môi trường – Tài nguyên",
+      "ma_viet_tat_lop": "QLTN",
+      "ghi_chu_lop": null,
+      "nguon_lop": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "prefix_mssv_mac_dinh": "1191",
+      "ghi_chu_mssv": "Đã đối chiếu",
+      "nguon_mssv": "https://www.scribd.com/document/1071302050/DA24LDS-114124024-Le-Qui-Xuan-Dang-1",
+      "dang_hoat_dong": true
+    }
+  ],
+  "lop_hoc": [
+    {
+      "ma_lop": "DA24QLTD",
+      "ma_nganh": "7810301",
+      "ten_nganh": "Quản lý thể dục thể thao",
+      "khoa_nhap_hoc": 2024,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA25QLTDA",
+      "ma_nganh": "7810301",
+      "ten_nganh": "Quản lý thể dục thể thao",
+      "khoa_nhap_hoc": 2025,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA25QLTDB",
+      "ma_nganh": "7810301",
+      "ten_nganh": "Quản lý thể dục thể thao",
+      "khoa_nhap_hoc": 2025,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA24CXH",
+      "ma_nganh": "7760101",
+      "ten_nganh": "Công tác xã hội",
+      "khoa_nhap_hoc": 2024,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA25CXH",
+      "ma_nganh": "7760101",
+      "ten_nganh": "Công tác xã hội",
+      "khoa_nhap_hoc": 2025,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA24XD",
+      "ma_nganh": "7510102",
+      "ten_nganh": "Công nghệ kỹ thuật công trình xây dựng",
+      "khoa_nhap_hoc": 2024,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA25XD",
+      "ma_nganh": "7510102",
+      "ten_nganh": "Công nghệ kỹ thuật công trình xây dựng",
+      "khoa_nhap_hoc": 2025,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA24XDGT",
+      "ma_nganh": "7580205",
+      "ten_nganh": "Kỹ thuật xây dựng công trình giao thông",
+      "khoa_nhap_hoc": 2024,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA25XDGT",
+      "ma_nganh": "7580205",
+      "ten_nganh": "Kỹ thuật xây dựng công trình giao thông",
+      "khoa_nhap_hoc": 2025,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA24DT",
+      "ma_nganh": "7510303",
+      "ten_nganh": "Công nghệ kỹ thuật điều khiển và tự động hóa",
+      "khoa_nhap_hoc": 2024,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA25DT",
+      "ma_nganh": "7510303",
+      "ten_nganh": "Công nghệ kỹ thuật điều khiển và tự động hóa",
+      "khoa_nhap_hoc": 2025,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA24KDA",
+      "ma_nganh": "7510301",
+      "ten_nganh": "Công nghệ kỹ thuật điện, điện tử",
+      "khoa_nhap_hoc": 2024,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA24KDB",
+      "ma_nganh": "7510301",
+      "ten_nganh": "Công nghệ kỹ thuật điện, điện tử",
+      "khoa_nhap_hoc": 2024,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA24KDC",
+      "ma_nganh": "7510301",
+      "ten_nganh": "Công nghệ kỹ thuật điện, điện tử",
+      "khoa_nhap_hoc": 2024,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA25KDA",
+      "ma_nganh": "7510301",
+      "ten_nganh": "Công nghệ kỹ thuật điện, điện tử",
+      "khoa_nhap_hoc": 2025,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA25KDB",
+      "ma_nganh": "7510301",
+      "ten_nganh": "Công nghệ kỹ thuật điện, điện tử",
+      "khoa_nhap_hoc": 2025,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA25KDC",
+      "ma_nganh": "7510301",
+      "ten_nganh": "Công nghệ kỹ thuật điện, điện tử",
+      "khoa_nhap_hoc": 2025,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA24CK",
+      "ma_nganh": "7510201",
+      "ten_nganh": "Công nghệ kỹ thuật cơ khí",
+      "khoa_nhap_hoc": 2024,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA25CK",
+      "ma_nganh": "7510201",
+      "ten_nganh": "Công nghệ kỹ thuật cơ khí",
+      "khoa_nhap_hoc": 2025,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA25CDT",
+      "ma_nganh": "7510203",
+      "ten_nganh": "Công nghệ kỹ thuật cơ điện tử",
+      "khoa_nhap_hoc": 2025,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA24CNOTA",
+      "ma_nganh": "7510205",
+      "ten_nganh": "Công nghệ kỹ thuật ô tô",
+      "khoa_nhap_hoc": 2024,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA24CNOTB",
+      "ma_nganh": "7510205",
+      "ten_nganh": "Công nghệ kỹ thuật ô tô",
+      "khoa_nhap_hoc": 2024,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA25CNOTA",
+      "ma_nganh": "7510205",
+      "ten_nganh": "Công nghệ kỹ thuật ô tô",
+      "khoa_nhap_hoc": 2025,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA25CNOTB",
+      "ma_nganh": "7510205",
+      "ten_nganh": "Công nghệ kỹ thuật ô tô",
+      "khoa_nhap_hoc": 2025,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA24HH",
+      "ma_nganh": "7510401",
+      "ten_nganh": "Công nghệ kỹ thuật hóa học",
+      "khoa_nhap_hoc": 2024,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA25HH",
+      "ma_nganh": "7510401",
+      "ten_nganh": "Công nghệ kỹ thuật hóa học",
+      "khoa_nhap_hoc": 2025,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA25TTNT",
+      "ma_nganh": "7480107",
+      "ten_nganh": "Trí tuệ nhân tạo",
+      "khoa_nhap_hoc": 2025,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA24TTA",
+      "ma_nganh": "7480201",
+      "ten_nganh": "Công nghệ thông tin",
+      "khoa_nhap_hoc": 2024,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA24TTB",
+      "ma_nganh": "7480201",
+      "ten_nganh": "Công nghệ thông tin",
+      "khoa_nhap_hoc": 2024,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA24TTC",
+      "ma_nganh": "7480201",
+      "ten_nganh": "Công nghệ thông tin",
+      "khoa_nhap_hoc": 2024,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA24TTD",
+      "ma_nganh": "7480201",
+      "ten_nganh": "Công nghệ thông tin",
+      "khoa_nhap_hoc": 2024,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA25TTA",
+      "ma_nganh": "7480201",
+      "ten_nganh": "Công nghệ thông tin",
+      "khoa_nhap_hoc": 2025,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA25TTB",
+      "ma_nganh": "7480201",
+      "ten_nganh": "Công nghệ thông tin",
+      "khoa_nhap_hoc": 2025,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA25TTC",
+      "ma_nganh": "7480201",
+      "ten_nganh": "Công nghệ thông tin",
+      "khoa_nhap_hoc": 2025,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA25TTD",
+      "ma_nganh": "7480201",
+      "ten_nganh": "Công nghệ thông tin",
+      "khoa_nhap_hoc": 2025,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA25TT_EIP",
+      "ma_nganh": "7480201",
+      "ten_nganh": "Công nghệ thông tin",
+      "khoa_nhap_hoc": 2025,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": "Có chương trình tích hợp tiếng Anh: DA25TT_EIP"
+    },
+    {
+      "ma_lop": "DA24CTH",
+      "ma_nganh": "7310201",
+      "ten_nganh": "Chính trị học",
+      "khoa_nhap_hoc": 2024,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA25CTH",
+      "ma_nganh": "7310201",
+      "ten_nganh": "Chính trị học",
+      "khoa_nhap_hoc": 2025,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA24CNTP",
+      "ma_nganh": "7540101",
+      "ten_nganh": "Công nghệ thực phẩm",
+      "khoa_nhap_hoc": 2024,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA25CNTP",
+      "ma_nganh": "7540101",
+      "ten_nganh": "Công nghệ thực phẩm",
+      "khoa_nhap_hoc": 2025,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA24CNSH",
+      "ma_nganh": "7420201",
+      "ten_nganh": "Công nghệ sinh học",
+      "khoa_nhap_hoc": 2024,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA25CNSH",
+      "ma_nganh": "7420201",
+      "ten_nganh": "Công nghệ sinh học",
+      "khoa_nhap_hoc": 2025,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA24BVTV",
+      "ma_nganh": "7620112",
+      "ten_nganh": "Bảo vệ thực vật",
+      "khoa_nhap_hoc": 2024,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA25BVTV",
+      "ma_nganh": "7620112",
+      "ten_nganh": "Bảo vệ thực vật",
+      "khoa_nhap_hoc": 2025,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA24NN",
+      "ma_nganh": "7620101",
+      "ten_nganh": "Nông nghiệp",
+      "khoa_nhap_hoc": 2024,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA25NN",
+      "ma_nganh": "7620101",
+      "ten_nganh": "Nông nghiệp",
+      "khoa_nhap_hoc": 2025,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA24TS",
+      "ma_nganh": "7620301",
+      "ten_nganh": "Nuôi trồng thủy sản",
+      "khoa_nhap_hoc": 2024,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA25TS",
+      "ma_nganh": "7620301",
+      "ten_nganh": "Nuôi trồng thủy sản",
+      "khoa_nhap_hoc": 2025,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA24TYA",
+      "ma_nganh": "7640101",
+      "ten_nganh": "Thú y",
+      "khoa_nhap_hoc": 2024,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA24TYB",
+      "ma_nganh": "7640101",
+      "ten_nganh": "Thú y",
+      "khoa_nhap_hoc": 2024,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA24TYC",
+      "ma_nganh": "7640101",
+      "ten_nganh": "Thú y",
+      "khoa_nhap_hoc": 2024,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA25TYA",
+      "ma_nganh": "7640101",
+      "ten_nganh": "Thú y",
+      "khoa_nhap_hoc": 2025,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA25TYB",
+      "ma_nganh": "7640101",
+      "ten_nganh": "Thú y",
+      "khoa_nhap_hoc": 2025,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA25TYC",
+      "ma_nganh": "7640101",
+      "ten_nganh": "Thú y",
+      "khoa_nhap_hoc": 2025,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA24LQLC",
+      "ma_nganh": "7510605",
+      "ten_nganh": "Logistics và Quản lý chuỗi cung ứng",
+      "khoa_nhap_hoc": 2024,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA25LQLC",
+      "ma_nganh": "7510605",
+      "ten_nganh": "Logistics và Quản lý chuỗi cung ứng",
+      "khoa_nhap_hoc": 2025,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA24LA",
+      "ma_nganh": "7380101",
+      "ten_nganh": "Luật",
+      "khoa_nhap_hoc": 2024,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA24LB",
+      "ma_nganh": "7380101",
+      "ten_nganh": "Luật",
+      "khoa_nhap_hoc": 2024,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA24LC",
+      "ma_nganh": "7380101",
+      "ten_nganh": "Luật",
+      "khoa_nhap_hoc": 2024,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA25LA",
+      "ma_nganh": "7380101",
+      "ten_nganh": "Luật",
+      "khoa_nhap_hoc": 2025,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA25LB",
+      "ma_nganh": "7380101",
+      "ten_nganh": "Luật",
+      "khoa_nhap_hoc": 2025,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA25LC",
+      "ma_nganh": "7380101",
+      "ten_nganh": "Luật",
+      "khoa_nhap_hoc": 2025,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA24QKDA",
+      "ma_nganh": "7340101",
+      "ten_nganh": "Quản trị kinh doanh",
+      "khoa_nhap_hoc": 2024,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA24QKDB",
+      "ma_nganh": "7340101",
+      "ten_nganh": "Quản trị kinh doanh",
+      "khoa_nhap_hoc": 2024,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA25QKDA",
+      "ma_nganh": "7340101",
+      "ten_nganh": "Quản trị kinh doanh",
+      "khoa_nhap_hoc": 2025,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA25QKDB",
+      "ma_nganh": "7340101",
+      "ten_nganh": "Quản trị kinh doanh",
+      "khoa_nhap_hoc": 2025,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA25QKDC",
+      "ma_nganh": "7340101",
+      "ten_nganh": "Quản trị kinh doanh",
+      "khoa_nhap_hoc": 2025,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA24KTA",
+      "ma_nganh": "7340301",
+      "ten_nganh": "Kế toán",
+      "khoa_nhap_hoc": 2024,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA24KTB",
+      "ma_nganh": "7340301",
+      "ten_nganh": "Kế toán",
+      "khoa_nhap_hoc": 2024,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA25KTA",
+      "ma_nganh": "7340301",
+      "ten_nganh": "Kế toán",
+      "khoa_nhap_hoc": 2025,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA25KTB",
+      "ma_nganh": "7340301",
+      "ten_nganh": "Kế toán",
+      "khoa_nhap_hoc": 2025,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA24K",
+      "ma_nganh": "7310101",
+      "ten_nganh": "Kinh tế",
+      "khoa_nhap_hoc": 2024,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA25K",
+      "ma_nganh": "7310101",
+      "ten_nganh": "Kinh tế",
+      "khoa_nhap_hoc": 2025,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA24TCNHA",
+      "ma_nganh": "7340201",
+      "ten_nganh": "Tài chính – Ngân hàng",
+      "khoa_nhap_hoc": 2024,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA24TCNHB",
+      "ma_nganh": "7340201",
+      "ten_nganh": "Tài chính – Ngân hàng",
+      "khoa_nhap_hoc": 2024,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA25TCNHA",
+      "ma_nganh": "7340201",
+      "ten_nganh": "Tài chính – Ngân hàng",
+      "khoa_nhap_hoc": 2025,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA25TCNHB",
+      "ma_nganh": "7340201",
+      "ten_nganh": "Tài chính – Ngân hàng",
+      "khoa_nhap_hoc": 2025,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA24QV",
+      "ma_nganh": "7340406",
+      "ten_nganh": "Quản trị văn phòng",
+      "khoa_nhap_hoc": 2024,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA25QVA",
+      "ma_nganh": "7340406",
+      "ten_nganh": "Quản trị văn phòng",
+      "khoa_nhap_hoc": 2025,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA25QVB",
+      "ma_nganh": "7340406",
+      "ten_nganh": "Quản trị văn phòng",
+      "khoa_nhap_hoc": 2025,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA25QVC",
+      "ma_nganh": "7340406",
+      "ten_nganh": "Quản trị văn phòng",
+      "khoa_nhap_hoc": 2025,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA24QLNN",
+      "ma_nganh": "7310205",
+      "ten_nganh": "Quản lý nhà nước",
+      "khoa_nhap_hoc": 2024,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA25QLNNA",
+      "ma_nganh": "7310205",
+      "ten_nganh": "Quản lý nhà nước",
+      "khoa_nhap_hoc": 2025,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA25QLNNB",
+      "ma_nganh": "7310205",
+      "ten_nganh": "Quản lý nhà nước",
+      "khoa_nhap_hoc": 2025,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA24TMDT",
+      "ma_nganh": "7340122",
+      "ten_nganh": "Thương mại điện tử",
+      "khoa_nhap_hoc": 2024,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA25TMDT",
+      "ma_nganh": "7340122",
+      "ten_nganh": "Thương mại điện tử",
+      "khoa_nhap_hoc": 2025,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA24ANH",
+      "ma_nganh": "7210201",
+      "ten_nganh": "Âm nhạc học",
+      "khoa_nhap_hoc": 2024,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA25ANH",
+      "ma_nganh": "7210201",
+      "ten_nganh": "Âm nhạc học",
+      "khoa_nhap_hoc": 2025,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA24NCT",
+      "ma_nganh": "7210210",
+      "ten_nganh": "Biểu diễn nhạc cụ truyền thống",
+      "khoa_nhap_hoc": 2024,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA25NCT",
+      "ma_nganh": "7210210",
+      "ten_nganh": "Biểu diễn nhạc cụ truyền thống",
+      "khoa_nhap_hoc": 2025,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA24NNAA",
+      "ma_nganh": "7220201",
+      "ten_nganh": "Ngôn ngữ Anh",
+      "khoa_nhap_hoc": 2024,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA24NNAB",
+      "ma_nganh": "7220201",
+      "ten_nganh": "Ngôn ngữ Anh",
+      "khoa_nhap_hoc": 2024,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA24NNAC",
+      "ma_nganh": "7220201",
+      "ten_nganh": "Ngôn ngữ Anh",
+      "khoa_nhap_hoc": 2024,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA24NNAD",
+      "ma_nganh": "7220201",
+      "ten_nganh": "Ngôn ngữ Anh",
+      "khoa_nhap_hoc": 2024,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA24NNAE",
+      "ma_nganh": "7220201",
+      "ten_nganh": "Ngôn ngữ Anh",
+      "khoa_nhap_hoc": 2024,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA25NNAA",
+      "ma_nganh": "7220201",
+      "ten_nganh": "Ngôn ngữ Anh",
+      "khoa_nhap_hoc": 2025,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA25NNAB",
+      "ma_nganh": "7220201",
+      "ten_nganh": "Ngôn ngữ Anh",
+      "khoa_nhap_hoc": 2025,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA25NNAC",
+      "ma_nganh": "7220201",
+      "ten_nganh": "Ngôn ngữ Anh",
+      "khoa_nhap_hoc": 2025,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA25NNAD",
+      "ma_nganh": "7220201",
+      "ten_nganh": "Ngôn ngữ Anh",
+      "khoa_nhap_hoc": 2025,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA25NNAE",
+      "ma_nganh": "7220201",
+      "ten_nganh": "Ngôn ngữ Anh",
+      "khoa_nhap_hoc": 2025,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA24NNK",
+      "ma_nganh": "7220106",
+      "ten_nganh": "Ngôn ngữ Khmer",
+      "khoa_nhap_hoc": 2024,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA25NNKA",
+      "ma_nganh": "7220106",
+      "ten_nganh": "Ngôn ngữ Khmer",
+      "khoa_nhap_hoc": 2025,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA25NNKB",
+      "ma_nganh": "7220106",
+      "ten_nganh": "Ngôn ngữ Khmer",
+      "khoa_nhap_hoc": 2025,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA24NNTQ",
+      "ma_nganh": "7220204",
+      "ten_nganh": "Ngôn ngữ Trung Quốc",
+      "khoa_nhap_hoc": 2024,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA25NNTQ",
+      "ma_nganh": "7220204",
+      "ten_nganh": "Ngôn ngữ Trung Quốc",
+      "khoa_nhap_hoc": 2025,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA24QDL",
+      "ma_nganh": "7810103",
+      "ten_nganh": "Quản trị dịch vụ du lịch và lữ hành",
+      "khoa_nhap_hoc": 2024,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA25QDLA",
+      "ma_nganh": "7810103",
+      "ten_nganh": "Quản trị dịch vụ du lịch và lữ hành",
+      "khoa_nhap_hoc": 2025,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA25QDLB",
+      "ma_nganh": "7810103",
+      "ten_nganh": "Quản trị dịch vụ du lịch và lữ hành",
+      "khoa_nhap_hoc": 2025,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA24VH",
+      "ma_nganh": "7229040",
+      "ten_nganh": "Văn hóa học",
+      "khoa_nhap_hoc": 2024,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA25VH",
+      "ma_nganh": "7229040",
+      "ten_nganh": "Văn hóa học",
+      "khoa_nhap_hoc": 2025,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA24YKA",
+      "ma_nganh": "7720101",
+      "ten_nganh": "Y khoa",
+      "khoa_nhap_hoc": 2024,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA24YKB",
+      "ma_nganh": "7720101",
+      "ten_nganh": "Y khoa",
+      "khoa_nhap_hoc": 2024,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA24YKC",
+      "ma_nganh": "7720101",
+      "ten_nganh": "Y khoa",
+      "khoa_nhap_hoc": 2024,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA24YKD",
+      "ma_nganh": "7720101",
+      "ten_nganh": "Y khoa",
+      "khoa_nhap_hoc": 2024,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA24YKE",
+      "ma_nganh": "7720101",
+      "ten_nganh": "Y khoa",
+      "khoa_nhap_hoc": 2024,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA25YKA",
+      "ma_nganh": "7720101",
+      "ten_nganh": "Y khoa",
+      "khoa_nhap_hoc": 2025,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA25YKB",
+      "ma_nganh": "7720101",
+      "ten_nganh": "Y khoa",
+      "khoa_nhap_hoc": 2025,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA25YKC",
+      "ma_nganh": "7720101",
+      "ten_nganh": "Y khoa",
+      "khoa_nhap_hoc": 2025,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA25YKD",
+      "ma_nganh": "7720101",
+      "ten_nganh": "Y khoa",
+      "khoa_nhap_hoc": 2025,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA25YKE",
+      "ma_nganh": "7720101",
+      "ten_nganh": "Y khoa",
+      "khoa_nhap_hoc": 2025,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA24RHMA",
+      "ma_nganh": "7720501",
+      "ten_nganh": "Răng – Hàm – Mặt",
+      "khoa_nhap_hoc": 2024,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA24RHMB",
+      "ma_nganh": "7720501",
+      "ten_nganh": "Răng – Hàm – Mặt",
+      "khoa_nhap_hoc": 2024,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA25RHMA",
+      "ma_nganh": "7720501",
+      "ten_nganh": "Răng – Hàm – Mặt",
+      "khoa_nhap_hoc": 2025,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA25RHMB",
+      "ma_nganh": "7720501",
+      "ten_nganh": "Răng – Hàm – Mặt",
+      "khoa_nhap_hoc": 2025,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA24DDA",
+      "ma_nganh": "7720301",
+      "ten_nganh": "Điều dưỡng",
+      "khoa_nhap_hoc": 2024,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA24DDB",
+      "ma_nganh": "7720301",
+      "ten_nganh": "Điều dưỡng",
+      "khoa_nhap_hoc": 2024,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA24DDC",
+      "ma_nganh": "7720301",
+      "ten_nganh": "Điều dưỡng",
+      "khoa_nhap_hoc": 2024,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA24DDD",
+      "ma_nganh": "7720301",
+      "ten_nganh": "Điều dưỡng",
+      "khoa_nhap_hoc": 2024,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA25DDA",
+      "ma_nganh": "7720301",
+      "ten_nganh": "Điều dưỡng",
+      "khoa_nhap_hoc": 2025,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA25DDB",
+      "ma_nganh": "7720301",
+      "ten_nganh": "Điều dưỡng",
+      "khoa_nhap_hoc": 2025,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA25DDC",
+      "ma_nganh": "7720301",
+      "ten_nganh": "Điều dưỡng",
+      "khoa_nhap_hoc": 2025,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA25DDD",
+      "ma_nganh": "7720301",
+      "ten_nganh": "Điều dưỡng",
+      "khoa_nhap_hoc": 2025,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA25DDE",
+      "ma_nganh": "7720301",
+      "ten_nganh": "Điều dưỡng",
+      "khoa_nhap_hoc": 2025,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA24YHDP",
+      "ma_nganh": "7720110",
+      "ten_nganh": "Y học dự phòng",
+      "khoa_nhap_hoc": 2024,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA25YHDP",
+      "ma_nganh": "7720110",
+      "ten_nganh": "Y học dự phòng",
+      "khoa_nhap_hoc": 2025,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA24KTHY",
+      "ma_nganh": "7720602",
+      "ten_nganh": "Kỹ thuật hình ảnh y học",
+      "khoa_nhap_hoc": 2024,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA25KTHY",
+      "ma_nganh": "7720602",
+      "ten_nganh": "Kỹ thuật hình ảnh y học",
+      "khoa_nhap_hoc": 2025,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA24PHCNA",
+      "ma_nganh": "7720603",
+      "ten_nganh": "Kỹ thuật phục hồi chức năng",
+      "khoa_nhap_hoc": 2024,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA24PHCNB",
+      "ma_nganh": "7720603",
+      "ten_nganh": "Kỹ thuật phục hồi chức năng",
+      "khoa_nhap_hoc": 2024,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA25PHCNA",
+      "ma_nganh": "7720603",
+      "ten_nganh": "Kỹ thuật phục hồi chức năng",
+      "khoa_nhap_hoc": 2025,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA25PHCNB",
+      "ma_nganh": "7720603",
+      "ten_nganh": "Kỹ thuật phục hồi chức năng",
+      "khoa_nhap_hoc": 2025,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA24XYHA",
+      "ma_nganh": "7720601",
+      "ten_nganh": "Kỹ thuật xét nghiệm y học",
+      "khoa_nhap_hoc": 2024,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA24XYHB",
+      "ma_nganh": "7720601",
+      "ten_nganh": "Kỹ thuật xét nghiệm y học",
+      "khoa_nhap_hoc": 2024,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA25XYHA",
+      "ma_nganh": "7720601",
+      "ten_nganh": "Kỹ thuật xét nghiệm y học",
+      "khoa_nhap_hoc": 2025,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA25XYHB",
+      "ma_nganh": "7720601",
+      "ten_nganh": "Kỹ thuật xét nghiệm y học",
+      "khoa_nhap_hoc": 2025,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA24YTC",
+      "ma_nganh": "7720701",
+      "ten_nganh": "Y tế công cộng",
+      "khoa_nhap_hoc": 2024,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA25YTC",
+      "ma_nganh": "7720701",
+      "ten_nganh": "Y tế công cộng",
+      "khoa_nhap_hoc": 2025,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA24DA",
+      "ma_nganh": "7720201",
+      "ten_nganh": "Dược học",
+      "khoa_nhap_hoc": 2024,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA24DB",
+      "ma_nganh": "7720201",
+      "ten_nganh": "Dược học",
+      "khoa_nhap_hoc": 2024,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA24DC",
+      "ma_nganh": "7720201",
+      "ten_nganh": "Dược học",
+      "khoa_nhap_hoc": 2024,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA25D",
+      "ma_nganh": "7720201",
+      "ten_nganh": "Dược học",
+      "khoa_nhap_hoc": 2025,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA24HD",
+      "ma_nganh": "7720203",
+      "ten_nganh": "Hóa dược",
+      "khoa_nhap_hoc": 2024,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA25HD",
+      "ma_nganh": "7720203",
+      "ten_nganh": "Hóa dược",
+      "khoa_nhap_hoc": 2025,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA25KTMT",
+      "ma_nganh": "7520320",
+      "ten_nganh": "Kỹ thuật môi trường",
+      "khoa_nhap_hoc": 2025,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA24QLTN",
+      "ma_nganh": "7850101",
+      "ten_nganh": "Quản lý tài nguyên và môi trường",
+      "khoa_nhap_hoc": 2024,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA25QLTN",
+      "ma_nganh": "7850101",
+      "ten_nganh": "Quản lý tài nguyên và môi trường",
+      "khoa_nhap_hoc": 2025,
+      "dang_hoat_dong": true,
+      "nguon": "https://daotao.tvu.edu.vn/images/thongbao/2025/12.THONG_BAO_SO_15_VE_VIEC_DANG_KY_HOC_PHAN_HOC_KY_2_NAM_HOC_2025-2026.pdf",
+      "ghi_chu": null
+    },
+    {
+      "ma_lop": "DA23TTA",
+      "ma_nganh": "7480201",
+      "ten_nganh": "Công nghệ thông tin",
+      "khoa_nhap_hoc": 2023,
+      "dang_hoat_dong": true,
+      "nguon": null,
+      "ghi_chu": "Bổ sung từ thông tin người dùng cung cấp; cần đối chiếu nguồn TVU nếu dùng làm dữ liệu chính thức."
+    },
+    {
+      "ma_lop": "DA23TTB",
+      "ma_nganh": "7480201",
+      "ten_nganh": "Công nghệ thông tin",
+      "khoa_nhap_hoc": 2023,
+      "dang_hoat_dong": true,
+      "nguon": null,
+      "ghi_chu": "Bổ sung từ thông tin người dùng cung cấp; cần đối chiếu nguồn TVU nếu dùng làm dữ liệu chính thức."
+    },
+    {
+      "ma_lop": "DA23TTC",
+      "ma_nganh": "7480201",
+      "ten_nganh": "Công nghệ thông tin",
+      "khoa_nhap_hoc": 2023,
+      "dang_hoat_dong": true,
+      "nguon": null,
+      "ghi_chu": "Bổ sung từ thông tin người dùng cung cấp; cần đối chiếu nguồn TVU nếu dùng làm dữ liệu chính thức."
+    }
+  ],
+  "ma_mssv_nganh": [
+    {
+      "ma_nganh": "7810301",
+      "khoa_nhap_hoc": 2023,
+      "prefix_mssv": "1178",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.scribd.com/document/1071301782/GKYT-2-7-%C4%90%E1%BA%A1i-H%E1%BB%99i-Th%E1%BB%83-D%E1%BB%A5c-Th%E1%BB%83-Thao-Ph%C6%B0%E1%BB%9Dng-Long-%C4%90%E1%BB%A9c"
+    },
+    {
+      "ma_nganh": "7810301",
+      "khoa_nhap_hoc": 2024,
+      "prefix_mssv": "1178",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.scribd.com/document/1071301782/GKYT-2-7-%C4%90%E1%BA%A1i-H%E1%BB%99i-Th%E1%BB%83-D%E1%BB%A5c-Th%E1%BB%83-Thao-Ph%C6%B0%E1%BB%9Dng-Long-%C4%90%E1%BB%A9c"
+    },
+    {
+      "ma_nganh": "7810301",
+      "khoa_nhap_hoc": 2025,
+      "prefix_mssv": "1178",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.scribd.com/document/1071301782/GKYT-2-7-%C4%90%E1%BA%A1i-H%E1%BB%99i-Th%E1%BB%83-D%E1%BB%A5c-Th%E1%BB%83-Thao-Ph%C6%B0%E1%BB%9Dng-Long-%C4%90%E1%BB%A9c"
+    },
+    {
+      "ma_nganh": "7760101",
+      "khoa_nhap_hoc": 2023,
+      "prefix_mssv": "1151",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.studocu.vn/vn/document/tra-vinh-university/ngon-ngu-hoc/danh-sach-sinh-vien-tham-gia-hoat-dong-truyen-phong-chong-ma-tuy-dh-tra-vinh/155712409"
+    },
+    {
+      "ma_nganh": "7760101",
+      "khoa_nhap_hoc": 2024,
+      "prefix_mssv": "1151",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.studocu.vn/vn/document/tra-vinh-university/ngon-ngu-hoc/danh-sach-sinh-vien-tham-gia-hoat-dong-truyen-phong-chong-ma-tuy-dh-tra-vinh/155712409"
+    },
+    {
+      "ma_nganh": "7760101",
+      "khoa_nhap_hoc": 2025,
+      "prefix_mssv": "1151",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.studocu.vn/vn/document/tra-vinh-university/ngon-ngu-hoc/danh-sach-sinh-vien-tham-gia-hoat-dong-truyen-phong-chong-ma-tuy-dh-tra-vinh/155712409"
+    },
+    {
+      "ma_nganh": "7510102",
+      "khoa_nhap_hoc": 2023,
+      "prefix_mssv": "1117",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.studocu.vn/vn/document/truong-dai-hoc-tra-vinh/truong-dai-hoc-tra-vinh/danh-sach-tham-gia-ra-quan-ve-sinh-ntvt-21/140618029"
+    },
+    {
+      "ma_nganh": "7510102",
+      "khoa_nhap_hoc": 2024,
+      "prefix_mssv": "1117",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.studocu.vn/vn/document/truong-dai-hoc-tra-vinh/truong-dai-hoc-tra-vinh/danh-sach-tham-gia-ra-quan-ve-sinh-ntvt-21/140618029"
+    },
+    {
+      "ma_nganh": "7510102",
+      "khoa_nhap_hoc": 2025,
+      "prefix_mssv": "1117",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.studocu.vn/vn/document/truong-dai-hoc-tra-vinh/truong-dai-hoc-tra-vinh/danh-sach-tham-gia-ra-quan-ve-sinh-ntvt-21/140618029"
+    },
+    {
+      "ma_nganh": "7580205",
+      "khoa_nhap_hoc": 2023,
+      "prefix_mssv": "1168",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.scribd.com/document/802308532/DS-A-ia-n-form9-16-2024-DS-Tham-gia-chuong-trinh-van-nghe-chao-doan-tan-SV"
+    },
+    {
+      "ma_nganh": "7580205",
+      "khoa_nhap_hoc": 2024,
+      "prefix_mssv": "1168",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.scribd.com/document/802308532/DS-A-ia-n-form9-16-2024-DS-Tham-gia-chuong-trinh-van-nghe-chao-doan-tan-SV"
+    },
+    {
+      "ma_nganh": "7580205",
+      "khoa_nhap_hoc": 2025,
+      "prefix_mssv": "1168",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.scribd.com/document/802308532/DS-A-ia-n-form9-16-2024-DS-Tham-gia-chuong-trinh-van-nghe-chao-doan-tan-SV"
+    },
+    {
+      "ma_nganh": "7510303",
+      "khoa_nhap_hoc": 2023,
+      "prefix_mssv": "1152",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.studocu.vn/vn/document/truong-dai-hoc-tra-vinh/quan-tri-kinh-doanh-tvu-onschool/phu-luc-1-nguyen-kien-trung/115165162"
+    },
+    {
+      "ma_nganh": "7510303",
+      "khoa_nhap_hoc": 2024,
+      "prefix_mssv": "1152",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.studocu.vn/vn/document/truong-dai-hoc-tra-vinh/quan-tri-kinh-doanh-tvu-onschool/phu-luc-1-nguyen-kien-trung/115165162"
+    },
+    {
+      "ma_nganh": "7510303",
+      "khoa_nhap_hoc": 2025,
+      "prefix_mssv": "1152",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.studocu.vn/vn/document/truong-dai-hoc-tra-vinh/quan-tri-kinh-doanh-tvu-onschool/phu-luc-1-nguyen-kien-trung/115165162"
+    },
+    {
+      "ma_nganh": "7510301",
+      "khoa_nhap_hoc": 2023,
+      "prefix_mssv": "1121",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.scribd.com/document/1077914540/Dssv-Tham-Du-Cong-Bo-Dhtv-pdf-145928-1"
+    },
+    {
+      "ma_nganh": "7510301",
+      "khoa_nhap_hoc": 2024,
+      "prefix_mssv": "1121",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.scribd.com/document/1077914540/Dssv-Tham-Du-Cong-Bo-Dhtv-pdf-145928-1"
+    },
+    {
+      "ma_nganh": "7510301",
+      "khoa_nhap_hoc": 2025,
+      "prefix_mssv": "1121",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.scribd.com/document/1077914540/Dssv-Tham-Du-Cong-Bo-Dhtv-pdf-145928-1"
+    },
+    {
+      "ma_nganh": "7510201",
+      "khoa_nhap_hoc": 2023,
+      "prefix_mssv": "1118",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.scribd.com/document/1077914533/Dssv-Tham-Du-Le-Phat-Dong-Sh-Chinh-Tri-pdf-15147-1"
+    },
+    {
+      "ma_nganh": "7510201",
+      "khoa_nhap_hoc": 2024,
+      "prefix_mssv": "1118",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.scribd.com/document/1077914533/Dssv-Tham-Du-Le-Phat-Dong-Sh-Chinh-Tri-pdf-15147-1"
+    },
+    {
+      "ma_nganh": "7510201",
+      "khoa_nhap_hoc": 2025,
+      "prefix_mssv": "1118",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.scribd.com/document/1077914533/Dssv-Tham-Du-Le-Phat-Dong-Sh-Chinh-Tri-pdf-15147-1"
+    },
+    {
+      "ma_nganh": "7510203",
+      "khoa_nhap_hoc": 2023,
+      "prefix_mssv": "1196",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://ctsv.tvu.edu.vn/wp-content/uploads/2025/10/Thong-bao-Trung-tuyen-Hoc-bong-tai-tro-Fondation-Dela-Cheneliere-2025-2026.pdf"
+    },
+    {
+      "ma_nganh": "7510203",
+      "khoa_nhap_hoc": 2024,
+      "prefix_mssv": "1196",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://ctsv.tvu.edu.vn/wp-content/uploads/2025/10/Thong-bao-Trung-tuyen-Hoc-bong-tai-tro-Fondation-Dela-Cheneliere-2025-2026.pdf"
+    },
+    {
+      "ma_nganh": "7510203",
+      "khoa_nhap_hoc": 2025,
+      "prefix_mssv": "1196",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://ctsv.tvu.edu.vn/wp-content/uploads/2025/10/Thong-bao-Trung-tuyen-Hoc-bong-tai-tro-Fondation-Dela-Cheneliere-2025-2026.pdf"
+    },
+    {
+      "ma_nganh": "7510205",
+      "khoa_nhap_hoc": 2023,
+      "prefix_mssv": "1180",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.scribd.com/document/1077914533/Dssv-Tham-Du-Le-Phat-Dong-Sh-Chinh-Tri-pdf-15147-1"
+    },
+    {
+      "ma_nganh": "7510205",
+      "khoa_nhap_hoc": 2024,
+      "prefix_mssv": "1180",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.scribd.com/document/1077914533/Dssv-Tham-Du-Le-Phat-Dong-Sh-Chinh-Tri-pdf-15147-1"
+    },
+    {
+      "ma_nganh": "7510205",
+      "khoa_nhap_hoc": 2025,
+      "prefix_mssv": "1180",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.scribd.com/document/1077914533/Dssv-Tham-Du-Le-Phat-Dong-Sh-Chinh-Tri-pdf-15147-1"
+    },
+    {
+      "ma_nganh": "7510401",
+      "khoa_nhap_hoc": 2023,
+      "prefix_mssv": "1126",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.scribd.com/document/1071301957/2026-05-27-1"
+    },
+    {
+      "ma_nganh": "7510401",
+      "khoa_nhap_hoc": 2024,
+      "prefix_mssv": "1126",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.scribd.com/document/1071301957/2026-05-27-1"
+    },
+    {
+      "ma_nganh": "7510401",
+      "khoa_nhap_hoc": 2025,
+      "prefix_mssv": "1126",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.scribd.com/document/1071301957/2026-05-27-1"
+    },
+    {
+      "ma_nganh": "7480107",
+      "khoa_nhap_hoc": 2023,
+      "prefix_mssv": "1195",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.scribd.com/document/1071301782/GKYT-2-7-%C4%90%E1%BA%A1i-H%E1%BB%99i-Th%E1%BB%83-D%E1%BB%A5c-Th%E1%BB%83-Thao-Ph%C6%B0%E1%BB%9Dng-Long-%C4%90%E1%BB%A9c"
+    },
+    {
+      "ma_nganh": "7480107",
+      "khoa_nhap_hoc": 2024,
+      "prefix_mssv": "1195",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.scribd.com/document/1071301782/GKYT-2-7-%C4%90%E1%BA%A1i-H%E1%BB%99i-Th%E1%BB%83-D%E1%BB%A5c-Th%E1%BB%83-Thao-Ph%C6%B0%E1%BB%9Dng-Long-%C4%90%E1%BB%A9c"
+    },
+    {
+      "ma_nganh": "7480107",
+      "khoa_nhap_hoc": 2025,
+      "prefix_mssv": "1195",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.scribd.com/document/1071301782/GKYT-2-7-%C4%90%E1%BA%A1i-H%E1%BB%99i-Th%E1%BB%83-D%E1%BB%A5c-Th%E1%BB%83-Thao-Ph%C6%B0%E1%BB%9Dng-Long-%C4%90%E1%BB%A9c"
+    },
+    {
+      "ma_nganh": "7480201",
+      "khoa_nhap_hoc": 2023,
+      "prefix_mssv": "1101",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.studocu.vn/vn/document/truong-dai-hoc-tra-vinh/quan-tri-quan-he-kh/bao-cao-tuan-2-thiet-ke-co-so-du-lieu-he-thong-dat-phong-da23ttd/164106797"
+    },
+    {
+      "ma_nganh": "7480201",
+      "khoa_nhap_hoc": 2024,
+      "prefix_mssv": "1101",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.studocu.vn/vn/document/truong-dai-hoc-tra-vinh/quan-tri-quan-he-kh/bao-cao-tuan-2-thiet-ke-co-so-du-lieu-he-thong-dat-phong-da23ttd/164106797"
+    },
+    {
+      "ma_nganh": "7480201",
+      "khoa_nhap_hoc": 2025,
+      "prefix_mssv": "1101",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.studocu.vn/vn/document/truong-dai-hoc-tra-vinh/quan-tri-quan-he-kh/bao-cao-tuan-2-thiet-ke-co-so-du-lieu-he-thong-dat-phong-da23ttd/164106797"
+    },
+    {
+      "ma_nganh": "7310201",
+      "khoa_nhap_hoc": 2023,
+      "prefix_mssv": "1165",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.studocu.vn/vn/document/tra-vinh-university/ngon-ngu-hoc/danh-sach-sinh-vien-tham-gia-hoat-dong-truyen-phong-chong-ma-tuy-dh-tra-vinh/155712409"
+    },
+    {
+      "ma_nganh": "7310201",
+      "khoa_nhap_hoc": 2024,
+      "prefix_mssv": "1165",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.studocu.vn/vn/document/tra-vinh-university/ngon-ngu-hoc/danh-sach-sinh-vien-tham-gia-hoat-dong-truyen-phong-chong-ma-tuy-dh-tra-vinh/155712409"
+    },
+    {
+      "ma_nganh": "7310201",
+      "khoa_nhap_hoc": 2025,
+      "prefix_mssv": "1165",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.studocu.vn/vn/document/tra-vinh-university/ngon-ngu-hoc/danh-sach-sinh-vien-tham-gia-hoat-dong-truyen-phong-chong-ma-tuy-dh-tra-vinh/155712409"
+    },
+    {
+      "ma_nganh": "7540101",
+      "khoa_nhap_hoc": 2023,
+      "prefix_mssv": "1162",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.scribd.com/document/1077914540/Dssv-Tham-Du-Cong-Bo-Dhtv-pdf-145928-1"
+    },
+    {
+      "ma_nganh": "7540101",
+      "khoa_nhap_hoc": 2024,
+      "prefix_mssv": "1162",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.scribd.com/document/1077914540/Dssv-Tham-Du-Cong-Bo-Dhtv-pdf-145928-1"
+    },
+    {
+      "ma_nganh": "7540101",
+      "khoa_nhap_hoc": 2025,
+      "prefix_mssv": "1162",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.scribd.com/document/1077914540/Dssv-Tham-Du-Cong-Bo-Dhtv-pdf-145928-1"
+    },
+    {
+      "ma_nganh": "7420201",
+      "khoa_nhap_hoc": 2023,
+      "prefix_mssv": "1177",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.scribd.com/document/1077914540/Dssv-Tham-Du-Cong-Bo-Dhtv-pdf-145928-1"
+    },
+    {
+      "ma_nganh": "7420201",
+      "khoa_nhap_hoc": 2024,
+      "prefix_mssv": "1177",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.scribd.com/document/1077914540/Dssv-Tham-Du-Cong-Bo-Dhtv-pdf-145928-1"
+    },
+    {
+      "ma_nganh": "7420201",
+      "khoa_nhap_hoc": 2025,
+      "prefix_mssv": "1177",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.scribd.com/document/1077914540/Dssv-Tham-Du-Cong-Bo-Dhtv-pdf-145928-1"
+    },
+    {
+      "ma_nganh": "7620112",
+      "khoa_nhap_hoc": 2023,
+      "prefix_mssv": "1115",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.scribd.com/document/1077914533/Dssv-Tham-Du-Le-Phat-Dong-Sh-Chinh-Tri-pdf-15147-1"
+    },
+    {
+      "ma_nganh": "7620112",
+      "khoa_nhap_hoc": 2024,
+      "prefix_mssv": "1115",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.scribd.com/document/1077914533/Dssv-Tham-Du-Le-Phat-Dong-Sh-Chinh-Tri-pdf-15147-1"
+    },
+    {
+      "ma_nganh": "7620112",
+      "khoa_nhap_hoc": 2025,
+      "prefix_mssv": "1115",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.scribd.com/document/1077914533/Dssv-Tham-Du-Le-Phat-Dong-Sh-Chinh-Tri-pdf-15147-1"
+    },
+    {
+      "ma_nganh": "7620101",
+      "khoa_nhap_hoc": 2023,
+      "prefix_mssv": "1147",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.scribd.com/document/1077914533/Dssv-Tham-Du-Le-Phat-Dong-Sh-Chinh-Tri-pdf-15147-1"
+    },
+    {
+      "ma_nganh": "7620101",
+      "khoa_nhap_hoc": 2024,
+      "prefix_mssv": "1147",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.scribd.com/document/1077914533/Dssv-Tham-Du-Le-Phat-Dong-Sh-Chinh-Tri-pdf-15147-1"
+    },
+    {
+      "ma_nganh": "7620101",
+      "khoa_nhap_hoc": 2025,
+      "prefix_mssv": "1147",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.scribd.com/document/1077914533/Dssv-Tham-Du-Le-Phat-Dong-Sh-Chinh-Tri-pdf-15147-1"
+    },
+    {
+      "ma_nganh": "7620301",
+      "khoa_nhap_hoc": 2023,
+      "prefix_mssv": "1103",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.studocu.vn/vn/document/truong-dai-hoc-tra-vinh/truong-dai-hoc-tra-vinh/danh-sach-tham-gia-ra-quan-ve-sinh-ntvt-21/140618029"
+    },
+    {
+      "ma_nganh": "7620301",
+      "khoa_nhap_hoc": 2024,
+      "prefix_mssv": "1103",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.studocu.vn/vn/document/truong-dai-hoc-tra-vinh/truong-dai-hoc-tra-vinh/danh-sach-tham-gia-ra-quan-ve-sinh-ntvt-21/140618029"
+    },
+    {
+      "ma_nganh": "7620301",
+      "khoa_nhap_hoc": 2025,
+      "prefix_mssv": "1103",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.studocu.vn/vn/document/truong-dai-hoc-tra-vinh/truong-dai-hoc-tra-vinh/danh-sach-tham-gia-ra-quan-ve-sinh-ntvt-21/140618029"
+    },
+    {
+      "ma_nganh": "7640101",
+      "khoa_nhap_hoc": 2023,
+      "prefix_mssv": "1113",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.scribd.com/document/802308532/DS-A-ia-n-form9-16-2024-DS-Tham-gia-chuong-trinh-van-nghe-chao-doan-tan-SV"
+    },
+    {
+      "ma_nganh": "7640101",
+      "khoa_nhap_hoc": 2024,
+      "prefix_mssv": "1113",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.scribd.com/document/802308532/DS-A-ia-n-form9-16-2024-DS-Tham-gia-chuong-trinh-van-nghe-chao-doan-tan-SV"
+    },
+    {
+      "ma_nganh": "7640101",
+      "khoa_nhap_hoc": 2025,
+      "prefix_mssv": "1113",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.scribd.com/document/802308532/DS-A-ia-n-form9-16-2024-DS-Tham-gia-chuong-trinh-van-nghe-chao-doan-tan-SV"
+    },
+    {
+      "ma_nganh": "7510605",
+      "khoa_nhap_hoc": 2023,
+      "prefix_mssv": "1192",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.scribd.com/document/802308532/DS-A-ia-n-form9-16-2024-DS-Tham-gia-chuong-trinh-van-nghe-chao-doan-tan-SV"
+    },
+    {
+      "ma_nganh": "7510605",
+      "khoa_nhap_hoc": 2024,
+      "prefix_mssv": "1192",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.scribd.com/document/802308532/DS-A-ia-n-form9-16-2024-DS-Tham-gia-chuong-trinh-van-nghe-chao-doan-tan-SV"
+    },
+    {
+      "ma_nganh": "7510605",
+      "khoa_nhap_hoc": 2025,
+      "prefix_mssv": "1192",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.scribd.com/document/802308532/DS-A-ia-n-form9-16-2024-DS-Tham-gia-chuong-trinh-van-nghe-chao-doan-tan-SV"
+    },
+    {
+      "ma_nganh": "7380101",
+      "khoa_nhap_hoc": 2023,
+      "prefix_mssv": "1141",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu; mã lớp có nhiều nhánh",
+      "nguon": "https://www.scribd.com/document/1071301957/2026-05-27-1"
+    },
+    {
+      "ma_nganh": "7380101",
+      "khoa_nhap_hoc": 2024,
+      "prefix_mssv": "1141",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu; mã lớp có nhiều nhánh",
+      "nguon": "https://www.scribd.com/document/1071301957/2026-05-27-1"
+    },
+    {
+      "ma_nganh": "7380101",
+      "khoa_nhap_hoc": 2025,
+      "prefix_mssv": "1141",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu; mã lớp có nhiều nhánh",
+      "nguon": "https://www.scribd.com/document/1071301957/2026-05-27-1"
+    },
+    {
+      "ma_nganh": "7340101",
+      "khoa_nhap_hoc": 2023,
+      "prefix_mssv": "1122",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.scribd.com/document/802308532/DS-A-ia-n-form9-16-2024-DS-Tham-gia-chuong-trinh-van-nghe-chao-doan-tan-SV"
+    },
+    {
+      "ma_nganh": "7340101",
+      "khoa_nhap_hoc": 2024,
+      "prefix_mssv": "1122",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.scribd.com/document/802308532/DS-A-ia-n-form9-16-2024-DS-Tham-gia-chuong-trinh-van-nghe-chao-doan-tan-SV"
+    },
+    {
+      "ma_nganh": "7340101",
+      "khoa_nhap_hoc": 2025,
+      "prefix_mssv": "1122",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.scribd.com/document/802308532/DS-A-ia-n-form9-16-2024-DS-Tham-gia-chuong-trinh-van-nghe-chao-doan-tan-SV"
+    },
+    {
+      "ma_nganh": "7340301",
+      "khoa_nhap_hoc": 2023,
+      "prefix_mssv": "1119",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.scribd.com/document/1077914533/Dssv-Tham-Du-Le-Phat-Dong-Sh-Chinh-Tri-pdf-15147-1"
+    },
+    {
+      "ma_nganh": "7340301",
+      "khoa_nhap_hoc": 2024,
+      "prefix_mssv": "1119",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.scribd.com/document/1077914533/Dssv-Tham-Du-Le-Phat-Dong-Sh-Chinh-Tri-pdf-15147-1"
+    },
+    {
+      "ma_nganh": "7340301",
+      "khoa_nhap_hoc": 2025,
+      "prefix_mssv": "1119",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.scribd.com/document/1077914533/Dssv-Tham-Du-Le-Phat-Dong-Sh-Chinh-Tri-pdf-15147-1"
+    },
+    {
+      "ma_nganh": "7310101",
+      "khoa_nhap_hoc": 2023,
+      "prefix_mssv": "1146",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.scribd.com/document/1071302050/DA24LDS-114124024-Le-Qui-Xuan-Dang-1"
+    },
+    {
+      "ma_nganh": "7310101",
+      "khoa_nhap_hoc": 2024,
+      "prefix_mssv": "1146",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.scribd.com/document/1071302050/DA24LDS-114124024-Le-Qui-Xuan-Dang-1"
+    },
+    {
+      "ma_nganh": "7310101",
+      "khoa_nhap_hoc": 2025,
+      "prefix_mssv": "1146",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.scribd.com/document/1071302050/DA24LDS-114124024-Le-Qui-Xuan-Dang-1"
+    },
+    {
+      "ma_nganh": "7340201",
+      "khoa_nhap_hoc": 2023,
+      "prefix_mssv": "1145",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://ctsv.tvu.edu.vn/wp-content/uploads/2025/10/Thong-bao-Trung-tuyen-Hoc-bong-tai-tro-Fondation-Dela-Cheneliere-2025-2026.pdf"
+    },
+    {
+      "ma_nganh": "7340201",
+      "khoa_nhap_hoc": 2024,
+      "prefix_mssv": "1145",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://ctsv.tvu.edu.vn/wp-content/uploads/2025/10/Thong-bao-Trung-tuyen-Hoc-bong-tai-tro-Fondation-Dela-Cheneliere-2025-2026.pdf"
+    },
+    {
+      "ma_nganh": "7340201",
+      "khoa_nhap_hoc": 2025,
+      "prefix_mssv": "1145",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://ctsv.tvu.edu.vn/wp-content/uploads/2025/10/Thong-bao-Trung-tuyen-Hoc-bong-tai-tro-Fondation-Dela-Cheneliere-2025-2026.pdf"
+    },
+    {
+      "ma_nganh": "7340406",
+      "khoa_nhap_hoc": 2023,
+      "prefix_mssv": "1109",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.scribd.com/document/1077914533/Dssv-Tham-Du-Le-Phat-Dong-Sh-Chinh-Tri-pdf-15147-1"
+    },
+    {
+      "ma_nganh": "7340406",
+      "khoa_nhap_hoc": 2024,
+      "prefix_mssv": "1109",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.scribd.com/document/1077914533/Dssv-Tham-Du-Le-Phat-Dong-Sh-Chinh-Tri-pdf-15147-1"
+    },
+    {
+      "ma_nganh": "7340406",
+      "khoa_nhap_hoc": 2025,
+      "prefix_mssv": "1109",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.scribd.com/document/1077914533/Dssv-Tham-Du-Le-Phat-Dong-Sh-Chinh-Tri-pdf-15147-1"
+    },
+    {
+      "ma_nganh": "7310205",
+      "khoa_nhap_hoc": 2023,
+      "prefix_mssv": "1174",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://ctsv.tvu.edu.vn/wp-content/uploads/2025/10/Thong-bao-Trung-tuyen-Hoc-bong-tai-tro-Fondation-Dela-Cheneliere-2025-2026.pdf"
+    },
+    {
+      "ma_nganh": "7310205",
+      "khoa_nhap_hoc": 2024,
+      "prefix_mssv": "1174",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://ctsv.tvu.edu.vn/wp-content/uploads/2025/10/Thong-bao-Trung-tuyen-Hoc-bong-tai-tro-Fondation-Dela-Cheneliere-2025-2026.pdf"
+    },
+    {
+      "ma_nganh": "7310205",
+      "khoa_nhap_hoc": 2025,
+      "prefix_mssv": "1174",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://ctsv.tvu.edu.vn/wp-content/uploads/2025/10/Thong-bao-Trung-tuyen-Hoc-bong-tai-tro-Fondation-Dela-Cheneliere-2025-2026.pdf"
+    },
+    {
+      "ma_nganh": "7340122",
+      "khoa_nhap_hoc": 2023,
+      "prefix_mssv": "1176",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.scribd.com/document/1077914533/Dssv-Tham-Du-Le-Phat-Dong-Sh-Chinh-Tri-pdf-15147-1"
+    },
+    {
+      "ma_nganh": "7340122",
+      "khoa_nhap_hoc": 2024,
+      "prefix_mssv": "1176",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.scribd.com/document/1077914533/Dssv-Tham-Du-Le-Phat-Dong-Sh-Chinh-Tri-pdf-15147-1"
+    },
+    {
+      "ma_nganh": "7340122",
+      "khoa_nhap_hoc": 2025,
+      "prefix_mssv": "1176",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.scribd.com/document/1077914533/Dssv-Tham-Du-Le-Phat-Dong-Sh-Chinh-Tri-pdf-15147-1"
+    },
+    {
+      "ma_nganh": "7210201",
+      "khoa_nhap_hoc": 2023,
+      "prefix_mssv": "1171",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://ctsv.tvu.edu.vn/wp-content/uploads/2025/11/Tms.-Thong-bao-KQ-trung-tuyen-HB-HKH-Thuong-gia-Dai-Loan-tai-Viet-Nam-2025.pdf"
+    },
+    {
+      "ma_nganh": "7210201",
+      "khoa_nhap_hoc": 2024,
+      "prefix_mssv": "1171",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://ctsv.tvu.edu.vn/wp-content/uploads/2025/11/Tms.-Thong-bao-KQ-trung-tuyen-HB-HKH-Thuong-gia-Dai-Loan-tai-Viet-Nam-2025.pdf"
+    },
+    {
+      "ma_nganh": "7210201",
+      "khoa_nhap_hoc": 2025,
+      "prefix_mssv": "1171",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://ctsv.tvu.edu.vn/wp-content/uploads/2025/11/Tms.-Thong-bao-KQ-trung-tuyen-HB-HKH-Thuong-gia-Dai-Loan-tai-Viet-Nam-2025.pdf"
+    },
+    {
+      "ma_nganh": "7210210",
+      "khoa_nhap_hoc": 2023,
+      "prefix_mssv": "1155",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.scribd.com/document/1077914535/shgk-truong-claska-pdf-15434-1"
+    },
+    {
+      "ma_nganh": "7210210",
+      "khoa_nhap_hoc": 2024,
+      "prefix_mssv": "1155",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.scribd.com/document/1077914535/shgk-truong-claska-pdf-15434-1"
+    },
+    {
+      "ma_nganh": "7210210",
+      "khoa_nhap_hoc": 2025,
+      "prefix_mssv": "1155",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.scribd.com/document/1077914535/shgk-truong-claska-pdf-15434-1"
+    },
+    {
+      "ma_nganh": "7220201",
+      "khoa_nhap_hoc": 2023,
+      "prefix_mssv": "1104",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://ctsv.tvu.edu.vn/wp-content/uploads/2025/10/Thong-bao-Trung-tuyen-Hoc-bong-tai-tro-Fondation-Dela-Cheneliere-2025-2026.pdf"
+    },
+    {
+      "ma_nganh": "7220201",
+      "khoa_nhap_hoc": 2024,
+      "prefix_mssv": "1104",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://ctsv.tvu.edu.vn/wp-content/uploads/2025/10/Thong-bao-Trung-tuyen-Hoc-bong-tai-tro-Fondation-Dela-Cheneliere-2025-2026.pdf"
+    },
+    {
+      "ma_nganh": "7220201",
+      "khoa_nhap_hoc": 2025,
+      "prefix_mssv": "1104",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://ctsv.tvu.edu.vn/wp-content/uploads/2025/10/Thong-bao-Trung-tuyen-Hoc-bong-tai-tro-Fondation-Dela-Cheneliere-2025-2026.pdf"
+    },
+    {
+      "ma_nganh": "7220106",
+      "khoa_nhap_hoc": 2023,
+      "prefix_mssv": "1148",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.scribd.com/document/1077914535/shgk-truong-claska-pdf-15434-1"
+    },
+    {
+      "ma_nganh": "7220106",
+      "khoa_nhap_hoc": 2024,
+      "prefix_mssv": "1148",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.scribd.com/document/1077914535/shgk-truong-claska-pdf-15434-1"
+    },
+    {
+      "ma_nganh": "7220106",
+      "khoa_nhap_hoc": 2025,
+      "prefix_mssv": "1148",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.scribd.com/document/1077914535/shgk-truong-claska-pdf-15434-1"
+    },
+    {
+      "ma_nganh": "7220204",
+      "khoa_nhap_hoc": 2023,
+      "prefix_mssv": "1187",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://ctsv.tvu.edu.vn/wp-content/uploads/2025/11/Tms.-Thong-bao-KQ-trung-tuyen-HB-HKH-Thuong-gia-Dai-Loan-tai-Viet-Nam-2025.pdf"
+    },
+    {
+      "ma_nganh": "7220204",
+      "khoa_nhap_hoc": 2024,
+      "prefix_mssv": "1187",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://ctsv.tvu.edu.vn/wp-content/uploads/2025/11/Tms.-Thong-bao-KQ-trung-tuyen-HB-HKH-Thuong-gia-Dai-Loan-tai-Viet-Nam-2025.pdf"
+    },
+    {
+      "ma_nganh": "7220204",
+      "khoa_nhap_hoc": 2025,
+      "prefix_mssv": "1187",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://ctsv.tvu.edu.vn/wp-content/uploads/2025/11/Tms.-Thong-bao-KQ-trung-tuyen-HB-HKH-Thuong-gia-Dai-Loan-tai-Viet-Nam-2025.pdf"
+    },
+    {
+      "ma_nganh": "7810103",
+      "khoa_nhap_hoc": 2023,
+      "prefix_mssv": "1166",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.scribd.com/document/1077914535/shgk-truong-claska-pdf-15434-1"
+    },
+    {
+      "ma_nganh": "7810103",
+      "khoa_nhap_hoc": 2024,
+      "prefix_mssv": "1166",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.scribd.com/document/1077914535/shgk-truong-claska-pdf-15434-1"
+    },
+    {
+      "ma_nganh": "7810103",
+      "khoa_nhap_hoc": 2025,
+      "prefix_mssv": "1166",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.scribd.com/document/1077914535/shgk-truong-claska-pdf-15434-1"
+    },
+    {
+      "ma_nganh": "7229040",
+      "khoa_nhap_hoc": 2023,
+      "prefix_mssv": "1125",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.scribd.com/document/1077914533/Dssv-Tham-Du-Le-Phat-Dong-Sh-Chinh-Tri-pdf-15147-1"
+    },
+    {
+      "ma_nganh": "7229040",
+      "khoa_nhap_hoc": 2024,
+      "prefix_mssv": "1125",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.scribd.com/document/1077914533/Dssv-Tham-Du-Le-Phat-Dong-Sh-Chinh-Tri-pdf-15147-1"
+    },
+    {
+      "ma_nganh": "7229040",
+      "khoa_nhap_hoc": 2025,
+      "prefix_mssv": "1125",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.scribd.com/document/1077914533/Dssv-Tham-Du-Le-Phat-Dong-Sh-Chinh-Tri-pdf-15147-1"
+    },
+    {
+      "ma_nganh": "7720101",
+      "khoa_nhap_hoc": 2023,
+      "prefix_mssv": "1160",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.scribd.com/document/971926940/Da23yka-n1-1-1-t%E1%BB%95-3-%C6%B0u-Nh%C6%B0%E1%BB%A3c-%C4%90i%E1%BB%83m-C%E1%BB%A7a-%C4%90%C6%B0%E1%BB%9Dng-Tiem-B%E1%BA%AFp"
+    },
+    {
+      "ma_nganh": "7720101",
+      "khoa_nhap_hoc": 2024,
+      "prefix_mssv": "1160",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.scribd.com/document/971926940/Da23yka-n1-1-1-t%E1%BB%95-3-%C6%B0u-Nh%C6%B0%E1%BB%A3c-%C4%90i%E1%BB%83m-C%E1%BB%A7a-%C4%90%C6%B0%E1%BB%9Dng-Tiem-B%E1%BA%AFp"
+    },
+    {
+      "ma_nganh": "7720101",
+      "khoa_nhap_hoc": 2025,
+      "prefix_mssv": "1160",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.scribd.com/document/971926940/Da23yka-n1-1-1-t%E1%BB%95-3-%C6%B0u-Nh%C6%B0%E1%BB%A3c-%C4%90i%E1%BB%83m-C%E1%BB%A7a-%C4%90%C6%B0%E1%BB%9Dng-Tiem-B%E1%BA%AFp"
+    },
+    {
+      "ma_nganh": "7720501",
+      "khoa_nhap_hoc": 2023,
+      "prefix_mssv": "1164",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.scribd.com/document/1023168829/Danh-Sach-%C4%90a-K%C3%BD-12-Mar-2026-14-23-40-1-1"
+    },
+    {
+      "ma_nganh": "7720501",
+      "khoa_nhap_hoc": 2024,
+      "prefix_mssv": "1164",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.scribd.com/document/1023168829/Danh-Sach-%C4%90a-K%C3%BD-12-Mar-2026-14-23-40-1-1"
+    },
+    {
+      "ma_nganh": "7720501",
+      "khoa_nhap_hoc": 2025,
+      "prefix_mssv": "1164",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.scribd.com/document/1023168829/Danh-Sach-%C4%90a-K%C3%BD-12-Mar-2026-14-23-40-1-1"
+    },
+    {
+      "ma_nganh": "7720301",
+      "khoa_nhap_hoc": 2023,
+      "prefix_mssv": "1154",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.studocu.vn/vn/document/tra-vinh-university/ngon-ngu-hoc/danh-sach-sinh-vien-tham-gia-hoat-dong-truyen-phong-chong-ma-tuy-dh-tra-vinh/155712409"
+    },
+    {
+      "ma_nganh": "7720301",
+      "khoa_nhap_hoc": 2024,
+      "prefix_mssv": "1154",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.studocu.vn/vn/document/tra-vinh-university/ngon-ngu-hoc/danh-sach-sinh-vien-tham-gia-hoat-dong-truyen-phong-chong-ma-tuy-dh-tra-vinh/155712409"
+    },
+    {
+      "ma_nganh": "7720301",
+      "khoa_nhap_hoc": 2025,
+      "prefix_mssv": "1154",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.studocu.vn/vn/document/tra-vinh-university/ngon-ngu-hoc/danh-sach-sinh-vien-tham-gia-hoat-dong-truyen-phong-chong-ma-tuy-dh-tra-vinh/155712409"
+    },
+    {
+      "ma_nganh": "7720110",
+      "khoa_nhap_hoc": 2023,
+      "prefix_mssv": "1183",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.scribd.com/document/872525853/Danh-Sach-C%E1%BB%95-V%C5%A9-Bong-%C4%90a-02032025"
+    },
+    {
+      "ma_nganh": "7720110",
+      "khoa_nhap_hoc": 2024,
+      "prefix_mssv": "1183",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.scribd.com/document/872525853/Danh-Sach-C%E1%BB%95-V%C5%A9-Bong-%C4%90a-02032025"
+    },
+    {
+      "ma_nganh": "7720110",
+      "khoa_nhap_hoc": 2025,
+      "prefix_mssv": "1183",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.scribd.com/document/872525853/Danh-Sach-C%E1%BB%95-V%C5%A9-Bong-%C4%90a-02032025"
+    },
+    {
+      "ma_nganh": "7720602",
+      "khoa_nhap_hoc": 2023,
+      "prefix_mssv": "1184",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.scribd.com/document/802308532/DS-A-ia-n-form9-16-2024-DS-Tham-gia-chuong-trinh-van-nghe-chao-doan-tan-SV"
+    },
+    {
+      "ma_nganh": "7720602",
+      "khoa_nhap_hoc": 2024,
+      "prefix_mssv": "1184",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.scribd.com/document/802308532/DS-A-ia-n-form9-16-2024-DS-Tham-gia-chuong-trinh-van-nghe-chao-doan-tan-SV"
+    },
+    {
+      "ma_nganh": "7720602",
+      "khoa_nhap_hoc": 2025,
+      "prefix_mssv": "1184",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.scribd.com/document/802308532/DS-A-ia-n-form9-16-2024-DS-Tham-gia-chuong-trinh-van-nghe-chao-doan-tan-SV"
+    },
+    {
+      "ma_nganh": "7720603",
+      "khoa_nhap_hoc": 2023,
+      "prefix_mssv": "1173",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.scribd.com/document/872525853/Danh-Sach-C%E1%BB%95-V%C5%A9-Bong-%C4%90a-02032025"
+    },
+    {
+      "ma_nganh": "7720603",
+      "khoa_nhap_hoc": 2024,
+      "prefix_mssv": "1173",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.scribd.com/document/872525853/Danh-Sach-C%E1%BB%95-V%C5%A9-Bong-%C4%90a-02032025"
+    },
+    {
+      "ma_nganh": "7720603",
+      "khoa_nhap_hoc": 2025,
+      "prefix_mssv": "1173",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.scribd.com/document/872525853/Danh-Sach-C%E1%BB%95-V%C5%A9-Bong-%C4%90a-02032025"
+    },
+    {
+      "ma_nganh": "7720601",
+      "khoa_nhap_hoc": 2023,
+      "prefix_mssv": "1153",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.scribd.com/document/802308532/DS-A-ia-n-form9-16-2024-DS-Tham-gia-chuong-trinh-van-nghe-chao-doan-tan-SV"
+    },
+    {
+      "ma_nganh": "7720601",
+      "khoa_nhap_hoc": 2024,
+      "prefix_mssv": "1153",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.scribd.com/document/802308532/DS-A-ia-n-form9-16-2024-DS-Tham-gia-chuong-trinh-van-nghe-chao-doan-tan-SV"
+    },
+    {
+      "ma_nganh": "7720601",
+      "khoa_nhap_hoc": 2025,
+      "prefix_mssv": "1153",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.scribd.com/document/802308532/DS-A-ia-n-form9-16-2024-DS-Tham-gia-chuong-trinh-van-nghe-chao-doan-tan-SV"
+    },
+    {
+      "ma_nganh": "7720701",
+      "khoa_nhap_hoc": 2023,
+      "prefix_mssv": "1161",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.scribd.com/document/1071301957/2026-05-27-1"
+    },
+    {
+      "ma_nganh": "7720701",
+      "khoa_nhap_hoc": 2024,
+      "prefix_mssv": "1161",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.scribd.com/document/1071301957/2026-05-27-1"
+    },
+    {
+      "ma_nganh": "7720701",
+      "khoa_nhap_hoc": 2025,
+      "prefix_mssv": "1161",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.scribd.com/document/1071301957/2026-05-27-1"
+    },
+    {
+      "ma_nganh": "7720201",
+      "khoa_nhap_hoc": 2023,
+      "prefix_mssv": "1156",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.scribd.com/document/1077914533/Dssv-Tham-Du-Le-Phat-Dong-Sh-Chinh-Tri-pdf-15147-1"
+    },
+    {
+      "ma_nganh": "7720201",
+      "khoa_nhap_hoc": 2024,
+      "prefix_mssv": "1156",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.scribd.com/document/1077914533/Dssv-Tham-Du-Le-Phat-Dong-Sh-Chinh-Tri-pdf-15147-1"
+    },
+    {
+      "ma_nganh": "7720201",
+      "khoa_nhap_hoc": 2025,
+      "prefix_mssv": "1156",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.scribd.com/document/1077914533/Dssv-Tham-Du-Le-Phat-Dong-Sh-Chinh-Tri-pdf-15147-1"
+    },
+    {
+      "ma_nganh": "7720203",
+      "khoa_nhap_hoc": 2023,
+      "prefix_mssv": "1188",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu; khóa 23 có tài liệu xuất hiện thêm 112623xxx",
+      "nguon": "https://www.scribd.com/document/1070700988/SHGK-Truong-Y-Duoc"
+    },
+    {
+      "ma_nganh": "7720203",
+      "khoa_nhap_hoc": 2023,
+      "prefix_mssv": "1126",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu; khóa 23 có tài liệu xuất hiện thêm 112623xxx",
+      "nguon": "https://www.scribd.com/document/1070700988/SHGK-Truong-Y-Duoc"
+    },
+    {
+      "ma_nganh": "7720203",
+      "khoa_nhap_hoc": 2024,
+      "prefix_mssv": "1188",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu; khóa 23 có tài liệu xuất hiện thêm 112623xxx",
+      "nguon": "https://www.scribd.com/document/1070700988/SHGK-Truong-Y-Duoc"
+    },
+    {
+      "ma_nganh": "7720203",
+      "khoa_nhap_hoc": 2025,
+      "prefix_mssv": "1188",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu; khóa 23 có tài liệu xuất hiện thêm 112623xxx",
+      "nguon": "https://www.scribd.com/document/1070700988/SHGK-Truong-Y-Duoc"
+    },
+    {
+      "ma_nganh": "7850101",
+      "khoa_nhap_hoc": 2023,
+      "prefix_mssv": "1191",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.scribd.com/document/1071302050/DA24LDS-114124024-Le-Qui-Xuan-Dang-1"
+    },
+    {
+      "ma_nganh": "7850101",
+      "khoa_nhap_hoc": 2024,
+      "prefix_mssv": "1191",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.scribd.com/document/1071302050/DA24LDS-114124024-Le-Qui-Xuan-Dang-1"
+    },
+    {
+      "ma_nganh": "7850101",
+      "khoa_nhap_hoc": 2025,
+      "prefix_mssv": "1191",
+      "xac_minh": true,
+      "ghi_chu": "Đã đối chiếu",
+      "nguon": "https://www.scribd.com/document/1071302050/DA24LDS-114124024-Le-Qui-Xuan-Dang-1"
+    }
+  ],
+  "danh_muc_giang_vien_tvu": [
+    {
+      "khoa_don_vi": "Khoa Công nghệ thông tin – Trường Kỹ thuật và Công nghệ",
+      "ho_ten": "Nguyễn Nhứt Lam",
+      "hoc_vi": "TS.",
+      "chuc_vu": "Trưởng khoa",
+      "linh_vuc": "Graph neural network; Social network analysis; Deep learning for smart city; AI",
+      "nguon_url": "https://cet.tvu.edu.vn/index.php/giang-vien/thong-tin-giang-vien/khoa-cong-nghe-thong-tin",
+      "dang_hoat_dong": true
+    },
+    {
+      "khoa_don_vi": "Khoa Công nghệ thông tin – Trường Kỹ thuật và Công nghệ",
+      "ho_ten": "Thạch Kọng Saoane",
+      "hoc_vi": "TS.",
+      "chuc_vu": "Phó Trưởng khoa",
+      "linh_vuc": null,
+      "nguon_url": "https://cet.tvu.edu.vn/index.php/giang-vien/thong-tin-giang-vien/khoa-cong-nghe-thong-tin",
+      "dang_hoat_dong": true
+    },
+    {
+      "khoa_don_vi": "Khoa Công nghệ thông tin – Trường Kỹ thuật và Công nghệ",
+      "ho_ten": "Nguyễn Trần Diễm Hạnh",
+      "hoc_vi": "TS.",
+      "chuc_vu": "Phó Trưởng khoa",
+      "linh_vuc": null,
+      "nguon_url": "https://cet.tvu.edu.vn/index.php/giang-vien/thong-tin-giang-vien/khoa-cong-nghe-thong-tin",
+      "dang_hoat_dong": true
+    },
+    {
+      "khoa_don_vi": "Khoa Công nghệ thông tin – Trường Kỹ thuật và Công nghệ",
+      "ho_ten": "Nguyễn Bá Nhiệm",
+      "hoc_vi": "ThS.",
+      "chuc_vu": "Phó Trưởng khoa",
+      "linh_vuc": null,
+      "nguon_url": "https://cet.tvu.edu.vn/index.php/giang-vien/thong-tin-giang-vien/khoa-cong-nghe-thong-tin",
+      "dang_hoat_dong": true
+    },
+    {
+      "khoa_don_vi": "Khoa Công nghệ thông tin – Trường Kỹ thuật và Công nghệ",
+      "ho_ten": "Lê Phong Dũ",
+      "hoc_vi": "ThS.",
+      "chuc_vu": "Phó Trưởng khoa",
+      "linh_vuc": "Điều khiển tắc nghẽn mạng; Mạng hướng nội dung; Mạng xã hội",
+      "nguon_url": "https://cet.tvu.edu.vn/index.php/giang-vien/thong-tin-giang-vien/khoa-cong-nghe-thong-tin",
+      "dang_hoat_dong": true
+    },
+    {
+      "khoa_don_vi": "Khoa Công nghệ thông tin – Trường Kỹ thuật và Công nghệ",
+      "ho_ten": "Đoàn Phước Miền",
+      "hoc_vi": "TS.",
+      "chuc_vu": "Giảng viên",
+      "linh_vuc": "Thị giác máy tính; xử lý ảnh",
+      "nguon_url": "https://cet.tvu.edu.vn/index.php/giang-vien/thong-tin-giang-vien/khoa-cong-nghe-thong-tin",
+      "dang_hoat_dong": true
+    },
+    {
+      "khoa_don_vi": "Khoa Công nghệ thông tin – Trường Kỹ thuật và Công nghệ",
+      "ho_ten": "Võ Thành C",
+      "hoc_vi": "ThS.",
+      "chuc_vu": "Giảng viên",
+      "linh_vuc": null,
+      "nguon_url": "https://cet.tvu.edu.vn/index.php/giang-vien/thong-tin-giang-vien/khoa-cong-nghe-thong-tin",
+      "dang_hoat_dong": true
+    },
+    {
+      "khoa_don_vi": "Khoa Công nghệ thông tin – Trường Kỹ thuật và Công nghệ",
+      "ho_ten": "Trịnh Quốc Việt",
+      "hoc_vi": "ThS.",
+      "chuc_vu": "Giảng viên",
+      "linh_vuc": null,
+      "nguon_url": "https://cet.tvu.edu.vn/index.php/giang-vien/thong-tin-giang-vien/khoa-cong-nghe-thong-tin",
+      "dang_hoat_dong": true
+    },
+    {
+      "khoa_don_vi": "Khoa Công nghệ thông tin – Trường Kỹ thuật và Công nghệ",
+      "ho_ten": "Trần Văn Nam",
+      "hoc_vi": "ThS.",
+      "chuc_vu": "Giảng viên",
+      "linh_vuc": "Xử lý ngôn ngữ tự nhiên",
+      "nguon_url": "https://cet.tvu.edu.vn/index.php/giang-vien/thong-tin-giang-vien/khoa-cong-nghe-thong-tin",
+      "dang_hoat_dong": true
+    },
+    {
+      "khoa_don_vi": "Khoa Công nghệ thông tin – Trường Kỹ thuật và Công nghệ",
+      "ho_ten": "Trầm Hoàng Nam",
+      "hoc_vi": "ThS.",
+      "chuc_vu": "Giảng viên",
+      "linh_vuc": null,
+      "nguon_url": "https://cet.tvu.edu.vn/index.php/giang-vien/thong-tin-giang-vien/khoa-cong-nghe-thong-tin",
+      "dang_hoat_dong": true
+    },
+    {
+      "khoa_don_vi": "Khoa Công nghệ thông tin – Trường Kỹ thuật và Công nghệ",
+      "ho_ten": "Phan Thị Phương Nam",
+      "hoc_vi": "ThS.",
+      "chuc_vu": "Giảng viên",
+      "linh_vuc": null,
+      "nguon_url": "https://cet.tvu.edu.vn/index.php/giang-vien/thong-tin-giang-vien/khoa-cong-nghe-thong-tin",
+      "dang_hoat_dong": true
+    },
+    {
+      "khoa_don_vi": "Khoa Công nghệ thông tin – Trường Kỹ thuật và Công nghệ",
+      "ho_ten": "Phạm Thị Trúc Mai",
+      "hoc_vi": "ThS.",
+      "chuc_vu": "Giảng viên",
+      "linh_vuc": "Phát triển ứng dụng web mã nguồn mở; Hệ chuyên gia; Khai phá dữ liệu; Phân tích dữ liệu; Phân tích mạng xã hội",
+      "nguon_url": "https://cet.tvu.edu.vn/index.php/giang-vien/thong-tin-giang-vien/khoa-cong-nghe-thong-tin",
+      "dang_hoat_dong": true
+    },
+    {
+      "khoa_don_vi": "Khoa Công nghệ thông tin – Trường Kỹ thuật và Công nghệ",
+      "ho_ten": "Phạm Minh Đương",
+      "hoc_vi": "ThS.",
+      "chuc_vu": "Giảng viên",
+      "linh_vuc": "Công nghệ thông tin và ứng dụng",
+      "nguon_url": "https://cet.tvu.edu.vn/index.php/giang-vien/thong-tin-giang-vien/khoa-cong-nghe-thong-tin",
+      "dang_hoat_dong": true
+    },
+    {
+      "khoa_don_vi": "Khoa Công nghệ thông tin – Trường Kỹ thuật và Công nghệ",
+      "ho_ten": "Nguyễn Thừa Phát Tài",
+      "hoc_vi": "ThS.",
+      "chuc_vu": "Giảng viên",
+      "linh_vuc": "Hệ thống thông tin",
+      "nguon_url": "https://cet.tvu.edu.vn/index.php/giang-vien/thong-tin-giang-vien/khoa-cong-nghe-thong-tin",
+      "dang_hoat_dong": true
+    },
+    {
+      "khoa_don_vi": "Khoa Công nghệ thông tin – Trường Kỹ thuật và Công nghệ",
+      "ho_ten": "Nguyễn Ngọc Đan Thanh",
+      "hoc_vi": "ThS.",
+      "chuc_vu": "Giảng viên",
+      "linh_vuc": null,
+      "nguon_url": "https://cet.tvu.edu.vn/index.php/giang-vien/thong-tin-giang-vien/khoa-cong-nghe-thong-tin",
+      "dang_hoat_dong": true
+    },
+    {
+      "khoa_don_vi": "Khoa Công nghệ thông tin – Trường Kỹ thuật và Công nghệ",
+      "ho_ten": "Nguyễn Mộng Hiền",
+      "hoc_vi": "ThS.",
+      "chuc_vu": "Giảng viên",
+      "linh_vuc": "Thị giác máy tính; xử lý ảnh",
+      "nguon_url": "https://cet.tvu.edu.vn/index.php/giang-vien/thong-tin-giang-vien/khoa-cong-nghe-thong-tin",
+      "dang_hoat_dong": true
+    },
+    {
+      "khoa_don_vi": "Khoa Công nghệ thông tin – Trường Kỹ thuật và Công nghệ",
+      "ho_ten": "Nguyễn Khắc Quốc",
+      "hoc_vi": "ThS.",
+      "chuc_vu": "Giảng viên",
+      "linh_vuc": null,
+      "nguon_url": "https://cet.tvu.edu.vn/index.php/giang-vien/thong-tin-giang-vien/khoa-cong-nghe-thong-tin",
+      "dang_hoat_dong": true
+    },
+    {
+      "khoa_don_vi": "Khoa Công nghệ thông tin – Trường Kỹ thuật và Công nghệ",
+      "ho_ten": "Nguyễn Hoàng Duy Thiện",
+      "hoc_vi": "ThS.",
+      "chuc_vu": "Giảng viên",
+      "linh_vuc": "Lập trình di động; Điện toán đám mây; E-learning",
+      "nguon_url": "https://cet.tvu.edu.vn/index.php/giang-vien/thong-tin-giang-vien/khoa-cong-nghe-thong-tin",
+      "dang_hoat_dong": true
+    },
+    {
+      "khoa_don_vi": "Khoa Công nghệ thông tin – Trường Kỹ thuật và Công nghệ",
+      "ho_ten": "Ngô Thanh Huy",
+      "hoc_vi": "ThS.",
+      "chuc_vu": "Giảng viên",
+      "linh_vuc": null,
+      "nguon_url": "https://cet.tvu.edu.vn/index.php/giang-vien/thong-tin-giang-vien/khoa-cong-nghe-thong-tin",
+      "dang_hoat_dong": true
+    },
+    {
+      "khoa_don_vi": "Khoa Công nghệ thông tin – Trường Kỹ thuật và Công nghệ",
+      "ho_ten": "Lê Minh Tự",
+      "hoc_vi": "ThS.",
+      "chuc_vu": "Giảng viên",
+      "linh_vuc": null,
+      "nguon_url": "https://cet.tvu.edu.vn/index.php/giang-vien/thong-tin-giang-vien/khoa-cong-nghe-thong-tin",
+      "dang_hoat_dong": true
+    },
+    {
+      "khoa_don_vi": "Khoa Công nghệ thông tin – Trường Kỹ thuật và Công nghệ",
+      "ho_ten": "Khấu Văn Nhựt",
+      "hoc_vi": "ThS.",
+      "chuc_vu": "Giảng viên",
+      "linh_vuc": null,
+      "nguon_url": "https://cet.tvu.edu.vn/index.php/giang-vien/thong-tin-giang-vien/khoa-cong-nghe-thong-tin",
+      "dang_hoat_dong": true
+    },
+    {
+      "khoa_don_vi": "Khoa Công nghệ thông tin – Trường Kỹ thuật và Công nghệ",
+      "ho_ten": "Huỳnh Văn Thanh",
+      "hoc_vi": "ThS.",
+      "chuc_vu": "Giảng viên",
+      "linh_vuc": null,
+      "nguon_url": "https://cet.tvu.edu.vn/index.php/giang-vien/thong-tin-giang-vien/khoa-cong-nghe-thong-tin",
+      "dang_hoat_dong": true
+    },
+    {
+      "khoa_don_vi": "Khoa Công nghệ thông tin – Trường Kỹ thuật và Công nghệ",
+      "ho_ten": "Hà Thị Thúy Vi",
+      "hoc_vi": "ThS.",
+      "chuc_vu": "Giảng viên",
+      "linh_vuc": null,
+      "nguon_url": "https://cet.tvu.edu.vn/index.php/giang-vien/thong-tin-giang-vien/khoa-cong-nghe-thong-tin",
+      "dang_hoat_dong": true
+    },
+    {
+      "khoa_don_vi": "Khoa Công nghệ thông tin – Trường Kỹ thuật và Công nghệ",
+      "ho_ten": "Dương Ngọc Vân Khanh",
+      "hoc_vi": "ThS.",
+      "chuc_vu": "Giảng viên",
+      "linh_vuc": "Data hiding",
+      "nguon_url": "https://cet.tvu.edu.vn/index.php/giang-vien/thong-tin-giang-vien/khoa-cong-nghe-thong-tin",
+      "dang_hoat_dong": true
+    },
+    {
+      "khoa_don_vi": "Khoa Điện – Điện tử – Trường Kỹ thuật và Công nghệ",
+      "ho_ten": "Cao Phương Thảo",
+      "hoc_vi": "TS.",
+      "chuc_vu": "Trưởng khoa",
+      "linh_vuc": null,
+      "nguon_url": "https://cet.tvu.edu.vn/index.php/giang-vien/thong-tin-giang-vien/khoa-dien-dientu",
+      "dang_hoat_dong": true
+    },
+    {
+      "khoa_don_vi": "Khoa Điện – Điện tử – Trường Kỹ thuật và Công nghệ",
+      "ho_ten": "Trần Song Toàn",
+      "hoc_vi": "TS.",
+      "chuc_vu": "Phó Trưởng khoa",
+      "linh_vuc": null,
+      "nguon_url": "https://cet.tvu.edu.vn/index.php/giang-vien/thong-tin-giang-vien/khoa-dien-dientu",
+      "dang_hoat_dong": true
+    },
+    {
+      "khoa_don_vi": "Khoa Điện – Điện tử – Trường Kỹ thuật và Công nghệ",
+      "ho_ten": "Lê Minh Hải",
+      "hoc_vi": "TS.",
+      "chuc_vu": "Phó Trưởng khoa",
+      "linh_vuc": null,
+      "nguon_url": "https://cet.tvu.edu.vn/index.php/giang-vien/thong-tin-giang-vien/khoa-dien-dientu",
+      "dang_hoat_dong": true
+    },
+    {
+      "khoa_don_vi": "Khoa Điện – Điện tử – Trường Kỹ thuật và Công nghệ",
+      "ho_ten": "Nguyễn Thanh Hiền",
+      "hoc_vi": "ThS.",
+      "chuc_vu": "Phó Trưởng khoa",
+      "linh_vuc": null,
+      "nguon_url": "https://cet.tvu.edu.vn/index.php/giang-vien/thong-tin-giang-vien/khoa-dien-dientu",
+      "dang_hoat_dong": true
+    },
+    {
+      "khoa_don_vi": "Khoa Điện – Điện tử – Trường Kỹ thuật và Công nghệ",
+      "ho_ten": "Nguyễn Đức Hiệu",
+      "hoc_vi": "ThS.",
+      "chuc_vu": "Phó Trưởng khoa",
+      "linh_vuc": null,
+      "nguon_url": "https://cet.tvu.edu.vn/index.php/giang-vien/thong-tin-giang-vien/khoa-dien-dientu",
+      "dang_hoat_dong": true
+    },
+    {
+      "khoa_don_vi": "Khoa Điện – Điện tử – Trường Kỹ thuật và Công nghệ",
+      "ho_ten": "Triệu Quốc Huy",
+      "hoc_vi": "ThS.",
+      "chuc_vu": "Giảng viên",
+      "linh_vuc": null,
+      "nguon_url": "https://cet.tvu.edu.vn/index.php/giang-vien/thong-tin-giang-vien/khoa-dien-dientu",
+      "dang_hoat_dong": true
+    },
+    {
+      "khoa_don_vi": "Khoa Điện – Điện tử – Trường Kỹ thuật và Công nghệ",
+      "ho_ten": "Thạch Thị Via Sa Na",
+      "hoc_vi": "ThS.",
+      "chuc_vu": "Giảng viên",
+      "linh_vuc": null,
+      "nguon_url": "https://cet.tvu.edu.vn/index.php/giang-vien/thong-tin-giang-vien/khoa-dien-dientu",
+      "dang_hoat_dong": true
+    },
+    {
+      "khoa_don_vi": "Khoa Điện – Điện tử – Trường Kỹ thuật và Công nghệ",
+      "ho_ten": "Phan Thế Hiếu",
+      "hoc_vi": "ThS.",
+      "chuc_vu": "Giảng viên",
+      "linh_vuc": null,
+      "nguon_url": "https://cet.tvu.edu.vn/index.php/giang-vien/thong-tin-giang-vien/khoa-dien-dientu",
+      "dang_hoat_dong": true
+    },
+    {
+      "khoa_don_vi": "Khoa Điện – Điện tử – Trường Kỹ thuật và Công nghệ",
+      "ho_ten": "Nguyễn Thanh Tần",
+      "hoc_vi": "ThS.",
+      "chuc_vu": "Giảng viên",
+      "linh_vuc": null,
+      "nguon_url": "https://cet.tvu.edu.vn/index.php/giang-vien/thong-tin-giang-vien/khoa-dien-dientu",
+      "dang_hoat_dong": true
+    },
+    {
+      "khoa_don_vi": "Khoa Điện – Điện tử – Trường Kỹ thuật và Công nghệ",
+      "ho_ten": "Nguyễn Ngọc Tiền",
+      "hoc_vi": "ThS.",
+      "chuc_vu": "Giảng viên",
+      "linh_vuc": null,
+      "nguon_url": "https://cet.tvu.edu.vn/index.php/giang-vien/thong-tin-giang-vien/khoa-dien-dientu",
+      "dang_hoat_dong": true
+    },
+    {
+      "khoa_don_vi": "Khoa Điện – Điện tử – Trường Kỹ thuật và Công nghệ",
+      "ho_ten": "Nguyễn Hoàng Vũ",
+      "hoc_vi": "ThS.",
+      "chuc_vu": "Giảng viên",
+      "linh_vuc": null,
+      "nguon_url": "https://cet.tvu.edu.vn/index.php/giang-vien/thong-tin-giang-vien/khoa-dien-dientu",
+      "dang_hoat_dong": true
+    },
+    {
+      "khoa_don_vi": "Khoa Điện – Điện tử – Trường Kỹ thuật và Công nghệ",
+      "ho_ten": "Lê Thanh Tùng",
+      "hoc_vi": "ThS.",
+      "chuc_vu": "Giảng viên",
+      "linh_vuc": null,
+      "nguon_url": "https://cet.tvu.edu.vn/index.php/giang-vien/thong-tin-giang-vien/khoa-dien-dientu",
+      "dang_hoat_dong": true
+    },
+    {
+      "khoa_don_vi": "Khoa Điện – Điện tử – Trường Kỹ thuật và Công nghệ",
+      "ho_ten": "Lê Thành Nam",
+      "hoc_vi": "ThS.",
+      "chuc_vu": "Giảng viên",
+      "linh_vuc": null,
+      "nguon_url": "https://cet.tvu.edu.vn/index.php/giang-vien/thong-tin-giang-vien/khoa-dien-dientu",
+      "dang_hoat_dong": true
+    },
+    {
+      "khoa_don_vi": "Khoa Điện – Điện tử – Trường Kỹ thuật và Công nghệ",
+      "ho_ten": "Kim Anh Tuấn",
+      "hoc_vi": "ThS.",
+      "chuc_vu": "Giảng viên",
+      "linh_vuc": null,
+      "nguon_url": "https://cet.tvu.edu.vn/index.php/giang-vien/thong-tin-giang-vien/khoa-dien-dientu",
+      "dang_hoat_dong": true
+    },
+    {
+      "khoa_don_vi": "Khoa Điện – Điện tử – Trường Kỹ thuật và Công nghệ",
+      "ho_ten": "Đặng Hữu Phúc",
+      "hoc_vi": "ThS.",
+      "chuc_vu": "Giảng viên",
+      "linh_vuc": null,
+      "nguon_url": "https://cet.tvu.edu.vn/index.php/giang-vien/thong-tin-giang-vien/khoa-dien-dientu",
+      "dang_hoat_dong": true
+    },
+    {
+      "khoa_don_vi": "Khoa Điện – Điện tử – Trường Kỹ thuật và Công nghệ",
+      "ho_ten": "Đặng Hoàng Minh",
+      "hoc_vi": "ThS.",
+      "chuc_vu": "Giảng viên",
+      "linh_vuc": null,
+      "nguon_url": "https://cet.tvu.edu.vn/index.php/giang-vien/thong-tin-giang-vien/khoa-dien-dientu",
+      "dang_hoat_dong": true
+    },
+    {
+      "khoa_don_vi": "Khoa Điện – Điện tử – Trường Kỹ thuật và Công nghệ",
+      "ho_ten": "Phạm Tấn Hưng",
+      "hoc_vi": "ThS.",
+      "chuc_vu": "Giảng viên",
+      "linh_vuc": null,
+      "nguon_url": "https://cet.tvu.edu.vn/index.php/giang-vien/thong-tin-giang-vien/khoa-dien-dientu",
+      "dang_hoat_dong": true
+    },
+    {
+      "khoa_don_vi": "Khoa Điện – Điện tử – Trường Kỹ thuật và Công nghệ",
+      "ho_ten": "Phạm Minh Triết",
+      "hoc_vi": "ThS.",
+      "chuc_vu": "Giảng viên",
+      "linh_vuc": null,
+      "nguon_url": "https://cet.tvu.edu.vn/index.php/giang-vien/thong-tin-giang-vien/khoa-dien-dientu",
+      "dang_hoat_dong": true
+    },
+    {
+      "khoa_don_vi": "Khoa Điện – Điện tử – Trường Kỹ thuật và Công nghệ",
+      "ho_ten": "Bùi Thị Thu Thủy",
+      "hoc_vi": "ThS.",
+      "chuc_vu": "Giảng viên",
+      "linh_vuc": null,
+      "nguon_url": "https://cet.tvu.edu.vn/index.php/giang-vien/thong-tin-giang-vien/khoa-dien-dientu",
+      "dang_hoat_dong": true
+    },
+    {
+      "khoa_don_vi": "Khoa Kỹ thuật hóa học – Trường Kỹ thuật và Công nghệ",
+      "ho_ten": "Huỳnh Tấn Thành",
+      "hoc_vi": "TS.",
+      "chuc_vu": "Trưởng khoa",
+      "linh_vuc": null,
+      "nguon_url": "https://cet.tvu.edu.vn/index.php/giang-vien/thong-tin-giang-vien/khoa-ky-thuat-hoa-hoc",
+      "dang_hoat_dong": true
+    },
+    {
+      "khoa_don_vi": "Khoa Kỹ thuật hóa học – Trường Kỹ thuật và Công nghệ",
+      "ho_ten": "Lê Ngọc Long",
+      "hoc_vi": "TS.",
+      "chuc_vu": "Phó Trưởng khoa",
+      "linh_vuc": null,
+      "nguon_url": "https://cet.tvu.edu.vn/index.php/giang-vien/thong-tin-giang-vien/khoa-ky-thuat-hoa-hoc",
+      "dang_hoat_dong": true
+    },
+    {
+      "khoa_don_vi": "Khoa Kỹ thuật hóa học – Trường Kỹ thuật và Công nghệ",
+      "ho_ten": "Nguyễn Thiện Thảo",
+      "hoc_vi": "TS.",
+      "chuc_vu": "Phó Trưởng khoa",
+      "linh_vuc": null,
+      "nguon_url": "https://cet.tvu.edu.vn/index.php/giang-vien/thong-tin-giang-vien/khoa-ky-thuat-hoa-hoc",
+      "dang_hoat_dong": true
+    },
+    {
+      "khoa_don_vi": "Khoa Kỹ thuật hóa học – Trường Kỹ thuật và Công nghệ",
+      "ho_ten": "Nguyễn Thị Thu Hà",
+      "hoc_vi": "ThS.",
+      "chuc_vu": "Giảng viên",
+      "linh_vuc": null,
+      "nguon_url": "https://cet.tvu.edu.vn/index.php/giang-vien/thong-tin-giang-vien/khoa-ky-thuat-hoa-hoc",
+      "dang_hoat_dong": true
+    },
+    {
+      "khoa_don_vi": "Khoa Kỹ thuật hóa học – Trường Kỹ thuật và Công nghệ",
+      "ho_ten": "Nguyễn Thị Anh Thư",
+      "hoc_vi": "ThS.",
+      "chuc_vu": "Giảng viên",
+      "linh_vuc": null,
+      "nguon_url": "https://cet.tvu.edu.vn/index.php/giang-vien/thong-tin-giang-vien/khoa-ky-thuat-hoa-hoc",
+      "dang_hoat_dong": true
+    },
+    {
+      "khoa_don_vi": "Khoa Kỹ thuật hóa học – Trường Kỹ thuật và Công nghệ",
+      "ho_ten": "Mai Thị Thùy Lam",
+      "hoc_vi": "ThS.",
+      "chuc_vu": "Giảng viên",
+      "linh_vuc": null,
+      "nguon_url": "https://cet.tvu.edu.vn/index.php/giang-vien/thong-tin-giang-vien/khoa-ky-thuat-hoa-hoc",
+      "dang_hoat_dong": true
+    },
+    {
+      "khoa_don_vi": "Khoa Kỹ thuật hóa học – Trường Kỹ thuật và Công nghệ",
+      "ho_ten": "Mã Thái Hòa",
+      "hoc_vi": "ThS.",
+      "chuc_vu": "Giảng viên",
+      "linh_vuc": null,
+      "nguon_url": "https://cet.tvu.edu.vn/index.php/giang-vien/thong-tin-giang-vien/khoa-ky-thuat-hoa-hoc",
+      "dang_hoat_dong": true
+    },
+    {
+      "khoa_don_vi": "Khoa Kỹ thuật hóa học – Trường Kỹ thuật và Công nghệ",
+      "ho_ten": "Huỳnh Thị Hồng Hoa",
+      "hoc_vi": "ThS.",
+      "chuc_vu": "Giảng viên",
+      "linh_vuc": null,
+      "nguon_url": "https://cet.tvu.edu.vn/index.php/giang-vien/thong-tin-giang-vien/khoa-ky-thuat-hoa-hoc",
+      "dang_hoat_dong": true
+    },
+    {
+      "khoa_don_vi": "Khoa Môi trường – Trường Kỹ thuật và Công nghệ",
+      "ho_ten": "Nguyễn Thành Tựu",
+      "hoc_vi": "TS.",
+      "chuc_vu": "Trưởng khoa",
+      "linh_vuc": null,
+      "nguon_url": "https://cet.tvu.edu.vn/index.php/giang-vien/thong-tin-giang-vien/khoa-moi-truong",
+      "dang_hoat_dong": true
+    },
+    {
+      "khoa_don_vi": "Khoa Môi trường – Trường Kỹ thuật và Công nghệ",
+      "ho_ten": "Phạm Kim Long",
+      "hoc_vi": "TS.",
+      "chuc_vu": "Giảng viên",
+      "linh_vuc": null,
+      "nguon_url": "https://cet.tvu.edu.vn/index.php/giang-vien/thong-tin-giang-vien/khoa-moi-truong",
+      "dang_hoat_dong": true
+    },
+    {
+      "khoa_don_vi": "Khoa Môi trường – Trường Kỹ thuật và Công nghệ",
+      "ho_ten": "Vương Tuấn Phong",
+      "hoc_vi": "ThS.",
+      "chuc_vu": "Giảng viên",
+      "linh_vuc": null,
+      "nguon_url": "https://cet.tvu.edu.vn/index.php/giang-vien/thong-tin-giang-vien/khoa-moi-truong",
+      "dang_hoat_dong": true
+    },
+    {
+      "khoa_don_vi": "Khoa Môi trường – Trường Kỹ thuật và Công nghệ",
+      "ho_ten": "Nguyễn Hoàng Lâm",
+      "hoc_vi": "TS.",
+      "chuc_vu": "Giảng viên",
+      "linh_vuc": null,
+      "nguon_url": "https://cet.tvu.edu.vn/index.php/giang-vien/thong-tin-giang-vien/khoa-moi-truong",
+      "dang_hoat_dong": true
+    },
+    {
+      "khoa_don_vi": "Khoa Môi trường – Trường Kỹ thuật và Công nghệ",
+      "ho_ten": "Lê Ngọc Phương Khanh",
+      "hoc_vi": "ThS.",
+      "chuc_vu": "Giảng viên",
+      "linh_vuc": null,
+      "nguon_url": "https://cet.tvu.edu.vn/index.php/giang-vien/thong-tin-giang-vien/khoa-moi-truong",
+      "dang_hoat_dong": true
+    },
+    {
+      "khoa_don_vi": "Khoa Xây dựng – Trường Kỹ thuật và Công nghệ",
+      "ho_ten": "Huỳnh Văn Hiệp",
+      "hoc_vi": "TS.",
+      "chuc_vu": "Trưởng khoa",
+      "linh_vuc": null,
+      "nguon_url": "https://cet.tvu.edu.vn/index.php/giang-vien/thong-tin-giang-vien/khoa-xay-dung",
+      "dang_hoat_dong": true
+    },
+    {
+      "khoa_don_vi": "Khoa Xây dựng – Trường Kỹ thuật và Công nghệ",
+      "ho_ten": "Nguyễn Vy Thanh",
+      "hoc_vi": "TS.",
+      "chuc_vu": "Phó Trưởng khoa",
+      "linh_vuc": null,
+      "nguon_url": "https://cet.tvu.edu.vn/index.php/giang-vien/thong-tin-giang-vien/khoa-xay-dung",
+      "dang_hoat_dong": true
+    },
+    {
+      "khoa_don_vi": "Khoa Xây dựng – Trường Kỹ thuật và Công nghệ",
+      "ho_ten": "Đoàn Công Chánh",
+      "hoc_vi": "ThS.",
+      "chuc_vu": "Phó Trưởng khoa",
+      "linh_vuc": null,
+      "nguon_url": "https://cet.tvu.edu.vn/index.php/giang-vien/thong-tin-giang-vien/khoa-xay-dung",
+      "dang_hoat_dong": true
+    },
+    {
+      "khoa_don_vi": "Khoa Xây dựng – Trường Kỹ thuật và Công nghệ",
+      "ho_ten": "Nguyễn Thanh Tâm",
+      "hoc_vi": "TS.",
+      "chuc_vu": "Giảng viên",
+      "linh_vuc": null,
+      "nguon_url": "https://cet.tvu.edu.vn/index.php/giang-vien/thong-tin-giang-vien/khoa-xay-dung",
+      "dang_hoat_dong": true
+    },
+    {
+      "khoa_don_vi": "Khoa Xây dựng – Trường Kỹ thuật và Công nghệ",
+      "ho_ten": "Võ Minh Huy",
+      "hoc_vi": "TS.",
+      "chuc_vu": "Giảng viên",
+      "linh_vuc": null,
+      "nguon_url": "https://cet.tvu.edu.vn/index.php/giang-vien/thong-tin-giang-vien/khoa-xay-dung",
+      "dang_hoat_dong": true
+    },
+    {
+      "khoa_don_vi": "Khoa Xây dựng – Trường Kỹ thuật và Công nghệ",
+      "ho_ten": "Từ Hồng Nhung",
+      "hoc_vi": "ThS.",
+      "chuc_vu": "Giảng viên",
+      "linh_vuc": null,
+      "nguon_url": "https://cet.tvu.edu.vn/index.php/giang-vien/thong-tin-giang-vien/khoa-xay-dung",
+      "dang_hoat_dong": true
+    },
+    {
+      "khoa_don_vi": "Khoa Xây dựng – Trường Kỹ thuật và Công nghệ",
+      "ho_ten": "Trần Văn Khánh",
+      "hoc_vi": "ThS.",
+      "chuc_vu": "Giảng viên",
+      "linh_vuc": null,
+      "nguon_url": "https://cet.tvu.edu.vn/index.php/giang-vien/thong-tin-giang-vien/khoa-xay-dung",
+      "dang_hoat_dong": true
+    },
+    {
+      "khoa_don_vi": "Khoa Xây dựng – Trường Kỹ thuật và Công nghệ",
+      "ho_ten": "Trần Thanh Vũ",
+      "hoc_vi": "ThS.",
+      "chuc_vu": "Giảng viên",
+      "linh_vuc": null,
+      "nguon_url": "https://cet.tvu.edu.vn/index.php/giang-vien/thong-tin-giang-vien/khoa-xay-dung",
+      "dang_hoat_dong": true
+    },
+    {
+      "khoa_don_vi": "Khoa Xây dựng – Trường Kỹ thuật và Công nghệ",
+      "ho_ten": "Thạch Vũ Đình Vi",
+      "hoc_vi": "ThS.",
+      "chuc_vu": "Giảng viên",
+      "linh_vuc": null,
+      "nguon_url": "https://cet.tvu.edu.vn/index.php/giang-vien/thong-tin-giang-vien/khoa-xay-dung",
+      "dang_hoat_dong": true
+    },
+    {
+      "khoa_don_vi": "Khoa Xây dựng – Trường Kỹ thuật và Công nghệ",
+      "ho_ten": "Nguyễn Thành Công",
+      "hoc_vi": "ThS.",
+      "chuc_vu": "Giảng viên",
+      "linh_vuc": null,
+      "nguon_url": "https://cet.tvu.edu.vn/index.php/giang-vien/thong-tin-giang-vien/khoa-xay-dung",
+      "dang_hoat_dong": true
+    },
+    {
+      "khoa_don_vi": "Khoa Xây dựng – Trường Kỹ thuật và Công nghệ",
+      "ho_ten": "Nguyễn Phú Nhuận",
+      "hoc_vi": "ThS.",
+      "chuc_vu": "Giảng viên",
+      "linh_vuc": null,
+      "nguon_url": "https://cet.tvu.edu.vn/index.php/giang-vien/thong-tin-giang-vien/khoa-xay-dung",
+      "dang_hoat_dong": true
+    },
+    {
+      "khoa_don_vi": "Khoa Xây dựng – Trường Kỹ thuật và Công nghệ",
+      "ho_ten": "Ngô Gia Truyền",
+      "hoc_vi": "ThS.",
+      "chuc_vu": "Giảng viên",
+      "linh_vuc": null,
+      "nguon_url": "https://cet.tvu.edu.vn/index.php/giang-vien/thong-tin-giang-vien/khoa-xay-dung",
+      "dang_hoat_dong": true
+    },
+    {
+      "khoa_don_vi": "Khoa Xây dựng – Trường Kỹ thuật và Công nghệ",
+      "ho_ten": "Kỷ Minh Hưng",
+      "hoc_vi": "ThS.",
+      "chuc_vu": "Giảng viên",
+      "linh_vuc": null,
+      "nguon_url": "https://cet.tvu.edu.vn/index.php/giang-vien/thong-tin-giang-vien/khoa-xay-dung",
+      "dang_hoat_dong": true
+    },
+    {
+      "khoa_don_vi": "Khoa Xây dựng – Trường Kỹ thuật và Công nghệ",
+      "ho_ten": "Huỳnh Thị Mỹ Dung",
+      "hoc_vi": "ThS.",
+      "chuc_vu": "Giảng viên",
+      "linh_vuc": null,
+      "nguon_url": "https://cet.tvu.edu.vn/index.php/giang-vien/thong-tin-giang-vien/khoa-xay-dung",
+      "dang_hoat_dong": true
+    },
+    {
+      "khoa_don_vi": "Khoa Xây dựng – Trường Kỹ thuật và Công nghệ",
+      "ho_ten": "Huỳnh Hữu Trí",
+      "hoc_vi": "ThS.",
+      "chuc_vu": "Giảng viên",
+      "linh_vuc": null,
+      "nguon_url": "https://cet.tvu.edu.vn/index.php/giang-vien/thong-tin-giang-vien/khoa-xay-dung",
+      "dang_hoat_dong": true
+    },
+    {
+      "khoa_don_vi": "Khoa Xây dựng – Trường Kỹ thuật và Công nghệ",
+      "ho_ten": "Cao Hữu Lợi",
+      "hoc_vi": "ThS.",
+      "chuc_vu": "Giảng viên",
+      "linh_vuc": null,
+      "nguon_url": "https://cet.tvu.edu.vn/index.php/giang-vien/thong-tin-giang-vien/khoa-xay-dung",
+      "dang_hoat_dong": true
+    },
+    {
+      "khoa_don_vi": "Khoa Xây dựng – Trường Kỹ thuật và Công nghệ",
+      "ho_ten": "Bùi Phước Hảo",
+      "hoc_vi": "ThS.",
+      "chuc_vu": "Giảng viên",
+      "linh_vuc": null,
+      "nguon_url": "https://cet.tvu.edu.vn/index.php/giang-vien/thong-tin-giang-vien/khoa-xay-dung",
+      "dang_hoat_dong": true
+    },
+    {
+      "khoa_don_vi": "Khoa Cơ khí – Động lực – Trường Kỹ thuật và Công nghệ",
+      "ho_ten": "Trương Văn Mến",
+      "hoc_vi": "TS.",
+      "chuc_vu": "Trưởng khoa",
+      "linh_vuc": null,
+      "nguon_url": "https://cet.tvu.edu.vn/index.php/giang-vien/thong-tin-giang-vien/khoa-co-khi-dong-luc",
+      "dang_hoat_dong": true
+    },
+    {
+      "khoa_don_vi": "Khoa Cơ khí – Động lực – Trường Kỹ thuật và Công nghệ",
+      "ho_ten": "Trần Văn Điền",
+      "hoc_vi": "ThS.",
+      "chuc_vu": "Phó Trưởng khoa",
+      "linh_vuc": null,
+      "nguon_url": "https://cet.tvu.edu.vn/index.php/giang-vien/thong-tin-giang-vien/khoa-co-khi-dong-luc",
+      "dang_hoat_dong": true
+    },
+    {
+      "khoa_don_vi": "Khoa Cơ khí – Động lực – Trường Kỹ thuật và Công nghệ",
+      "ho_ten": "Nguyễn Vũ Lực",
+      "hoc_vi": "ThS.",
+      "chuc_vu": "Phó Trưởng khoa",
+      "linh_vuc": null,
+      "nguon_url": "https://cet.tvu.edu.vn/index.php/giang-vien/thong-tin-giang-vien/khoa-co-khi-dong-luc",
+      "dang_hoat_dong": true
+    },
+    {
+      "khoa_don_vi": "Khoa Cơ khí – Động lực – Trường Kỹ thuật và Công nghệ",
+      "ho_ten": "Nguyễn Khắc Bằng",
+      "hoc_vi": "ThS.",
+      "chuc_vu": "Phó Trưởng khoa",
+      "linh_vuc": null,
+      "nguon_url": "https://cet.tvu.edu.vn/index.php/giang-vien/thong-tin-giang-vien/khoa-co-khi-dong-luc",
+      "dang_hoat_dong": true
+    },
+    {
+      "khoa_don_vi": "Khoa Cơ khí – Động lực – Trường Kỹ thuật và Công nghệ",
+      "ho_ten": "Thạch Ngọc Phúc",
+      "hoc_vi": "ThS.",
+      "chuc_vu": "Giảng viên",
+      "linh_vuc": null,
+      "nguon_url": "https://cet.tvu.edu.vn/index.php/giang-vien/thong-tin-giang-vien/khoa-co-khi-dong-luc",
+      "dang_hoat_dong": true
+    },
+    {
+      "khoa_don_vi": "Khoa Cơ khí – Động lực – Trường Kỹ thuật và Công nghệ",
+      "ho_ten": "Phan Văn Tuân",
+      "hoc_vi": "ThS.",
+      "chuc_vu": "Giảng viên",
+      "linh_vuc": null,
+      "nguon_url": "https://cet.tvu.edu.vn/index.php/giang-vien/thong-tin-giang-vien/khoa-co-khi-dong-luc",
+      "dang_hoat_dong": true
+    },
+    {
+      "khoa_don_vi": "Khoa Cơ khí – Động lực – Trường Kỹ thuật và Công nghệ",
+      "ho_ten": "Ngô Thanh Hà",
+      "hoc_vi": "ThS.",
+      "chuc_vu": "Giảng viên",
+      "linh_vuc": null,
+      "nguon_url": "https://cet.tvu.edu.vn/index.php/giang-vien/thong-tin-giang-vien/khoa-co-khi-dong-luc",
+      "dang_hoat_dong": true
+    },
+    {
+      "khoa_don_vi": "Khoa Cơ khí – Động lực – Trường Kỹ thuật và Công nghệ",
+      "ho_ten": "Dương Minh Hùng",
+      "hoc_vi": "ThS.",
+      "chuc_vu": "Giảng viên",
+      "linh_vuc": null,
+      "nguon_url": "https://cet.tvu.edu.vn/index.php/giang-vien/thong-tin-giang-vien/khoa-co-khi-dong-luc",
+      "dang_hoat_dong": true
+    },
+    {
+      "khoa_don_vi": "Khoa Cơ khí – Động lực – Trường Kỹ thuật và Công nghệ",
+      "ho_ten": "Huỳnh Thanh Bảnh",
+      "hoc_vi": "ThS.",
+      "chuc_vu": "Giảng viên",
+      "linh_vuc": null,
+      "nguon_url": "https://cet.tvu.edu.vn/index.php/giang-vien/thong-tin-giang-vien/khoa-co-khi-dong-luc",
+      "dang_hoat_dong": true
+    },
+    {
+      "khoa_don_vi": "Khoa Cơ khí – Động lực – Trường Kỹ thuật và Công nghệ",
+      "ho_ten": "Phạm Vũ Phong",
+      "hoc_vi": "ThS.",
+      "chuc_vu": "Giảng viên",
+      "linh_vuc": null,
+      "nguon_url": "https://cet.tvu.edu.vn/index.php/giang-vien/thong-tin-giang-vien/khoa-co-khi-dong-luc",
+      "dang_hoat_dong": true
+    },
+    {
+      "khoa_don_vi": "Khoa Cơ khí – Động lực – Trường Kỹ thuật và Công nghệ",
+      "ho_ten": "Thạch Mỹ Thuật",
+      "hoc_vi": "ThS.",
+      "chuc_vu": "Giảng viên",
+      "linh_vuc": null,
+      "nguon_url": "https://cet.tvu.edu.vn/index.php/giang-vien/thong-tin-giang-vien/khoa-co-khi-dong-luc",
+      "dang_hoat_dong": true
+    },
+    {
+      "khoa_don_vi": "Khoa Cơ khí – Động lực – Trường Kỹ thuật và Công nghệ",
+      "ho_ten": "Cao Thanh Duy",
+      "hoc_vi": "KS.",
+      "chuc_vu": "Giảng viên",
+      "linh_vuc": null,
+      "nguon_url": "https://cet.tvu.edu.vn/index.php/giang-vien/thong-tin-giang-vien/khoa-co-khi-dong-luc",
+      "dang_hoat_dong": true
+    },
+    {
+      "khoa_don_vi": "Khoa Cơ khí – Động lực – Trường Kỹ thuật và Công nghệ",
+      "ho_ten": "Trần Huyền Trân",
+      "hoc_vi": "KS.",
+      "chuc_vu": "Giảng viên",
+      "linh_vuc": null,
+      "nguon_url": "https://cet.tvu.edu.vn/index.php/giang-vien/thong-tin-giang-vien/khoa-co-khi-dong-luc",
+      "dang_hoat_dong": true
+    }
+  ],
+  "validation": {
+    "mssv": {
+      "regex": "^\\d{9}$",
+      "message": "Mã số sinh viên phải gồm đúng 9 chữ số."
+    },
+    "phone": {
+      "regex": "^0\\d{9}$",
+      "message": "Số điện thoại phải gồm đúng 10 chữ số và bắt đầu bằng 0."
+    },
+    "student_email_domain": "@st.tvu.edu.vn",
+    "staff_email_domain": "@tvu.edu.vn",
+    "password_min_length": 8
+  }
+}

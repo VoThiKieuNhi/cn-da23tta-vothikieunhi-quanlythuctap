@@ -1,0 +1,45 @@
+:root {
+  --font-body: 'Inter', 'Segoe UI', Arial, sans-serif;
+  --font-heading: 'Poppins', 'Inter', sans-serif;
+  --text-xs: 13px;
+  --text-sm: 14px;
+  --text-base: 14px;
+  --text-md: 16px;
+  --text-lg: 18px;
+  --text-xl: 24px;
+  --text-2xl: 30px;
+  --bs-body-font-family: var(--font-body);
+  --bs-body-font-size: 14px;
+  --bs-body-line-height: 1.5;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: 1.5;
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: #f4f7fc;
+}
+
+.welcome-card {
+  max-width: 680px;
+}
+
+h1, h2, h3, h4, h5, h6,
+.page-title, .section-title, .card-title, .dashboard-title {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.page-title, .dashboard-title { font-size: 30px; font-weight: 700; }
+.section-title { font-size: 18px; }
+.card-title { font-size: 16px; }
+input, select, textarea, button, .btn { font-family: var(--font-body); }
+.btn { font-size: 14px; font-weight: 600; }
+.form-label { font-size: 14px; font-weight: 600; }
+.form-control, .form-select { font-size: 15px; }
+input::placeholder, textarea::placeholder { font-size: 14px; }
+.badge { font-size: 13px; font-weight: 500; }
