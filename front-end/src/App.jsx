@@ -9,6 +9,7 @@ const LecturerStudents = lazy(() => import('./pages/lecturer/LecturerStudents'))
 const LecturerReports = lazy(() => import('./pages/lecturer/LecturerReports'))
 const LecturerEvaluations = lazy(() => import('./pages/lecturer/LecturerEvaluations'))
 const LecturerStudentProgress = lazy(() => import('./pages/lecturer/LecturerStudentProgress'))
+const StudentProfile = lazy(() => import('./pages/student/StudentProfile'))
 const StudentDashboard = lazy(() => import('./pages/student/StudentDashboard'))
 const StudentInternshipRegistration = lazy(() => import('./pages/student/StudentInternshipRegistration'))
 const StudentProgress = lazy(() => import('./pages/student/StudentProgress'))
@@ -27,7 +28,8 @@ export default function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Navigate to="/login" replace />} />
-        <Route path="/login" element={<Login />} />
+        <Route path="/login" element={<Login key="main-login" />} />
+        <Route path="/admin/login" element={<Login key="admin-login" admin />} />
         <Route path="/admin" element={<ProtectedRoute role="ADMIN"><AdminLayout /></ProtectedRoute>}>
           <Route index element={<Navigate to="dashboard" replace />} />
           <Route path="dashboard" element={<Suspense fallback={<div className="admin-panel admin-loading" role="status">Đang tải Dashboard...</div>}><AdminDashboard /></Suspense>} />
@@ -45,6 +47,7 @@ export default function App() {
           <Route path="internship-registration" element={<Suspense fallback={<div className="admin-loading">Đang tải...</div>}><StudentInternshipRegistration /></Suspense>} />
           <Route path="progress" element={<Suspense fallback={<div className="admin-loading">Đang tải...</div>}><StudentProgress /></Suspense>} />
           <Route path="reports" element={<Suspense fallback={<div className="admin-loading">Đang tải...</div>}><StudentReports /></Suspense>} />
+          <Route path="profile" element={<Suspense fallback={<div role="status">Loading...</div>}><StudentProfile /></Suspense>} />
           <Route path="evaluation" element={<Suspense fallback={<div className="admin-loading">Đang tải...</div>}><StudentEvaluation /></Suspense>} />
         </Route>
         <Route path="/lecturer" element={<ProtectedRoute role="GIANG_VIEN"><LecturerLayout /></ProtectedRoute>}>

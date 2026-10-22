@@ -1,0 +1,111 @@
+/* Only /student/dashboard. Keep other workspaces and student pages unchanged. */
+#root .student-dashboard-app .admin-sidebar nav a i { width: 20px; text-align: center; font-size: 18px; }
+#root .student-dashboard-app .admin-brand strong { font-size: 13.5px; letter-spacing: .01em; }
+#root .student-dashboard-app .dashboard-period { box-shadow: 0 2px 8px rgba(6,43,88,.035); }
+#root .student-dashboard-app .dashboard-period-company { color: var(--text); }
+#root .student-dashboard-app { --dash-blue: #1677ff; --dash-green: #18a66a; --dash-orange: #f28b32; --dash-purple: #7b61ff; }
+#root .student-dashboard-app .sw-stat-icon.blue { background: #eaf2ff; color: var(--dash-blue); }
+#root .student-dashboard-app .sw-stat-icon.green { background: #e8f8ef; color: var(--dash-green); }
+#root .student-dashboard-app .sw-stat-icon.orange { background: #fff0e2; color: var(--dash-orange); }
+#root .student-dashboard-app .sw-stat-icon.purple { background: #f0e9ff; color: var(--dash-purple); }
+#root .student-dashboard-app .dashboard-top-grid { display: grid; grid-template-columns: minmax(0,2.2fr) minmax(260px,.8fr); gap: 16px; margin-bottom: 16px; }
+#root .student-dashboard-app .dashboard-calendar { height: 200px; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 10px 14px; }
+#root .student-dashboard-app .dashboard-calendar h2 { font-size: 14px; font-weight: 600; color: var(--navy); margin: 0 0 3px; }
+#root .student-dashboard-app .dashboard-calendar-nav { display: flex; align-items: center; justify-content: space-between; font-size: 12px; height: 25px; }
+#root .student-dashboard-app .dashboard-calendar-nav button { border: 0; background: transparent; color: var(--navy); width: 26px; height: 25px; border-radius: 5px; }
+#root .student-dashboard-app .dashboard-calendar-nav button:hover { background: var(--blue-soft); }
+#root .student-dashboard-app .dashboard-calendar table { width: 100%; table-layout: fixed; text-align: center; font-size: 12px; }
+#root .student-dashboard-app .dashboard-calendar th { font-size: 10px; font-weight: 600; height: 18px; color: var(--text-muted); }
+#root .student-dashboard-app .dashboard-calendar td { height: 19px; padding: 0; }
+#root .student-dashboard-app .dashboard-calendar td span { display: inline-grid; place-items: center; width: 19px; height: 19px; }
+#root .student-dashboard-app .dashboard-calendar .is-today { background: var(--primary); color: white; border-radius: 50%; font-weight: 600; }
+#root .student-dashboard-app .dashboard-featured-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 12px; }
+#root .student-dashboard-app .dashboard-period { min-width: 0; border: 1px solid var(--border); border-radius: 10px; overflow: hidden; }
+#root .student-dashboard-app .dashboard-period>img { width: 100%; height: 110px; object-fit: cover; object-position: center 55%; }
+#root .student-dashboard-app .dashboard-period-body { padding: 12px; }
+#root .student-dashboard-app .dashboard-period h3 { font-size: 13px; line-height: 1.55; margin-bottom: 5px; color: var(--navy); overflow-wrap: anywhere; }
+#root .student-dashboard-app .dashboard-period p { font-size: 12px; margin: 0 0 10px; color: var(--text-muted); }
+#root .student-dashboard-app .dashboard-period dl { margin: 0 0 10px; }
+#root .student-dashboard-app .dashboard-period dt { font-size: 11px; margin-top: 8px; }
+#root .student-dashboard-app .dashboard-period dd { font-size: 12px; line-height: 1.55; margin-top: 3px; }
+#root .student-dashboard-app .dashboard-period a { display: block; font-size: 12px; color: var(--primary-dark); text-decoration: none; margin-top: 12px; }
+#root .student-dashboard-app .dashboard-period a:hover { text-decoration: underline; }
+#root .student-dashboard-app .dashboard-period-DANG_MO_DANG_KY, #root .student-dashboard-app .dashboard-period-DANG_THUC_TAP { color: var(--success-text); background: var(--success-soft); }
+#root .student-dashboard-app .dashboard-period-SAP_MO, #root .student-dashboard-app .dashboard-period-CHO_BAT_DAU { color: var(--warning-text); background: var(--warning-soft); }
+#root .student-dashboard-app .dashboard-period-DA_KET_THUC { color: var(--text-muted); background: var(--bg); }
+#root .student-dashboard-app .dashboard-notices { max-height: 420px; overflow-y: auto; }
+#root .student-dashboard-app .dashboard-notices time { display: block; margin-top: 5px; color: var(--text-muted); font-size: 11.5px; }
+#root .student-dashboard-app .sw-card>header>i { display: grid; place-items: center; width: 30px; height: 30px; border-radius: 8px; color: var(--dash-blue); background: #eaf2ff; font-size: 17px; }
+#root .student-dashboard-app .sw-card>header>.bi-briefcase { background: #fff0e2; color: var(--dash-orange); }
+#root .student-dashboard-app .sw-card>header>.bi-lightning-charge { background: #f0e9ff; color: var(--dash-purple); }
+#root .student-dashboard-app .dashboard-information dt .bi-briefcase { color: var(--dash-orange); }
+#root .student-dashboard-app .dashboard-information dt .bi-person-video3 { color: var(--dash-green); }
+#root .student-dashboard-app .dashboard-information dt .bi-person-badge { color: var(--dash-purple); }
+#root .student-dashboard-app .dashboard-period:nth-child(2)>img { object-position: 30% 35%; }
+#root .student-dashboard-app .dashboard-period:nth-child(3)>img { object-position: 75% 70%; }
+#root .student-dashboard-app .dashboard-period h3 { font-size: 13.5px; font-weight: 600; }
+#root .student-dashboard-app .dashboard-period-CHO_BAT_DAU { background: #f0e9ff; color: var(--dash-purple); }
+#root .student-dashboard-app .dashboard-period-DANG_THUC_TAP { background: #eaf2ff; color: var(--dash-blue); }
+#root .student-dashboard-app .dashboard-registration-label { display: block; font-size: 11px; margin-bottom: 5px; color: var(--text-muted); }
+#root .student-dashboard-app { --sidebar-width: 210px; background: var(--bg); }
+#root .student-dashboard-app .admin-brand img { width: 58px; height: 58px; border-radius: 50%; }
+#root .student-dashboard-app .admin-brand { padding-bottom: 22px; gap: 9px; }
+#root .student-dashboard-app .admin-brand strong { font-size: 13.5px; }
+#root .student-dashboard-app .admin-brand span { font-size: 11.5px; }
+#root .student-dashboard-app .admin-sidebar nav { gap: 5px; }
+#root .student-dashboard-app .admin-sidebar nav a { padding: 10px 14px; min-height: 43px; border-radius: 8px; font-size: 13px; gap: 8px; }
+#root .student-dashboard-app .admin-topbar { height: 68px; gap: 16px; }
+#root .student-dashboard-app .sw-search { max-width: 460px; }
+#root .student-dashboard-app .admin-topbar-right { gap: 15px; }
+#root .student-dashboard-app .admin-avatar { width: 35px; height: 35px; }
+#root .student-dashboard-app .admin-user-label small { margin-top: 2px; }
+#root .student-dashboard-app .sw-content { padding: 20px 20px 24px; max-width: none; }
+#root .student-dashboard-app .portal-hero { height: 180px; min-height: 0; padding: 28px; border-radius: 14px; background-size: cover; background-position: center 48%; margin-bottom: 0; }
+#root .student-dashboard-app .portal-hero::before, #root .student-dashboard-app .portal-hero::after { display: none; }
+#root .student-dashboard-app .portal-hero h1 { font-size: 26px; margin: 0 0 10px; }
+#root .student-dashboard-app .portal-hero p { font-size: 13.5px; }
+#root .student-dashboard-app .sw-stat-grid { grid-template-columns: repeat(4,minmax(0,1fr)); gap: 14px; margin-bottom: 16px; }
+#root .student-dashboard-app .sw-stat { flex-direction: row; align-items: center; min-height: 96px; padding: 16px 18px; gap: 11px; border-color: var(--border); }
+#root .student-dashboard-app .sw-stat-icon { width: 42px; height: 42px; font-size: 22px; border-radius: 10px; box-shadow: inset 0 0 0 1px rgba(255,255,255,.7),0 3px 9px rgba(15,35,60,.04); }
+#root .student-dashboard-app .sw-stat h2 { font-size: 13px; margin: 0 0 6px; line-height: 1.45; }
+#root .student-dashboard-app .sw-stat strong { font-size: 24px; font-weight: 700; line-height: 1.3; }
+#root .student-dashboard-app .portal-dashboard-columns { grid-template-columns: minmax(0,2.2fr) minmax(260px,.8fr); gap: 16px; }
+#root .student-dashboard-app .sw-card { padding: 20px; margin-bottom: 16px; border-color: #e6ebf2; box-shadow: 0 3px 12px rgba(15,35,60,.035); }
+#root .student-dashboard-app .sw-card>header { margin-bottom: 18px; }
+#root .student-dashboard-app .sw-card h2 { font-size: 15px; }
+#root .student-dashboard-app .dashboard-information { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 18px 24px; margin: 0; }
+#root .student-dashboard-app .dashboard-information dt { display: flex; align-items: center; gap: 7px; font-size: 12px; color: var(--text-muted); margin-bottom: 6px; }
+#root .student-dashboard-app .dashboard-information dt i { color: var(--primary-dark); }
+#root .student-dashboard-app .dashboard-information dd { font-size: 13.5px; line-height: 1.6; color: var(--text); font-weight: 500; }
+#root .student-dashboard-app .sw-empty { min-height: 105px; padding: 12px 5px; gap: 8px; }
+#root .student-dashboard-app .sw-empty>i { font-size: 25px; }
+#root .student-dashboard-app .portal-notices>a { padding: 10px 0; gap: 8px; }
+#root .student-dashboard-app .portal-notices .sw-stat-icon { width: 36px; height: 36px; font-size: 20px; }
+#root .student-dashboard-app .sw-quick-links { gap: 8px; }
+#root .student-dashboard-app .admin-sidebar nav a:not(.active) { color: rgba(255,255,255,.9); }
+#root .student-dashboard-app .sw-quick-links>a { font-size: 13px; padding: 8px; gap: 10px; }
+#root .student-dashboard-app .dashboard-timeline .sw-timeline { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 16px 12px; }
+#root .student-dashboard-app .dashboard-timeline .sw-timeline li { display: block; padding: 0; }
+#root .student-dashboard-app .dashboard-timeline .sw-timeline li::before { display: none; }
+#root .student-dashboard-app .dashboard-timeline .sw-timeline li>span { margin-bottom: 8px; }
+#root .student-dashboard-app .dashboard-timeline .sw-timeline strong { font-size: 12px; }
+#root .student-dashboard-app .dashboard-timeline .sw-timeline small { font-size: 11.5px; line-height: 1.5; }
+@media(max-width:991px) {
+  #root .student-dashboard-app .dashboard-top-grid { grid-template-columns: 1fr; }
+  #root .student-dashboard-app .dashboard-calendar { max-width: 360px; width: 100%; }
+  #root .student-dashboard-app .dashboard-featured-grid { grid-template-columns: 1fr; }
+  #root .student-dashboard-app .sw-stat-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  #root .student-dashboard-app .portal-dashboard-columns { grid-template-columns: minmax(0,1.6fr) minmax(215px,1fr); }
+  #root .student-dashboard-app .dashboard-information { gap: 16px; }
+}
+@media(max-width:767px) {
+  #root .student-dashboard-app .admin-topbar { height: auto; }
+  #root .student-dashboard-app .sw-content { padding: 16px; }
+  #root .student-dashboard-app .portal-dashboard-columns { grid-template-columns: 1fr; }
+  #root .student-dashboard-app .portal-hero { padding: 20px; }
+  #root .student-dashboard-app .portal-hero h1 { font-size: 25px; }
+  #root .student-dashboard-app .dashboard-timeline .sw-timeline { grid-template-columns: repeat(2,minmax(0,1fr)); }
+}
+@media(max-width:479px) {
+  #root .student-dashboard-app .sw-stat-grid, #root .student-dashboard-app .dashboard-information { grid-template-columns: 1fr; }
+}

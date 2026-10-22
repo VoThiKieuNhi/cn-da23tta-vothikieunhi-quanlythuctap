@@ -13,5 +13,6 @@ export function internshipSteps(data) {
     { label: 'Thực tập tại doanh nghiệp', done: ['DANG_THUC_TAP', 'HOAN_THANH'].includes(r?.trangThai), note: r ? `${formatDate(r.ngayBatDau)} – ${formatDate(r.ngayKetThuc)}` : 'Chưa có lịch thực tập' },
     { label: 'Nộp báo cáo', done: !!data.reports.length, note: `${data.reports.length} tệp đã nộp` },
     { label: 'Đánh giá kết quả', done: !!data.evaluations.length, note: data.evaluations.length ? 'Đã có kết quả đánh giá' : 'Chưa có kết quả' },
+    { label: 'Hoàn thành', done: r?.trangThai === 'HOAN_THANH', note: r?.trangThai === 'HOAN_THANH' ? 'Đã hoàn thành thực tập' : 'Chưa hoàn thành' },
   ]
 }

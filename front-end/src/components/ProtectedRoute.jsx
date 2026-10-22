@@ -25,7 +25,7 @@ export default function ProtectedRoute({ role, children }) {
 
   if (state.loading) return <div className="container py-5" role="status"><span className="spinner-border spinner-border-sm me-2" />Đang xác thực...</div>
   if (state.error) return <div className="container py-5"><p role="alert">Không thể kết nối đến hệ thống. Vui lòng thử lại.</p><button className="btn btn-primary" onClick={() => { setState({ loading: true }); setAttempt(attempt + 1) }}>Thử lại</button></div>
-  if (!state.user) return <Navigate to="/login" replace />
+  if (!state.user) return <Navigate to={role === 'ADMIN' ? '/admin/login' : '/login'} replace />
   if (state.user.vaiTro !== role) return <Navigate to={dashboardPaths[state.user.vaiTro]} replace />
   return children
 }

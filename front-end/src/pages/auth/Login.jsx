@@ -1,18 +1,19 @@
 import { emailError } from '../../utils/validators'
 import { useRef, useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { dashboardPaths, login } from '../../services/authService'
 import '../../assets/css/login.css'
-import loginStudents from '../../assets/images/login-students.png'
 import logoTvu from "../../assets/images/logo-tvu.png";
+
+import campusImage from '../../assets/images/tvu-campus.jpg'
+import LoginV2 from './LoginV2'
 
 const accountTypes = [
   { role: 'SINH_VIEN', label: 'Sinh viên', style: 'student', icon: 'people-fill', placeholder: 'MSSV@st.tvu.edu.vn' },
   { role: 'GIANG_VIEN', label: 'Giảng viên', style: 'lecturer', icon: 'mortarboard-fill', placeholder: 'ten@tvu.edu.vn' },
-  { role: 'ADMIN', label: 'Quản trị viên', style: 'admin', icon: 'bank2', placeholder: 'admin@tvu.edu.vn' },
 ]
 
-export default function Login() {
+export default function Login({ admin = false }) {
   const navigate = useNavigate()
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
@@ -21,8 +22,9 @@ export default function Login() {
   const [loading, setLoading] = useState(false)
   const [errors, setErrors] = useState({})
   const [message, setMessage] = useState('')
-  const [selectedRole, setSelectedRole] = useState('')
-  const selectedAccount = accountTypes.find((item) => item.role === selectedRole)
+  const [chosenRole, setSelectedRole] = useState('')
+  const selectedRole = admin ? 'ADMIN' : chosenRole
+  const selectedAccount = admin ? { label: 'Quản trị viên', placeholder: 'admin@tvu.edu.vn' } : accountTypes.find((item) => item.role === selectedRole)
   const submitting = useRef(false)
 
   function selectRole(role) {
@@ -74,8 +76,10 @@ export default function Login() {
     }
   }
 
+  if (!admin) return <LoginV2 {...{ email, setEmail, password, setPassword, visible, setVisible, remember, setRemember, loading, errors, message, selectedRole, selectedAccount, accountTypes, selectRole, submit }} />
+
   return (
-    <main className="login-page">
+    <main className={`login-page${admin ? ' admin-login-page' : ''}`}>
       <div className="login-shell">
         <header className="university-brand">
           <img
@@ -83,21 +87,18 @@ export default function Login() {
             alt="Đại học Trà Vinh"
             className="tvu-logo"
           />
-          <div><strong>ĐẠI HỌC TRÀ VINH</strong><span>Hệ thống quản lý thực tập</span></div>
+          <div><strong>Đại học Trà Vinh</strong><span>HỆ THỐNG QUẢN LÝ THỰC TẬP</span><small>Tri thức - Sáng tạo - Phát triển</small></div>
         </header>
-        <section className="login-intro" aria-label="Giới thiệu hệ thống">
-          <div className="intro-content">
-            <h1>Chào mừng đến với<br />Hệ thống quản lý thực tập</h1>
-            <p>Kết nối sinh viên – giảng viên – doanh nghiệp<br />Quản lý toàn diện quá trình thực tập</p>
-          </div>
-          <div className="login-artwork">
-            <img src={loginStudents} className="login-students-illustration" alt="Sinh viên" />
-          </div>
-        </section>
+        {!admin && <section className="login-intro" aria-label="Khuôn viên Đại học Trà Vinh">
+          <img className="login-campus" src={campusImage} alt="Khuôn viên Đại học Trà Vinh" />
+          <svg className="login-divider-shape" viewBox="0 0 160 800" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0 H145 C115 155 48 295 62 460 C72 600 38 720 0 800 Z" fill="var(--navy)" /></svg>
+          <svg className="login-campus-wave" viewBox="0 0 700 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0 20 C180 105 425 -15 700 15 L700 90 L0 90Z" fill="var(--navy)" /><path d="M0 20 C180 105 425 -15 700 15" fill="none" stroke="var(--gold)" strokeWidth="5" /></svg>
+          <p className="login-campus-slogan">Kiến tạo tương lai từ những trải nghiệm thực tiễn</p>
+        </section>}
         <section className="login-panel" aria-labelledby="login-title">
           <div className="login-card">
-            <h2 id="login-title">Đăng nhập</h2>
-            <p className="login-subtitle">Vui lòng đăng nhập để tiếp tục sử dụng hệ thống</p>
+            <h2 id="login-title">{admin ? 'Đăng nhập quản trị' : 'Đăng nhập'}</h2>
+            <p className="login-subtitle">{admin ? 'Dành riêng cho tài khoản quản trị hệ thống' : 'Đăng nhập để tiếp tục sử dụng hệ thống'}</p>
             <form onSubmit={submit} noValidate aria-busy={loading}>
               {message && <div className="alert alert-danger login-alert" role="alert"><i className="bi bi-exclamation-circle me-2" aria-hidden="true" />{message}</div>}
               <div className="mb-4">
@@ -110,11 +111,11 @@ export default function Login() {
                 <div className={`login-input ${errors.password ? 'has-error' : ''}`}><i className="bi bi-lock" aria-hidden="true" /><input id="password" type={visible ? 'text' : 'password'} autoComplete="current-password" placeholder="Mật khẩu" value={password} onChange={(e) => setPassword(e.target.value)} disabled={loading} aria-invalid={!!errors.password} aria-describedby={errors.password ? 'password-error' : undefined} /><button type="button" onClick={() => setVisible(!visible)} aria-label={visible ? 'Ẩn mật khẩu' : 'Hiện mật khẩu'} aria-pressed={visible}><i className={`bi bi-eye${visible ? '-slash' : ''}`} aria-hidden="true" /></button></div>
                 {errors.password && <div id="password-error" className="field-error" role="alert">{errors.password}</div>}
               </div>
-              <div className="login-options"><div className="form-check login-remember"><input className="form-check-input" type="checkbox" id="remember" checked={remember} onChange={(e) => setRemember(e.target.checked)} disabled={loading} /><label className="form-check-label" htmlFor="remember">Ghi nhớ đăng nhập</label></div><span className="login-forgot" role="link" aria-disabled="true" title="Chức năng sẽ được bổ sung sau">Quên mật khẩu?</span></div>
+              <div className="login-options"><div className="form-check login-remember"><input className="form-check-input" type="checkbox" id="remember" checked={remember} onChange={(e) => setRemember(e.target.checked)} disabled={loading} /><label className="form-check-label" htmlFor="remember">Ghi nhớ đăng nhập</label></div></div>
               <button type="submit" className="btn btn-primary login-submit" disabled={loading}>{loading ? <><span className="spinner-border spinner-border-sm me-2" aria-hidden="true" />Đang đăng nhập...</> : <>Đăng nhập</>}</button>
               {errors.role && <div id="role-error" className="field-error" role="alert">{errors.role}</div>}
             </form>
-            <div className="login-divider"><span>hoặc đăng nhập bằng</span></div>
+            {!admin && <><div className="login-divider"><span>Hoặc đăng nhập với</span></div>
             <div className="login-roles" role="group" aria-label="Chọn loại tài khoản" aria-describedby={errors.role ? 'role-error' : undefined}>
               {accountTypes.map((item) => (
                 <div key={item.role} className={`login-role role-${item.style}${selectedRole === item.role ? ' is-selected' : ''}`}
@@ -129,7 +130,8 @@ export default function Login() {
                   <i className={`bi bi-${item.icon}`} aria-hidden="true" /><span>{item.label}</span>
                 </div>
               ))}
-            </div>
+            </div></>}
+            {admin && <div className="login-other-entry"><Link to="/login">Quay lại trang đăng nhập</Link></div>}
           </div>
 
         </section>

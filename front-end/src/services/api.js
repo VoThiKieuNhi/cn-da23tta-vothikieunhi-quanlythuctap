@@ -26,7 +26,8 @@ api.interceptors.request.use((config) => {
 api.interceptors.response.use((response) => response, (error) => {
   if (error.response?.status === 401 && error.config?.url !== '/auth/login') {
     clearSession()
-    if (window.location.pathname !== '/login') window.location.replace('/login')
+    const loginPath = /^\/admin(?:\/|$)/.test(window.location.pathname) ? '/admin/login' : '/login'
+    if (window.location.pathname !== loginPath) window.location.replace(loginPath)
   }
   return Promise.reject(error)
 })

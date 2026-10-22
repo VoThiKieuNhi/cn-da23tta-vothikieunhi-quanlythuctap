@@ -1,0 +1,49 @@
+.portal-hero { position: relative; isolation: isolate; overflow: hidden; border-radius: 14px; min-height: 180px; padding: 38px 30px; background: var(--navy); color: var(--surface); margin-bottom: 20px; display: flex; align-items: center; }
+.portal-hero::before { content: ''; position: absolute; inset: 0; z-index: -1; background: repeating-radial-gradient(ellipse at 110% -20%,transparent 0 35px,rgba(255,255,255,.055) 36px 37px,transparent 38px 55px); }
+.portal-hero::after { content: ''; position: absolute; right: -8%; bottom: -90px; width: 60%; height: 125px; border: 8px solid var(--gold); border-radius: 50%; transform: rotate(-9deg); }
+.portal-hero h1 { font-size: clamp(24px,2.3vw,28px); font-weight: 600; margin: 9px 0 12px; line-height: 1.4; }
+.portal-hero p { margin: 0; color: rgba(255,255,255,.78); font-size: 13.5px; }
+.portal-eyebrow { font-size: 11px; letter-spacing: .13em; color: var(--gold); }
+.portal-dashboard-columns { display: grid; grid-template-columns: minmax(0,1fr) 300px; gap: 20px; align-items: start; }
+.portal-dashboard-columns>div, .portal-dashboard-columns>aside { min-width: 0; }
+.portal-notices { display: grid; gap: 4px; }
+.portal-notices>a { display: flex; align-items: flex-start; gap: 11px; padding: 15px 0; border-bottom: 1px solid var(--border); text-decoration: none; color: var(--text); }
+.portal-notices>a:last-child { border-bottom: 0; }
+.portal-notices>a>div { min-width: 0; flex: 1; }
+.portal-notices strong { font-size: 13px; line-height: 1.5; }
+.portal-notices p { color: var(--text-muted); font-size: 12px; margin: 6px 0 0; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; overflow-wrap: anywhere; }
+.portal-notices>a>i { color: var(--text-muted); font-size: 12px; margin-top: 5px; }
+.student-app .sw-notifications .admin-dropdown { width: 320px; max-height: 65vh; overflow: auto; }
+.student-app .sw-notifications summary { position: relative; }
+.portal-period-toolbar { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 18px; }
+.portal-period-toolbar .portal-search { max-width: none; }
+.portal-period-toolbar select { width: auto; max-width: 220px; }
+.portal-period-table tr.is-selected td { background: var(--blue-soft); }
+.student-registration .registration-workspace { display: grid; grid-template-columns: minmax(0,1fr) minmax(310px,.8fr); gap: 20px; align-items: start; }
+.student-registration .registration-detail { grid-column: 1; }
+.student-registration .registration-form { grid-column: 2; grid-row: 1 / span 3; }
+.student-registration .registration-form .student-form-grid { grid-template-columns: 1fr; }
+.student-registration .registration-tips { margin-top: 20px; }
+.report-stepper { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); list-style: none; margin: 0 0 28px; padding: 0; }
+.report-stepper li { position: relative; text-align: center; font-size: 12px; color: var(--text-muted); padding: 0 5px; }
+.report-stepper li::before { content: ''; position: absolute; left: -50%; right: 50%; top: 15px; height: 2px; background: var(--border); }
+.report-stepper li:first-child::before { display: none; }
+.report-stepper span { position: relative; display: grid; place-items: center; width: 31px; height: 31px; margin: 0 auto 9px; border-radius: 50%; background: var(--border); color: var(--text-muted); }
+.report-stepper .is-current { color: var(--navy); font-weight: 600; }
+.report-stepper .is-current span,.report-stepper .is-done span { background: var(--primary-dark); color: var(--surface); }
+.report-stepper .is-done::before { background: var(--primary-dark); }
+.portal-evaluation-tabs { display: flex; gap: 18px; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+.portal-evaluation-tabs button { border: 0; background: transparent; padding: 12px 4px; border-bottom: 2px solid transparent; color: var(--text-muted); font-size: 13px; }
+.portal-evaluation-tabs button[aria-pressed="true"] { border-bottom-color: var(--primary); color: var(--primary-dark); font-weight: 600; }
+.portal-week-timeline { display: flex; gap: 18px; overflow-x: auto; list-style: none; padding: 6px 0 22px; margin: 0 0 18px; border-bottom: 1px solid var(--border); }
+.portal-week-timeline li { min-width: 110px; flex: 1; }
+.portal-week-timeline button { width: 100%; border: 0; background: transparent; text-align: center; color: var(--text); padding: 4px; border-radius: 8px; }
+.portal-week-timeline button:hover { background: var(--bg); }
+.portal-week-timeline span { display: grid; place-items: center; width: 32px; height: 32px; margin: 0 auto 10px; border-radius: 50%; background: var(--blue-soft); color: var(--primary-dark); }
+.portal-week-timeline span.reviewed { background: var(--success-soft); color: var(--success-text); }
+.portal-week-timeline strong,.portal-week-timeline small { display: block; font-size: 13px; }
+.portal-week-timeline small { font-size: 12px; color: var(--text-muted); margin-top: 5px; }
+.report-confirmation { padding: 20px; border: 1px solid var(--border); border-radius: 10px; background: var(--bg); }
+@media(max-width:1199px) { .portal-dashboard-columns { grid-template-columns: minmax(0,1fr) 270px; }.portal-dashboard-columns .sw-card { padding: 18px; } }
+@media(max-width:991px) { .portal-dashboard-columns { grid-template-columns: 1fr; }.student-registration .registration-workspace { grid-template-columns: 1fr; }.student-registration .registration-form { grid-column: auto; grid-row: auto; } }
+@media(max-width:575px) { .portal-hero { padding: 26px 20px; }.portal-period-toolbar { flex-direction: column; }.portal-period-toolbar select { max-width: none; width: 100%; }.report-stepper { gap: 2px; font-size: 11px; }.student-app .sw-notifications .admin-dropdown { width: min(320px,calc(100vw - 30px)); } }

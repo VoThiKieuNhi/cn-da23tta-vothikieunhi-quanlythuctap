@@ -12,6 +12,8 @@ calls.push({sql,params});
  if(sql.startsWith('SELECT id,ma_sinh_vien')){assert.equal(params[0],'22');return {rows:mode==='no-profile'?[]:[{id:'7',hoTen:'Test',maSinhVien:'SV',lop:'A',nganh:'IT'}]};}
  if(sql.startsWith('SELECT ngay_bat_dau_dang_ky'))return {rows:mode==='missing-period'?[]:[{...dot,...(mode==='not-open'?{ngayBatDauDangKy:'2026-10-06T08:00:00+07:00'}:{}),...(mode==='closed'?{ngayKetThucDangKy:'2026-10-04T17:00:00+07:00'}:{})}]};
  if(sql.startsWith('SELECT id,dot_thuc_tap_id')){assert.deepEqual(params,['10','7']);return {rows:mode==='other-owner'?[]:[{id:'10',dotThucTapId:'3',trangThai:mode==='approved'?'DA_DUYET':'CHO_DUYET'}]};}
+ if(sql.includes('AS eligible'))return {rows:[{eligible:mode!=='wrong-major'}]};
+ if(sql.includes('ngay_bat_dau <= $3::date'))return {rows:mode==='overlap'?[{id:'99'}]:[]};
  if(sql.startsWith('SELECT id FROM dang_ky_thuc_tap')){assert.deepEqual(params,['7','3']);return {rows:mode==='duplicate'?[{id:'10'}]:[]};}
  if(sql.startsWith('SELECT id FROM doanh_nghiep'))return {rows:mode==='missing-company'?[]:[{id:'4'}]};
  if(sql.startsWith('SELECT id FROM can_bo_huong_dan')){assert.deepEqual(params,['5','4']);return {rows:mode==='wrong-supervisor'?[]:[{id:'5'}]};}
@@ -32,6 +34,19 @@ async function request(method,path,data,role='SINH_VIEN'){
 }
 const path='/internship-registration';
 test('student registration security and business rules',async t=>{
+ await t.test('POST and PUT reject wrong major and overlapping active registration',async()=>{
+  for(const [state,status] of [['wrong-major',403],['overlap',409]])for(const method of ['POST','PUT']){
+   reset(state);const response=await request(method,path+(method==='PUT'?'/10':''),body);
+   assert.equal(response.status,status);assert.ok(!calls.some(c=>/^(INSERT|UPDATE)/.test(c.sql)));assert.equal(calls.at(-1).sql,'ROLLBACK');
+  }
+ });
+ await t.test('eligibility check runs under student lock and uses server dates, excludes current record on edit',async()=>{
+  reset();assert.equal((await request('PUT',path+'/10',body)).status,200);
+  assert.match(calls.find(c=>c.sql.startsWith('SELECT id,ma_sinh_vien')).sql,/FOR UPDATE/);
+  const overlap=calls.find(c=>c.sql.includes('ngay_bat_dau <= $3::date'));
+  assert.deepEqual(overlap.params,['7',dot.ngayBatDauThucTap,dot.ngayKetThucThucTap,'10']);
+  assert.match(overlap.sql,/CHO_DUYET.*DA_DUYET.*DANG_THUC_TAP/);assert.doesNotMatch(overlap.sql,/TU_CHOI/);
+ });
  await t.test('all seven endpoints enforce student JWT role',async()=>{for(const [method,url]of [['GET','/internship-periods/open'],['GET','/companies'],['GET','/companies/4/supervisors'],['GET',path],['POST',path],['PUT',path+'/10'],['DELETE',path+'/10']])for(const [role,status]of [[null,401],['ADMIN',403],['GIANG_VIEN',403]]){reset();assert.equal((await request(method,url,undefined,role)).status,status);assert.equal(calls.length,0);}});
  await t.test('profile is required',async()=>{reset('no-profile');assert.equal((await request('POST',path,body)).status,403);assert.equal(calls.at(-1).sql,'ROLLBACK');});
  for(const state of ['not-open','closed'])for(const method of ['POST','PUT','DELETE'])await t.test(method+' refuses '+state+' gate',async()=>{reset(state);const result=await request(method,path+(method==='POST'?'':'/10'),method==='DELETE'?undefined:body);assert.equal(result.status,409);assert.equal(result.data.message,'Cổng đăng ký thực tập hiện không mở.');assert.ok(!calls.some(c=>/^(INSERT|UPDATE|DELETE)/.test(c.sql)));});

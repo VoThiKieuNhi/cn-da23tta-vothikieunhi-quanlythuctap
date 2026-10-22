@@ -1,4 +1,5 @@
 const pool = require('../config/database');
+const periodMajors = require('../services/periodMajors');
 const { timeErrors, openingInPast, pastMessage } = require('../utils/periodTime');
 const { statuses, tinhTrangThaiDotThucTap, periodSource } = require('../utils/periodStatus');
 const dates = ['ngayBatDauDangKy', 'ngayKetThucDangKy', 'ngayBatDauThucTap', 'ngayKetThucThucTap'];
@@ -8,7 +9,7 @@ const fields = `dt.id, dt.hoc_ky AS "hocKy", dt.nam_hoc AS "namHoc",
   to_char(dt.ngay_bat_dau_thuc_tap,'YYYY-MM-DD') AS "ngayBatDauThucTap",
   to_char(dt.ngay_ket_thuc_thuc_tap,'YYYY-MM-DD') AS "ngayKetThucThucTap",
   dt.trang_thai_tu_dong AS "trangThai", dt.ngay_tao AS "ngayTao", dt.ngay_cap_nhat AS "ngayCapNhat",
-  (SELECT COUNT(*)::int FROM dang_ky_thuc_tap dk WHERE dk.dot_thuc_tap_id=dt.id) AS "soSinhVienDangKy"`;
+  (SELECT COUNT(*)::int FROM dang_ky_thuc_tap dk WHERE dk.dot_thuc_tap_id=dt.id) AS "soSinhVienDangKy", ${periodMajors.fields}`;
 const fail = (status,message,errors) => Object.assign(new Error(message),{status,errors});
 function parseId(value) {
   if(!/^[1-9]\d{0,18}$/.test(value || '') || BigInt(value)>9223372036854775807n) throw fail(400,'ID không hợp lệ.');
@@ -64,7 +65,7 @@ async function detail(req,res) {
 async function save(req,res) {
   let client;
   try {
-    const id=req.params.id?parseId(req.params.id):null,d=validate(req.body);
+    const id=req.params.id?parseId(req.params.id):null,d=validate(req.body),majorIds=periodMajors.parse(req.body);
     let existing=null;
     if(id) {
       client=await pool.connect();await client.query('BEGIN');
@@ -82,12 +83,14 @@ async function save(req,res) {
     if(existing) existing.trangThai=tinhTrangThaiDotThucTap(existing,now);
     if(openingInPast(d,existing,now)) throw fail(400,pastMessage,{ngayBatDauDangKy:pastMessage});
     d.trangThai=tinhTrangThaiDotThucTap(d,now);
+    if(!client){client=await pool.connect();await client.query('BEGIN');}
     const values=[d.hocKy,d.namHoc,...dates.map(key=>d[key]),d.trangThai];
     // The existing UNIQUE(hoc_ky, nam_hoc) also prevents concurrent duplicates.
     const result=id
       ?await client.query('UPDATE dot_thuc_tap SET hoc_ky=$1,nam_hoc=$2,ngay_bat_dau_dang_ky=$3,ngay_ket_thuc_dang_ky=$4,ngay_bat_dau_thuc_tap=$5,ngay_ket_thuc_thuc_tap=$6,trang_thai=$7,ngay_cap_nhat=NOW() WHERE id=$8 RETURNING id',[...values,id])
-      :await pool.query('INSERT INTO dot_thuc_tap (hoc_ky,nam_hoc,ngay_bat_dau_dang_ky,ngay_ket_thuc_dang_ky,ngay_bat_dau_thuc_tap,ngay_ket_thuc_thuc_tap,trang_thai) VALUES ($1,$2,$3,$4,$5,$6,$7) RETURNING id',values);
+      :await client.query('INSERT INTO dot_thuc_tap (hoc_ky,nam_hoc,ngay_bat_dau_dang_ky,ngay_ket_thuc_dang_ky,ngay_bat_dau_thuc_tap,ngay_ket_thuc_thuc_tap,trang_thai) VALUES ($1,$2,$3,$4,$5,$6,$7) RETURNING id',values);
     if(!result.rows.length) throw fail(404,'Không tìm thấy đợt thực tập.');
+    await periodMajors.save(client,result.rows[0].id,majorIds,!!id);
     if(client) await client.query('COMMIT');
     res.status(id?200:201).json({success:true,data:{...result.rows[0],trangThai:d.trangThai},message:id?'Cập nhật đợt thực tập thành công.':'Thêm đợt thực tập thành công.'});
   }catch(error){if(client)try{await client.query('ROLLBACK');}catch{/* preserve original error */}respondError(res,error);}

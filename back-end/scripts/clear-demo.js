@@ -7,7 +7,9 @@ async function clear(){const c=await pool.connect();let committed=false;try{
  await s.verifyRoots(c,m);
  const ids=table=>m.records.filter(r=>r.table===table).map(r=>r.id);
  const registrations=ids('dang_ky_thuc_tap'),teachers=ids('giang_vien');
- if(registrations.length!==3||teachers.length!==2||ids('sinh_vien').length!==3)throw s.fail('Manifest demo thiếu dữ liệu nhận diện.');
+ const current=m.profile==='multi-major-20-v2';
+ if(current?(registrations.length!==20||teachers.length!==20||ids('sinh_vien').length!==20):(registrations.length!==3||teachers.length!==2||ids('sinh_vien').length!==3))throw s.fail('Manifest demo thiếu dữ liệu nhận diện.');
+ if(current&&m.records.some(r=>r.table==='nguoi_dung'&&r.keys?.vai_tro==='ADMIN'))throw s.fail('Bộ demo mới không được chứa Admin.');
  if(!Array.isArray(m.files)||m.files.some(file=>typeof file!=='string'||!registrations.some(id=>file.startsWith(`reports/report_${id}_`))))throw s.fail('Manifest chứa tệp ngoài phạm vi đăng ký demo.');
  // Children created while demonstrating these demo registrations belong to this same demo scope.
  // A real lecturer attached later is a cross-boundary dependency and requires manual review.

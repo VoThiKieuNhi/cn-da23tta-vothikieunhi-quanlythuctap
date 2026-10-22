@@ -8,6 +8,7 @@ const db={async query(sql,params=[]){
 
  calls.push({sql,params});
  if(['BEGIN','COMMIT','ROLLBACK'].includes(sql))return {rows:[]};
+ if(sql.includes('AS eligible'))return {rows:[{eligible:true}]};
  if(sql.startsWith('SELECT trang_thai')){assert.match(sql,/FOR UPDATE/);const row=rows.find(x=>x.id===params[0]);return {rows:row?[{trang_thai:row.trangThai}]:[]};}
  if(sql.startsWith('UPDATE dang_ky_thuc_tap')){if(mode==='failure')throw new Error('private');const row=rows.find(x=>x.id===params[2]);row.trangThai=params[0];row.lyDoTuChoi=params[1];return {rows:[row]};}
  if(sql.startsWith('SELECT id,ma_sinh_vien'))return {rows:[{id:'7',hoTen:'Test',maSinhVien:'SV'}]};

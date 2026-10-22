@@ -21,6 +21,7 @@ function isValidEmail(value) {
 }
 function isValidTvuEmail(email) { return isValidEmail(email) && email.trim().toLowerCase().endsWith('@tvu.edu.vn'); }
 function isValidStudentEmail(email) { return isValidEmail(email) && email.trim().toLowerCase().endsWith('@st.tvu.edu.vn'); }
+function isValidCompanyPhone(phone) { return typeof phone === 'string' && /^(?=.*\d)[+\d() .-]{3,20}$/.test(phone.trim()); }
 function isValidPhone(phone) { return typeof phone === 'string' && /^0\d{9}$/.test(phone.trim()); }
 function emailError(email, role) {
   if (!isValidEmail(email)) return messages.email;
@@ -34,4 +35,4 @@ function passwordError(password) {
   return '';
 }
 function isValidPassword(password) { return !passwordError(password); }
-export { messages, isValidEmail, isValidTvuEmail, isValidStudentEmail, isValidPhone, emailError, passwordError, isValidPassword };
+export { messages, isValidEmail, isValidTvuEmail, isValidStudentEmail, isValidPhone, isValidCompanyPhone, emailError, passwordError, isValidPassword };

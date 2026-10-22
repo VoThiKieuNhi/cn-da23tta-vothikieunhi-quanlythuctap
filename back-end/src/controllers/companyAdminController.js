@@ -1,4 +1,4 @@
-const { emailError, isValidPhone, messages } = require('../utils/validators');
+const { emailError, isValidPhone, isValidCompanyPhone, messages } = require('../utils/validators');
 const pool = require('../config/database');
 
 const companyFields = `dn.id, dn.ten_doanh_nghiep AS "tenDoanhNghiep", dn.dia_chi AS "diaChi",
@@ -29,7 +29,8 @@ function validate(body,spec) {
     if(emailError(data.email)) throw fail(400,emailError(data.email));
     data.email=data.email.toLowerCase();
   }
-  if(data.soDienThoai && !isValidPhone(data.soDienThoai)) throw fail(400,messages.phone);
+  if(spec===supervisorSpec && data.soDienThoai && !isValidPhone(data.soDienThoai)) throw fail(400,messages.phone);
+  if(spec===companySpec && data.soDienThoai && !isValidCompanyPhone(data.soDienThoai)) throw fail(400,'Số điện thoại doanh nghiệp không hợp lệ.');
   return data;
 }
 function errorResponse(res,error,conflict=companyConflict) {

@@ -39,6 +39,13 @@ async function request(method,path='',data,role='ADMIN') {
   return {status:r.status,body:await r.json()};
 }
 test('company authorization and data integrity',async t=>{
+  await t.test('landline and hotline remain text on company create/edit; supervisor uses personal phone',async()=>{
+    for(const phone of ['028 3736 2323','024 7109 6686','0767 496 612','1900 1234','+84 28 3736 2323'])for(const method of ['POST','PUT']){
+      reset();assert.equal((await request(method,method==='PUT'?'/1':'',{tenDoanhNghiep:'Company',diaChi:'Address',soDienThoai:phone})).status,method==='POST'?201:200);
+      assert.equal(calls.find(c=>/^(INSERT|UPDATE)/.test(c.sql)).params[2],phone);
+    }
+    reset();assert.equal((await request('POST','/1/supervisors',{hoTen:'Test',soDienThoai:'028 3736 2323'})).status,400);
+  });
   await t.test('all nine endpoints require ADMIN',async()=>{
     for(const [method,path] of [['GET',''],['POST',''],['GET','/1'],['PUT','/1'],['DELETE','/1'],['GET','/1/supervisors'],['POST','/1/supervisors'],['PUT','/1/supervisors/2'],['DELETE','/1/supervisors/2']])
       for(const [role,status] of [[null,401],['SINH_VIEN',403],['GIANG_VIEN',403]]) {reset();assert.equal((await request(method,path,undefined,role)).status,status);assert.equal(calls.length,0);}

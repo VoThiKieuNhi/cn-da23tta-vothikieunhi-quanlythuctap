@@ -1,3 +1,4 @@
+import campus from '../../assets/images/tvu-campus.jpg'
 import { registrationLabels, statusColors } from '../../utils/statusLabels'
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
@@ -12,9 +13,9 @@ ChartJS.defaults.font.lineHeight = 1.55
 const statuses = Object.fromEntries(Object.entries(registrationLabels).map(([key, label]) => [key, [label, statusColors[key]]]))
 const mainStats = [
   ['tongSinhVien', 'Tổng sinh viên', 'people-fill', 'blue'],
-  ['tongGiangVien', 'Tổng giảng viên', 'person-video3', 'purple'],
+  ['tongGiangVien', 'Tổng giảng viên', 'person-video3', 'green'],
   ['tongDoanhNghiep', 'Tổng doanh nghiệp', 'buildings-fill', 'orange'],
-  ['tongDotThucTap', 'Đợt thực tập', 'calendar-week', 'green'],
+  ['tongDotThucTap', 'Đợt thực tập', 'calendar-week', 'purple'],
 ]
 const number = (value) => Number(value).toLocaleString('vi-VN')
 const empty = <div className="admin-empty"><i className="bi bi-bar-chart" aria-hidden="true" /><p>Chưa có dữ liệu để thống kê.</p></div>
@@ -33,7 +34,7 @@ export default function AdminDashboard() {
   const data = state.data
   return (
     <>
-      <div className="admin-heading"><div><span className="admin-eyebrow">TỔNG QUAN HỆ THỐNG</span><h1>Xin chào, Quản trị viên 👋</h1><p>Theo dõi và quản lý hoạt động thực tập của sinh viên.</p></div><span className="admin-heading-icon"><i className="bi bi-mortarboard" aria-hidden="true" /></span></div>
+      <div className="admin-heading admin-campus-hero" style={{ backgroundImage: `linear-gradient(90deg, rgba(3,31,66,.93), rgba(6,43,88,.55) 45%, rgba(6,43,88,.04)), url(${campus})` }}><div><span className="admin-eyebrow">TỔNG QUAN HỆ THỐNG</span><h1>Xin chào, Quản trị viên 👋</h1><p>Chào mừng bạn đến với hệ thống quản lý thực tập.</p><blockquote>“ Tri thức - Sáng tạo - Phát triển ”</blockquote></div><span className="admin-heading-icon"><i className="bi bi-mortarboard" aria-hidden="true" /></span></div>
       {state.loading ? <div className="admin-panel admin-loading" role="status"><span className="spinner-border text-primary" /><p>Đang tải dữ liệu Dashboard...</p></div>
         : state.error ? <div className="admin-panel admin-empty" role="alert"><i className="bi bi-exclamation-circle" /><p>Không thể tải dữ liệu Dashboard. Vui lòng thử lại.</p><button className="btn btn-primary" onClick={() => { setState({ loading: true }); setAttempt(attempt + 1) }}>Thử lại</button></div>
           : data && <>

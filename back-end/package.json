@@ -11,6 +11,7 @@
     "dat-lai-mat-khau-admin": "node scripts/datLaiMatKhauAdmin.js",
     "import-tvu-reference": "node scripts/importTvuReference.js",
     "seed-demo": "node scripts/seed-demo.js",
+    "seed:companies": "node scripts/seed-companies.js",
     "clear-demo": "node scripts/clear-demo.js"
   },
   "dependencies": {

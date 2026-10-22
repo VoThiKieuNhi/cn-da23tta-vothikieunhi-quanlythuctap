@@ -1,5 +1,5 @@
 import { formatDate } from '../../utils/dateFormat'
-import { emailError, isValidPhone, messages } from '../../utils/validators'
+import { emailError, isValidPhone, isValidCompanyPhone, messages } from '../../utils/validators'
 import { useEffect, useRef, useState } from 'react'
 import { getCompanies, getCompanyById, createCompany, updateCompany, deleteCompany, createSupervisor, updateSupervisor, deleteSupervisor } from '../../services/companyAdminService'
 import '../../assets/css/student-admin.css'
@@ -18,7 +18,8 @@ function validate(data, fields) {
     else if (max && Array.from(data[key] || '').length > max) errors[key] = `Tối đa ${max} ký tự.`
   }
   if (data.email?.trim() && emailError(data.email)) errors.email = emailError(data.email)
-  if (data.soDienThoai?.trim() && !isValidPhone(data.soDienThoai)) errors.soDienThoai = messages.phone
+  if (fields === supervisorFields && data.soDienThoai?.trim() && !isValidPhone(data.soDienThoai)) errors.soDienThoai = messages.phone
+  if (fields === companyFields && data.soDienThoai?.trim() && !isValidCompanyPhone(data.soDienThoai)) errors.soDienThoai = 'Số điện thoại doanh nghiệp không hợp lệ.'
   return errors
 }
 
@@ -124,7 +125,7 @@ export default function AdminCompanies() {
   const start = Math.max(1, Math.min(query.page - 2, pageCount - 4))
   const pages = Array.from({ length: Math.min(5, pageCount) }, (_, i) => start + i)
   return <div className="student-admin company-admin">
-    <div className="student-page-heading"><div><h1>Quản lý doanh nghiệp</h1><p>Quản lý thông tin đơn vị thực tập và cán bộ hướng dẫn tại doanh nghiệp.</p></div><button className="btn btn-primary" onClick={() => setModal({ mode: 'create' })}><i className="bi bi-plus-lg me-2" />Thêm doanh nghiệp</button></div>
+    <div className="student-page-heading"><div><h1>Quản lý doanh nghiệp</h1><p>Quản lý thông tin doanh nghiệp và cán bộ hướng dẫn.</p></div><button className="btn btn-primary" onClick={() => setModal({ mode: 'create' })}><i className="bi bi-plus-lg me-2" />Thêm doanh nghiệp</button></div>
     {notice && <div className="alert alert-success d-flex align-items-center justify-content-between py-2" role="status">{notice}<button className="btn-close" aria-label="Đóng thông báo" onClick={() => setNotice('')} /></div>}
     <section className="admin-panel student-list-panel"><form className="student-filters" onSubmit={e => { e.preventDefault(); change({ ...query, ...draft, page: 1 }) }}>
       <div className="student-search"><i className="bi bi-search" /><input className="form-control" placeholder="Tìm theo tên doanh nghiệp, địa chỉ, email..." aria-label="Tìm doanh nghiệp theo tên, địa chỉ, email hoặc người đại diện" maxLength={200} value={draft.search} onChange={e => setDraft({ ...draft, search: e.target.value })} /></div>
@@ -134,7 +135,7 @@ export default function AdminCompanies() {
       {state.loading ? <div className="admin-loading" role="status"><span className="spinner-border spinner-border-sm text-primary" /><p>Đang tải danh sách doanh nghiệp...</p></div>
         : state.error ? <div className="admin-empty" role="alert"><p>Không thể tải danh sách doanh nghiệp.</p><button className="btn btn-primary" onClick={reload}>Thử lại</button></div>
           : !result?.data.length ? <div className="admin-empty"><i className="bi bi-buildings" /><p>{query.search || query.linhVuc ? 'Không tìm thấy doanh nghiệp phù hợp với bộ lọc.' : 'Chưa có doanh nghiệp trong hệ thống.'}</p>{!query.search && !query.linhVuc && <button className="btn btn-primary" onClick={() => setModal({ mode: 'create' })}>Thêm doanh nghiệp đầu tiên</button>}</div>
-            : <div className="table-responsive"><table className="table align-middle student-table"><thead><tr>{['STT', 'Tên doanh nghiệp', 'Địa chỉ', 'Lĩnh vực', 'Người đại diện', 'Số điện thoại', 'Cán bộ HD', 'Thao tác'].map(label => <th key={label} scope="col">{label}</th>)}</tr></thead><tbody>{result.data.map((record, index) => <tr key={record.id}><td>{(pagination.page - 1) * pagination.limit + index + 1}</td><td className="fw-semibold">{record.tenDoanhNghiep}</td><td><span className="company-address" title={record.diaChi}>{record.diaChi}</span></td><td>{record.linhVucHoatDong || '—'}</td><td>{record.nguoiDaiDien || '—'}</td><td>{record.soDienThoai || '—'}</td><td><span className="student-badge locked">{record.soCanBoHuongDan}</span></td><td><div className="student-actions">{[['view', 'Xem', 'eye'], ['edit', 'Sửa', 'pencil-square'], ['delete', 'Xóa', 'trash3']].map(([mode, label, icon]) => <button key={mode} className="btn btn-sm" title={label} aria-label={`${label} ${record.tenDoanhNghiep}`} onClick={() => setModal({ mode, record })}><i className={`bi bi-${icon}`} /> <span>{label}</span></button>)}</div></td></tr>)}</tbody></table></div>}
+            : <div className="table-responsive"><table className="table align-middle student-table"><thead><tr>{['STT', 'Tên doanh nghiệp', 'Địa chỉ', 'Lĩnh vực', 'Email', 'Số điện thoại', 'Cán bộ HD', 'Thao tác'].map(label => <th key={label} scope="col">{label}</th>)}</tr></thead><tbody>{result.data.map((record, index) => <tr key={record.id}><td>{(pagination.page - 1) * pagination.limit + index + 1}</td><td className="fw-semibold">{record.tenDoanhNghiep}</td><td><span className="company-address" title={record.diaChi}>{record.diaChi}</span></td><td>{record.linhVucHoatDong || '—'}</td><td>{record.email || '—'}</td><td>{record.soDienThoai || '—'}</td><td><span className="student-badge locked">{record.soCanBoHuongDan}</span></td><td><div className="student-actions">{[['view', 'Xem', 'eye'], ['edit', 'Sửa', 'pencil-square'], ['delete', 'Xóa', 'trash3']].map(([mode, label, icon]) => <button key={mode} className="btn btn-sm" title={label} aria-label={`${label} ${record.tenDoanhNghiep}`} onClick={() => setModal({ mode, record })}><i className={`bi bi-${icon}`} /> <span>{label}</span></button>)}</div></td></tr>)}</tbody></table></div>}
       {pagination && <div className="student-pagination"><span>{pagination.total} doanh nghiệp · Trang {pagination.totalPages ? pagination.page : 0} / {pagination.totalPages}</span><nav aria-label="Phân trang doanh nghiệp"><button disabled={query.page <= 1} onClick={() => change({ ...query, page: query.page - 1 })}>Trước</button>{pages.map(page => <button key={page} className={query.page === page ? 'active' : ''} aria-current={query.page === page ? 'page' : undefined} disabled={!pagination.totalPages} onClick={() => change({ ...query, page })}>{page}</button>)}<button disabled={query.page >= pageCount} onClick={() => change({ ...query, page: query.page + 1 })}>Sau</button></nav></div>}
     </section>
     {modal?.mode === 'view' ? <CompanyDetail id={modal.record.id} onClose={() => setModal(null)} onChanged={reload} /> : modal && <EditDialog {...modal} onClose={() => setModal(null)} onSaved={saved} />}

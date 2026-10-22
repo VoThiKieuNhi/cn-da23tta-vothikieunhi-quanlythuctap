@@ -59,4 +59,27 @@ async function me(req, res) {
   }
 }
 
-module.exports = { login, me };
+async function changePassword(req, res) {
+  const { currentPassword, newPassword } = req.body || {};
+  const { passwordError } = require('../utils/validators');
+  if (typeof currentPassword !== 'string' || !currentPassword) return res.status(400).json({ success: false, message: 'Vui lòng nhập mật khẩu hiện tại.', errors: { currentPassword: 'Vui lòng nhập mật khẩu hiện tại.' } });
+  const invalid = passwordError(newPassword);
+  if (invalid) return res.status(400).json({ success: false, message: invalid, errors: { newPassword: invalid } });
+  let client;
+  try {
+    client = await pool.connect();
+    await client.query('BEGIN');
+    const account = (await client.query('SELECT mat_khau_hash FROM nguoi_dung WHERE id=$1 AND dang_hoat_dong=true FOR UPDATE', [req.user.id])).rows[0];
+    if (!account) throw Object.assign(new Error('Tài khoản không khả dụng.'), { status: 401 });
+    if (!await bcrypt.compare(currentPassword, account.mat_khau_hash)) throw Object.assign(new Error('Mật khẩu hiện tại không chính xác.'), { status: 400, field: 'currentPassword' });
+    if (await bcrypt.compare(newPassword, account.mat_khau_hash)) throw Object.assign(new Error('Mật khẩu mới phải khác mật khẩu hiện tại.'), { status: 400, field: 'newPassword' });
+    const hash = await bcrypt.hash(newPassword, 12);
+    await client.query('UPDATE nguoi_dung SET mat_khau_hash=$1,ngay_cap_nhat=NOW() WHERE id=$2', [hash, req.user.id]);
+    await client.query('COMMIT');
+    res.json({ success: true, message: 'Đổi mật khẩu thành công.' });
+  } catch (error) {
+    if (client) await client.query('ROLLBACK').catch(() => {});
+    res.status(error.status || 500).json({ success: false, message: error.status ? error.message : 'Không thể đổi mật khẩu. Vui lòng thử lại.', ...(error.field ? { errors: { [error.field]: error.message } } : {}) });
+  } finally { client?.release(); }
+}
+module.exports = { login, me, changePassword };

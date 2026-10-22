@@ -1,49 +1,76 @@
 require('dotenv').config({path:require('node:path').join(__dirname,'../.env'),quiet:true});
 const bcrypt=require('bcryptjs'),pool=require('../src/config/database'),s=require('./demo-support');
-const reference=require('../src/services/referenceService'),files=require('../src/services/reportFiles');
-const {passwordError}=require('../src/utils/validators');
-const {evaluationInput}=require('../src/utils/evaluationRules');
+const reference=require('../src/services/referenceService');
+const eligibility=require('../src/services/registrationEligibility');
+const {tinhTrangThaiDotThucTap}=require('../src/utils/periodStatus');
+const names=['Nguyễn Minh Anh','Trần Hoàng Nam','Lê Ngọc Mai','Phạm Thanh Bình','Võ Minh Châu','Đặng Hải Đăng','Bùi Thu Hà','Đỗ Gia Huy','Hồ Ngọc Lan','Dương Tuấn Kiệt','Nguyễn Thảo Linh','Trần Đức Long','Lê Hoàng Minh','Phạm Bảo Ngọc','Võ Quỳnh Như','Đặng Minh Phúc','Bùi Anh Quân','Đỗ Thanh Tâm','Hồ Phương Thảo','Dương Quốc Việt'];
 async function seed(){
- const password=process.env.DEMO_PASSWORD;
- if(typeof password!=='string'||Array.from(password).length<8)throw s.fail('Vui lòng cấu hình DEMO_PASSWORD tối thiểu 8 ký tự.');
- if(passwordError(password))throw s.fail(passwordError(password));
- const c=await pool.connect();let reportFile,manifestWritten=false,commitAttempted=false;
+ const c=await pool.connect();let manifestWritten=false,commitAttempted=false;
  try{
   await c.query('BEGIN');await c.query("SET LOCAL TIME ZONE 'Asia/Ho_Chi_Minh'");await c.query('SELECT pg_advisory_xact_lock(74120301)');
-  if(await s.readManifest())throw s.fail('Demo data already exists. Use npm run clear-demo before reseeding.');
-  const m=s.newManifest(await s.identity(c));
-  const students=['110123101','110123102','110123103'],names=['Nguyễn Minh Anh','Trần Hoàng Nam','Lê Ngọc Mai'];
-  const emails=['demo.admin@tvu.edu.vn','demo.gv01@tvu.edu.vn','demo.gv02@tvu.edu.vn',...students.map(x=>x+'@st.tvu.edu.vn')];
-  // Never adopt an existing account or overwrite a real row, even if its name looks like demo.
-  if((await c.query('SELECT id FROM nguoi_dung WHERE lower(email)=ANY($1::text[])', [emails])).rows.length)throw s.fail('Email demo đã tồn tại ngoài manifest. Không tạo hoặc thay đổi tài khoản hiện có.');
-  if((await c.query('SELECT id FROM sinh_vien WHERE ma_sinh_vien=ANY($1::text[])',[students])).rows.length)throw s.fail('MSSV demo đã tồn tại. Không ghi đè hồ sơ.');
-  if((await c.query('SELECT id FROM giang_vien WHERE ma_giang_vien=ANY($1::text[])',[['DEMO-GV01','DEMO-GV02']])).rows.length)throw s.fail('Mã giảng viên demo đã tồn tại.');
-  if((await c.query("SELECT id FROM dot_thuc_tap WHERE hoc_ky=$1 AND replace(nam_hoc,' ','')=$2",['Học kỳ 1','2026-2027'])).rows.length)throw s.fail('Học kỳ 1 năm học 2026-2027 đã tồn tại. Không dùng lại hoặc sửa đợt hiện có; hãy dùng database demo riêng.');
-  if((await c.query('SELECT id FROM doanh_nghiep WHERE lower(email)=ANY($1::text[]) OR ten_doanh_nghiep=ANY($2::text[])',[['contact.demoa@example.com','contact.demob@example.com'],['Công ty Công nghệ Demo A','Công ty Giải pháp Phần mềm Demo B']])).rows.length)throw s.fail('Doanh nghiệp demo đã tồn tại ngoài manifest.');
-  const major=(await c.query("SELECT n.id,n.ten_nganh FROM nganh_hoc n JOIN ma_mssv_nganh m ON m.nganh_id=n.id WHERE n.ma_nganh=$1 AND n.dang_hoat_dong AND m.khoa_nhap_hoc=2023 AND m.prefix_mssv='1101' AND m.xac_minh FOR SHARE OF n,m",['7480201'])).rows[0];
-  if(!major)throw s.fail('Thiếu ngành CNTT/prefix 1101 khóa 2023 đã xác minh. Chạy seed TVU reference trước.');
-  const classes=(await c.query('SELECT ma_lop FROM lop_hoc WHERE nganh_id=$1 AND khoa_nhap_hoc=2023 AND dang_hoat_dong ORDER BY ma_lop FOR SHARE',[major.id])).rows;
-  if(!classes.length)throw s.fail('Chưa có lớp CNTT khóa 2023 trong danh mục.');
-  const hash=await bcrypt.hash(password,12),add=(table,data)=>s.insert(c,m,table,data);
-  const account=(email,role)=>add('nguoi_dung',{email,mat_khau_hash:hash,vai_tro:role,dang_hoat_dong:true});
-  await account(emails[0],'ADMIN');
-  const teachers=[];
-  for(let i=0;i<2;i++)teachers.push(await add('giang_vien',{nguoi_dung_id:await account(emails[i+1],'GIANG_VIEN'),ma_giang_vien:`DEMO-GV0${i+1}`,ho_ten:['Nguyễn Minh Khoa','Trần Thanh Hương'][i],bo_mon:'Đơn vị phục vụ demo',hoc_vi:'Thạc sĩ',danh_muc_giang_vien_id:null,chuc_vu:'Giảng viên demo',linh_vuc:'Công nghệ thông tin'}));
+  const existing=await s.readManifest();
+  if(existing){
+   if(existing.profile!=='multi-major-20-v2'||JSON.stringify(existing.database)!==JSON.stringify(await s.identity(c)))throw s.fail('Manifest demo khác phiên bản/database. Không tự xóa hay ghi đè bộ demo hiện có.');
+   await s.verifyRoots(c,existing);
+   if(existing.records.filter(r=>r.table==='sinh_vien').length!==20||existing.records.filter(r=>r.table==='giang_vien').length!==20)throw s.fail('Manifest không đủ 20 sinh viên/20 giảng viên. Cần đối chiếu trước khi seed.');
+   await c.query('COMMIT');console.log('Bộ demo 20 sinh viên và 20 giảng viên đã tồn tại; không tạo trùng hoặc đổi mật khẩu.');return;
+  }
+  const m=s.newManifest(await s.identity(c));m.profile='multi-major-20-v2';
+  // Spread across reference majors before revisiting a major.
+  const candidates=(await c.query(`SELECT n.id AS major_id,n.ten_nganh,l.ma_lop,l.khoa_nhap_hoc,m.prefix_mssv,
+   row_number() OVER(PARTITION BY n.id ORDER BY l.khoa_nhap_hoc,l.ma_lop,m.prefix_mssv) AS choice
+   FROM nganh_hoc n JOIN lop_hoc l ON l.nganh_id=n.id AND l.dang_hoat_dong
+   JOIN ma_mssv_nganh m ON m.nganh_id=n.id AND m.khoa_nhap_hoc=l.khoa_nhap_hoc AND m.xac_minh
+   WHERE n.dang_hoat_dong AND m.prefix_mssv ~ '^[0-9]{4}$'
+   ORDER BY choice,md5(n.id::text),l.ma_lop`)).rows;
+  if(!candidates.length)throw s.fail('Không có ngành/lớp/prefix đã xác minh để tạo sinh viên demo.');
+  const refs=(await c.query(`SELECT id,ho_ten,khoa_don_vi,hoc_vi,chuc_vu,linh_vuc,
+   row_number() OVER(PARTITION BY khoa_don_vi ORDER BY id) AS choice
+   FROM danh_muc_giang_vien_tvu WHERE dang_hoat_dong ORDER BY choice,khoa_don_vi,id LIMIT 20`)).rows;
+  if(refs.length!==20)throw s.fail('Cần ít nhất 20 giảng viên tham chiếu đang hoạt động.');
+  const occupied=new Set((await c.query(`SELECT ma_sinh_vien AS code FROM sinh_vien UNION SELECT split_part(lower(email),'@',1) AS code FROM nguoi_dung WHERE lower(email) LIKE '%@st.tvu.edu.vn'`)).rows.map(r=>r.code));
+  const students=[];
+  for(let i=0;i<20;i++){
+   const candidate=candidates[i%candidates.length],prefix=candidate.prefix_mssv+String(candidate.khoa_nhap_hoc).slice(-2);
+   let code;for(let serial=101;serial<=999;serial++){const next=prefix+String(serial).padStart(3,'0');if(!occupied.has(next)){code=next;break;}}
+   if(!code)throw s.fail('Không còn MSSV demo phù hợp trong prefix reference đã chọn.');occupied.add(code);
+   const input={maSinhVien:code,email:code+'@st.tvu.edu.vn',nganh:candidate.ten_nganh,lop:candidate.ma_lop,khoaHoc:String(candidate.khoa_nhap_hoc)};
+   await reference.validateStudent(c,input);students.push({...input,hoTen:names[i]});
+  }
+  const teacherCodes=refs.map((_,i)=>'DEMO-GV'+String(i+1).padStart(2,'0'));
+  const teacherEmails=refs.map((_,i)=>'demo.gv'+String(i+1).padStart(2,'0')+'@tvu.edu.vn');
+  const emails=[...students.map(x=>x.email),...teacherEmails];
+  if((await c.query('SELECT id FROM nguoi_dung WHERE lower(email)=ANY($1::text[])',[emails])).rows.length)throw s.fail('Email demo đã tồn tại ngoài manifest. Không ghi đè tài khoản.');
+  if((await c.query('SELECT id FROM giang_vien WHERE ma_giang_vien=ANY($1::text[])',[teacherCodes])).rows.length)throw s.fail('Mã giảng viên demo đã tồn tại ngoài manifest.');
+  const companyEmails=['contact.demoa@example.com','contact.demob@example.com'];
+  if((await c.query('SELECT id FROM doanh_nghiep WHERE lower(email)=ANY($1::text[])',[companyEmails])).rows.length)throw s.fail('Doanh nghiệp demo đã tồn tại ngoài manifest.');
+  const calendar=(await c.query('SELECT EXTRACT(YEAR FROM CURRENT_DATE)::int AS year,NOW() AS now')).rows[0];
+  let year=calendar.year,term;
+  for(let attempt=0;attempt<10;attempt++,year++){
+   term=(await c.query("SELECT id FROM dot_thuc_tap WHERE lower(hoc_ky)=lower($1) AND replace(nam_hoc,' ','')=$2",['Học kỳ 1',year+'-'+(year+1)])).rows;
+   if(!term.length&&new Date(year+'-10-01T00:00:00+07:00')>new Date(new Date(calendar.now).getTime()+10*86400000))break;
+  }
+  if(term.length||year>=calendar.year+10)throw s.fail('Không tìm được học kỳ trống để tạo đợt demo riêng.');
+  const start=year+'-10-01',finish=year+'-11-30';
+  const opening=new Date(new Date(calendar.now).getTime()-60000),closing=new Date(year+'-09-24T17:00:00+07:00');
+  const add=(table,data)=>s.insert(c,m,table,data);
+  const account=async(email,role,password)=>add('nguoi_dung',{email,mat_khau_hash:await bcrypt.hash(password,12),vai_tro:role,dang_hoat_dong:true});
+  for(let i=0;i<20;i++){const r=refs[i];await add('giang_vien',{nguoi_dung_id:await account(teacherEmails[i],'GIANG_VIEN','12345678'),ma_giang_vien:teacherCodes[i],ho_ten:r.ho_ten,bo_mon:r.khoa_don_vi,hoc_vi:r.hoc_vi,danh_muc_giang_vien_id:r.id,chuc_vu:r.chuc_vu,linh_vuc:r.linh_vuc});}
   const studentIds=[];
-  for(let i=0;i<3;i++){const input={maSinhVien:students[i],email:emails[i+3],nganh:major.ten_nganh,lop:classes[i%classes.length].ma_lop,khoaHoc:'2023'};await reference.validateStudent(c,input);studentIds.push(await add('sinh_vien',{nguoi_dung_id:await account(input.email,'SINH_VIEN'),ma_sinh_vien:input.maSinhVien,ho_ten:names[i],lop:input.lop,nganh:input.nganh,khoa_hoc:input.khoaHoc}));}
+  for(const r of students)studentIds.push(await add('sinh_vien',{nguoi_dung_id:await account(r.email,'SINH_VIEN',r.maSinhVien),ma_sinh_vien:r.maSinhVien,ho_ten:r.hoTen,lop:r.lop,nganh:r.nganh,khoa_hoc:r.khoaHoc}));
   const companies=[],supervisors=[];
-  for(let i=0;i<2;i++){companies.push(await add('doanh_nghiep',{ten_doanh_nghiep:['Công ty Công nghệ Demo A','Công ty Giải pháp Phần mềm Demo B'][i],dia_chi:'Dữ liệu phục vụ demo',email:['contact.demoA@example.com','contact.demoB@example.com'][i],so_dien_thoai:`090000000${i+1}`,linh_vuc_hoat_dong:'Phần mềm – dữ liệu demo'}));supervisors.push(await add('can_bo_huong_dan',{doanh_nghiep_id:companies[i],ho_ten:['Nguyễn Văn Hòa','Trần Minh Long'][i],email:`huongdan${i+1}@example.com`,so_dien_thoai:`090000000${i+3}`,chuc_vu:'Hướng dẫn thực tập demo'}));}
-  const dates=(await c.query("SELECT NOW()-interval '20 days' AS opening,NOW()-interval '10 days' AS closing,(CURRENT_DATE-5)::text AS start,(CURRENT_DATE+30)::text AS finish,CURRENT_DATE::text AS today")).rows[0];
-  const period=await add('dot_thuc_tap',{hoc_ky:'Học kỳ 1',nam_hoc:'2026-2027',ngay_bat_dau_dang_ky:dates.opening,ngay_ket_thuc_dang_ky:dates.closing,ngay_bat_dau_thuc_tap:dates.start,ngay_ket_thuc_thuc_tap:dates.finish,trang_thai:'DANG_THUC_TAP'});
-  const registrations=[];
-  for(let i=0;i<3;i++){const r=await add('dang_ky_thuc_tap',{sinh_vien_id:studentIds[i],dot_thuc_tap_id:period,doanh_nghiep_id:companies[i%2],can_bo_huong_dan_id:supervisors[i%2],vi_tri_thuc_tap:'Thực tập phần mềm – Demo',ngay_bat_dau:dates.start,ngay_ket_thuc:dates.finish,trang_thai:['DANG_THUC_TAP','HOAN_THANH','CHO_DUYET'][i]});registrations.push(r);if(i<2){await add('phan_cong_giang_vien',{dang_ky_thuc_tap_id:r,giang_vien_id:teachers[0],ghi_chu:'Phân công phục vụ demo'});for(let week=1;week<=i+1;week++)await add('tien_do_thuc_tap',{dang_ky_thuc_tap_id:r,so_tuan:week,tieu_de:week===1?'Làm quen môi trường thực tập':'Tổng hợp công việc demo',noi_dung:'Tìm hiểu quy trình làm việc, công cụ và nhiệm vụ được phân công.',ngay_bao_cao:dates.today,nhan_xet_giang_vien:'Sinh viên thực hiện đúng yêu cầu tuần đầu.'});}}
-  reportFile=await files.save({originalname:'bao-cao-demo.pdf',mimetype:'application/pdf',buffer:s.pdf()},registrations[1]);m.files.push(reportFile.stored);
-  await add('bao_cao_thuc_tap',{dang_ky_thuc_tap_id:registrations[1],ten_bao_cao:'BÁO CÁO THỰC TẬP - DỮ LIỆU DEMO',ten_file:reportFile.name,duong_dan_file:reportFile.stored,trang_thai:'DA_DUYET',nhan_xet_giang_vien:'Báo cáo phục vụ demo đã được duyệt.'});
-  const score=evaluationInput({diemChuyenMon:8.5,diemThaiDo:9,diemBaoCao:8,nhanXet:'Kết quả minh họa phục vụ demo.'});
-  await add('danh_gia_thuc_tap',{dang_ky_thuc_tap_id:registrations[1],giang_vien_id:teachers[0],diem_chuyen_mon:score.diemChuyenMon,diem_thai_do:score.diemThaiDo,diem_bao_cao:score.diemBaoCao,diem_tong:score.diemTong,nhan_xet:score.nhanXet});
+  for(let i=0;i<2;i++){companies.push(await add('doanh_nghiep',{ten_doanh_nghiep:'Doanh nghiệp Demo '+(i+1),dia_chi:'Dữ liệu demo',email:companyEmails[i],linh_vuc_hoat_dong:'Đơn vị thực tập demo đa ngành'}));supervisors.push(await add('can_bo_huong_dan',{doanh_nghiep_id:companies[i],ho_ten:['Nguyễn Văn Hòa','Trần Minh Long'][i],email:'huongdan.demo'+(i+1)+'@example.com',chuc_vu:'Cán bộ hướng dẫn demo'}));}
+  const dot={ngayBatDauDangKy:opening,ngayKetThucDangKy:closing,ngayBatDauThucTap:start,ngayKetThucThucTap:finish};
+  const period=await add('dot_thuc_tap',{hoc_ky:'Học kỳ 1',nam_hoc:year+'-'+(year+1),ngay_bat_dau_dang_ky:opening,ngay_ket_thuc_dang_ky:closing,ngay_bat_dau_thuc_tap:start,ngay_ket_thuc_thuc_tap:finish,trang_thai:tinhTrangThaiDotThucTap(dot,new Date(calendar.now))});
+  // No major links means all majors; still run the real eligibility check.
+  for(let i=0;i<20;i++){
+   if(tinhTrangThaiDotThucTap(dot,new Date())!=='DANG_MO_DANG_KY')throw s.fail('Cổng demo không mở. Dừng seed đăng ký.');
+   await eligibility.check(c,studentIds[i],period,dot);
+   await add('dang_ky_thuc_tap',{sinh_vien_id:studentIds[i],dot_thuc_tap_id:period,doanh_nghiep_id:companies[i%2],can_bo_huong_dan_id:supervisors[i%2],vi_tri_thuc_tap:'Thực tập ngành '+students[i].nganh,ngay_bat_dau:start,ngay_ket_thuc:finish,trang_thai:'CHO_DUYET'});
+  }
   await s.writeManifest(m);manifestWritten=true;commitAttempted=true;await c.query('COMMIT');
-  console.log('Đã tạo bộ demo: 1 Admin, 3 sinh viên, 2 giảng viên, 2 doanh nghiệp, 2 cán bộ, 1 đợt và 3 đăng ký. Giữ file .demo/manifest.json để clear an toàn.');
- }catch(e){await c.query('ROLLBACK').catch(()=>{});if(!commitAttempted){if(reportFile)await files.cleanup(reportFile.stored);if(manifestWritten)await s.fs.unlink(s.manifestPath);}throw e;}finally{c.release();}
+  console.log('Đã tạo đúng 20 sinh viên, 20 giảng viên, 20 đăng ký chờ duyệt. Không tạo hoặc thay đổi Admin.');
+ }catch(e){await c.query('ROLLBACK').catch(()=>{});if(manifestWritten&&!commitAttempted)await s.fs.unlink(s.manifestPath);throw e;}finally{c.release();}
 }
 if(require.main===module)seed().catch(s.safeError).finally(()=>pool.end());
 module.exports=seed;

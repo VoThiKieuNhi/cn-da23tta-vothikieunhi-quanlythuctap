@@ -1,4 +1,5 @@
 const pool=require('../config/database');
+const eligibility=require('../services/registrationEligibility');
 const {periodSource,tinhTrangThaiDotThucTap}=require('../utils/periodStatus');
 const fail=(status,message)=>Object.assign(new Error(message),{status});
 const closed='Cổng đăng ký thực tập hiện không mở.';
@@ -19,9 +20,14 @@ const periodFields=`dt.id,dt.hoc_ky AS "hocKy",dt.nam_hoc AS "namHoc",
  to_char(dt.ngay_bat_dau_thuc_tap,'YYYY-MM-DD') AS "ngayBatDauThucTap",
  to_char(dt.ngay_ket_thuc_thuc_tap,'YYYY-MM-DD') AS "ngayKetThucThucTap",dt.trang_thai_tu_dong AS "trangThai"`;
 async function openPeriods(req,res){try{
- await profile(pool,req.user.id);
- const result=await pool.query(`SELECT ${periodFields} FROM ${periodSource()} dt WHERE dt.trang_thai_tu_dong=$2 ORDER BY dt.ngay_bat_dau_dang_ky,dt.id`,[new Date(),'DANG_MO_DANG_KY']);
- res.json({success:true,data:result.rows});
+ const student=await profile(pool,req.user.id);
+ const result=await pool.query(`SELECT ${periodFields},
+ EXISTS (SELECT 1 FROM dang_ky_thuc_tap dk WHERE dk.sinh_vien_id=$3 AND dk.dot_thuc_tap_id=dt.id) AS "alreadyRegistered",
+ EXISTS (SELECT 1 FROM dang_ky_thuc_tap dk WHERE dk.sinh_vien_id=$3 AND dk.trang_thai IN ('CHO_DUYET','DA_DUYET','DANG_THUC_TAP')
+ AND dk.ngay_bat_dau<=dt.ngay_ket_thuc_thuc_tap AND dk.ngay_ket_thuc>=dt.ngay_bat_dau_thuc_tap) AS overlaps
+ FROM ${periodSource()} dt WHERE dt.trang_thai_tu_dong=$2 AND ${eligibility.majorEligible()}
+ ORDER BY dt.ngay_bat_dau_dang_ky,dt.id`,[new Date(),'DANG_MO_DANG_KY',student.id]);
+ res.json({success:true,data:result.rows.map(({alreadyRegistered,overlaps,...row})=>({...row,canRegister:!alreadyRegistered&&!overlaps,blockedReason:alreadyRegistered?'Bạn đã đăng ký đợt này.':overlaps?eligibility.overlapMessage:''}))});
 }catch(error){report(res,error);}}
 async function companies(req,res){try{
  await profile(pool,req.user.id);
@@ -79,6 +85,7 @@ async function mutate(req,res){
   }
   const periodId=create?data.dotThucTapId:current.dotThucTapId,dot=await period(client,periodId);requireOpen(dot);
   if(create && (await client.query('SELECT id FROM dang_ky_thuc_tap WHERE sinh_vien_id=$1 AND dot_thuc_tap_id=$2',[student.id,periodId])).rows.length)throw fail(409,'Bạn đã đăng ký thực tập trong đợt này.');
+  if(!remove)await eligibility.check(client,student.id,periodId,dot,registrationId);
   if(!remove)await companySupervisor(client,data);
   requireOpen(dot); // Recheck server clock after any lock waits.
   let result;

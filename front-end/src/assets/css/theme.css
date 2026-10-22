@@ -21,34 +21,34 @@
   --sidebar-width: 232px;
 }
 body { background: var(--bg); color: var(--text); }
-.admin-app { --admin-primary: var(--primary); --admin-text: var(--text); background: var(--bg); }
-.admin-app .btn, .login-page .btn { border-radius: 8px; font-size: 13.5px; }
-.admin-app .btn-primary { background: var(--primary-dark); border-color: var(--primary-dark); }
-.admin-app .btn-primary:hover { background: var(--navy); border-color: var(--navy); }
-.admin-app .form-control, .admin-app .form-select { border-color: var(--border); border-radius: 8px; font-size: 14px; min-height: 39px; }
-.admin-app :is(.admin-panel,.sw-card,.sw-stat) { border-color: var(--border); border-radius: 14px; box-shadow: var(--shadow-soft); background: var(--surface); }
-.admin-app :is(.student-page-heading,.admin-heading) h1 { font-size: clamp(25px,2vw,28px); color: var(--navy); }
-.admin-app :is(.student-page-heading,.admin-heading) p { color: var(--text-muted); font-size: 13.5px; }
-.admin-app :is(.sw-card,.admin-panel) h2 { color: var(--navy); font-size: 16px; font-weight: 600; }
-.admin-app .table { --bs-table-color: var(--text); --bs-table-hover-bg: #f8fafd; font-size: 13.5px; margin-bottom: 0; }
-.admin-app .table thead th { background: #f7f9fc; color: var(--text-muted); font-size: 12.5px; font-weight: 600; }
-.admin-app .table :is(th,td) { padding: 14px 12px; border-color: var(--border); vertical-align: middle; }
-.admin-app .table tbody tr:hover>* { background-color: #f8fafd; }
-.admin-app .table-responsive { overflow-x: auto; }
-.admin-app :is(.student-badge,.report-badge,.sw-badge) { font-size: 12px; border-radius: 5px; font-weight: 500; }
-.admin-app :is(.registration-CHO_DUYET,.report-CAN_CHINH_SUA) { background: var(--warning-soft); color: var(--warning-text); }
-.admin-app :is(.registration-DA_DUYET,.report-DA_NOP) { background: var(--blue-soft); color: var(--primary-dark); }
-.admin-app :is(.registration-DANG_THUC_TAP,.registration-HOAN_THANH,.report-DA_DUYET) { background: var(--success-soft); color: var(--success-text); }
-.admin-app .registration-TU_CHOI { background: var(--danger-soft); color: var(--danger-text); }
-.admin-app .student-modal { border-color: var(--border); border-radius: 14px; box-shadow: var(--shadow-soft); }
-.admin-app .student-modal header { background: var(--surface); border-bottom: 1px solid var(--border); }
-.admin-app .sw-stat { flex-direction: column; padding: 18px; }
-.admin-app .sw-stat-icon { width: 38px; height: 38px; border-radius: 9px; font-size: 20px; }
-.admin-app .sw-stat strong { color: var(--navy); font-size: 20px; }
-.admin-app .sw-stat h2 { font-size: 13px; color: var(--text-muted); }
-.admin-app .sw-stat-grid { gap: 14px; }
-.admin-app .sw-empty { color: var(--text-muted); }
-.admin-app .sw-score-circle { border-color: var(--gold-soft); box-shadow: none; color: var(--navy); background: var(--surface); }
-.admin-app .sw-upload { border-color: var(--border); background: var(--bg); border-radius: 10px; }
-.admin-app .sw-upload.dragging { border-color: var(--primary); background: var(--blue-soft); }
+#root .admin-app { --admin-primary: var(--primary); --admin-text: var(--text); background: var(--bg); }
+#root .admin-app .btn, .login-page .btn { border-radius: 8px; font-size: 13.5px; }
+#root .admin-app .btn-primary { background: var(--primary-dark); border-color: var(--primary-dark); }
+#root .admin-app .btn-primary:hover { background: var(--navy); border-color: var(--navy); }
+#root .admin-app .form-control, #root .admin-app .form-select { border-color: var(--border); border-radius: 8px; font-size: 14px; min-height: 39px; }
+#root .admin-app :is(.admin-panel,.sw-card,.sw-stat) { border-color: var(--border); border-radius: 14px; box-shadow: var(--shadow-soft); background: var(--surface); }
+#root .admin-app :is(.student-page-heading,.admin-heading) h1 { font-size: clamp(25px,2vw,28px); color: var(--navy); }
+#root .admin-app :is(.student-page-heading,.admin-heading) p { color: var(--text-muted); font-size: 13.5px; }
+#root .admin-app :is(.sw-card,.admin-panel) h2 { color: var(--navy); font-size: 16px; font-weight: 600; }
+#root .admin-app .table { --bs-table-color: var(--text); --bs-table-hover-bg: #f8fafd; font-size: 13.5px; margin-bottom: 0; }
+#root .admin-app .table thead th { background: #f7f9fc; color: var(--text-muted); font-size: 12.5px; font-weight: 600; }
+#root .admin-app .table :is(th,td) { padding: 14px 12px; border-color: var(--border); vertical-align: middle; }
+#root .admin-app .table tbody tr:hover>* { background-color: #f8fafd; }
+#root .admin-app .table-responsive { overflow-x: auto; }
+#root .admin-app :is(.student-badge,.report-badge,.sw-badge) { font-size: 12px; border-radius: 5px; font-weight: 500; }
+#root .admin-app :is(.registration-CHO_DUYET,.report-CAN_CHINH_SUA) { background: var(--warning-soft); color: var(--warning-text); }
+#root .admin-app :is(.registration-DA_DUYET,.report-DA_NOP) { background: var(--blue-soft); color: var(--primary-dark); }
+#root .admin-app :is(.registration-DANG_THUC_TAP,.registration-HOAN_THANH,.report-DA_DUYET) { background: var(--success-soft); color: var(--success-text); }
+#root .admin-app .registration-TU_CHOI { background: var(--danger-soft); color: var(--danger-text); }
+#root .admin-app .student-modal { border-color: var(--border); border-radius: 14px; box-shadow: var(--shadow-soft); }
+#root .admin-app .student-modal header { background: var(--surface); border-bottom: 1px solid var(--border); }
+#root .admin-app .sw-stat { flex-direction: column; padding: 18px; }
+#root .admin-app .sw-stat-icon { width: 38px; height: 38px; border-radius: 9px; font-size: 20px; }
+#root .admin-app .sw-stat strong { color: var(--navy); font-size: 20px; }
+#root .admin-app .sw-stat h2 { font-size: 13px; color: var(--text-muted); }
+#root .admin-app .sw-stat-grid { gap: 14px; }
+#root .admin-app .sw-empty { color: var(--text-muted); }
+#root .admin-app .sw-score-circle { border-color: var(--gold-soft); box-shadow: none; color: var(--navy); background: var(--surface); }
+#root .admin-app .sw-upload { border-color: var(--border); background: var(--bg); border-radius: 10px; }
+#root .admin-app .sw-upload.dragging { border-color: var(--primary); background: var(--blue-soft); }
 @media(prefers-reduced-motion:reduce) { *, *::before, *::after { scroll-behavior: auto !important; } }

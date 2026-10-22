@@ -1,9 +1,18 @@
-import { Link } from 'react-router-dom'
-import { WorkspaceBoundary, StudentHeader, StudentCard, StudentStats, StudentTimeline, EmptyState, RegistrationFacts } from '../../components/StudentWorkspace'
-import { registrationLabels, internshipSteps } from '../../utils/studentWorkspace'
+import { useEffect, useState } from 'react'
+import { WorkspaceBoundary } from '../../components/StudentWorkspace'
+import { getOpenInternshipPeriods, getMyRegistration } from '../../services/studentInternshipService'
+import StudentDashboardView from './StudentDashboardView'
+import '../../assets/css/student-dashboard-v2.css'
+
 export default function StudentDashboard() {
-  return <WorkspaceBoundary>{data => { const r = data.registration, steps = internshipSteps(data); return <><StudentHeader title={`Xin chào, ${data.student.hoTen} 👋`} subtitle="Theo dõi tiến độ thực tập và cập nhật các thông tin quan trọng của bạn tại đây." />
-    <StudentStats items={[{ label: 'Trạng thái đăng ký', value: registrationLabels[r?.trangThai] || 'Chưa đăng ký', icon: 'clipboard-check', tone: 'blue' }, { label: 'Doanh nghiệp', value: r?.tenDoanhNghiep || 'Chưa có dữ liệu', icon: 'buildings', tone: 'orange' }, { label: 'Giảng viên hướng dẫn', value: data.lecturers.map(x => x.hoTen).join(', ') || 'Chưa phân công', icon: 'person-video3', tone: 'green' }, { label: 'Tiến độ thực tập', value: r ? `${steps.filter(x => x.done).length}/${steps.length}` : 'Chưa có dữ liệu', detail: 'Mốc trong lộ trình', icon: 'graph-up-arrow', tone: 'purple' }]} />
-    <div className="sw-two-column"><StudentCard title="Thông tin đăng ký thực tập hiện tại" icon="briefcase"><RegistrationFacts data={data} /><Link className="btn btn-primary sw-card-action" to="/student/internship-registration">Xem đăng ký <i className="bi bi-arrow-right ms-2" /></Link></StudentCard><StudentCard title="Tiến độ thực tập" icon="clock-history"><StudentTimeline data={data} /></StudentCard><StudentCard title="Thông báo mới nhất" icon="bell"><EmptyState text="Chưa có thông báo mới." icon="bell" /></StudentCard><StudentCard title="Thao tác nhanh" icon="lightning-charge"><div className="sw-quick-links">{[['internship-registration', 'Đăng ký thực tập', 'clipboard-check', 'blue'], ['progress', 'Theo dõi tiến độ', 'graph-up', 'green'], ['reports', 'Báo cáo thực tập', 'file-earmark-text', 'orange'], ['evaluation', 'Xem kết quả', 'award', 'purple']].map(([path, label, icon, tone]) => <Link key={path} to={`/student/${path}`}><span className={`sw-stat-icon ${tone}`}><i className={`bi bi-${icon}`} /></span><span>{label}</span><i className="bi bi-chevron-right" /></Link>)}</div></StudentCard></div>
-  </> }}</WorkspaceBoundary>
+  const [summary, setSummary] = useState({ loading: true }), [revision, setRevision] = useState(0)
+  useEffect(() => {
+    const c = new AbortController()
+    Promise.all([getOpenInternshipPeriods(c.signal), getMyRegistration(c.signal)]).then(([periods, mine]) => {
+      if (!c.signal.aborted) setSummary({ periods, registrations: mine.data })
+    }).catch(() => { if (!c.signal.aborted) setSummary({ error: true }) })
+    return () => c.abort()
+  }, [revision])
+  const count = status => summary.registrations?.filter(item => item.trangThai === status).length
+  return <WorkspaceBoundary>{data => <StudentDashboardView data={data} summary={summary} count={count} onRetry={() => { setSummary({ loading: true }); setRevision(v => v + 1) }} />}</WorkspaceBoundary>
 }

@@ -1,0 +1,133 @@
+/* Admin-only portal theme. Shared Student/Lecturer selectors stay unchanged. */
+.tvu-admin-portal { background:#f4f7fb; color:#10213a; font:13px/1.5 'Inter','Segoe UI',sans-serif; }
+.tvu-admin-portal .admin-sidebar { width:72px; padding:12px 8px; background:linear-gradient(180deg,#062b58,#031f42); border:0; transform:none; }
+.tvu-admin-portal.sidebar-open .admin-sidebar { width:200px; padding-inline:10px; }
+.tvu-admin-portal .admin-brand { flex-direction:column; text-align:center; gap:8px; padding:0 0 22px; }
+.tvu-admin-portal .admin-brand img { width:48px; height:48px; object-fit:contain; background:transparent; border-radius:50%; }
+.tvu-admin-portal.sidebar-open .admin-brand img { width:60px; height:60px; }
+.tvu-admin-portal .admin-brand strong { font:700 12px/1.4 'Inter',sans-serif; color:#fff; }
+.tvu-admin-portal .admin-brand span { color:#e6edf7; font-size:10.5px; line-height:1.5; }
+.tvu-admin-portal .admin-nav-caption,.tvu-admin-portal .admin-sidebar-footer { display:none; }
+.tvu-admin-portal:not(.sidebar-open) .admin-brand > div,.tvu-admin-portal:not(.sidebar-open) .admin-sidebar nav a span { display:none; }
+.tvu-admin-portal .admin-sidebar nav { gap:7px; }
+.tvu-admin-portal .admin-sidebar nav a { min-height:41px; padding:10px; gap:9px; color:#fff; border-radius:8px; font-size:12px; font-weight:500; line-height:1.4; white-space:nowrap; }
+.tvu-admin-portal:not(.sidebar-open) .admin-sidebar nav a { justify-content:center; }
+.tvu-admin-portal .admin-sidebar nav a i { font-size:17px; flex-shrink:0; }
+.tvu-admin-portal .admin-sidebar nav a:hover { background:#ffffff12; }
+.tvu-admin-portal .admin-sidebar nav a.active { background:#eacb73; color:#062b58; box-shadow:0 3px 10px #0001; }
+.tvu-admin-portal .admin-main { margin-left:72px; }
+.tvu-admin-portal.sidebar-open .admin-main { margin-left:200px; }
+.tvu-admin-portal .admin-overlay { display:none; }
+.tvu-admin-portal .admin-topbar { height:64px; position:sticky; top:0; z-index:1020; padding:10px 20px; background:#fff; border-bottom:1px solid #e5eaf1; }
+.tvu-admin-portal .admin-topbar-left { gap:12px; flex:1; }
+.tvu-admin-portal .portal-search { width:100%; max-width:320px; min-width:0; }
+.tvu-admin-portal .portal-search input { height:36px; border:1px solid #dce6f3; border-radius:6px; font-size:12px; background:#f4f7fb; }
+.tvu-admin-portal .admin-topbar-right { gap:18px; }
+.tvu-admin-portal .admin-notification { border:0; padding:0; color:#062b58; }
+.tvu-admin-portal .admin-avatar { width:36px; height:36px; background:#eaf2ff; color:#1677ff; }
+.tvu-admin-portal .admin-user-label strong { font-size:12px; max-width:180px; }
+.tvu-admin-portal .admin-user-label small { font-size:11px; margin-top:2px; color:#718096; }
+.tvu-admin-portal .admin-content { padding:20px; max-width:1600px; }
+.tvu-admin-portal .admin-heading,.tvu-admin-portal .student-page-heading { gap:16px; margin-bottom:18px; }
+.tvu-admin-portal .admin-heading h1,.tvu-admin-portal .student-page-heading h1 { color:#062b58; font:700 25px/1.35 'Poppins','Inter',sans-serif; margin:0 0 6px; letter-spacing:-.3px; }
+.tvu-admin-portal .admin-heading p,.tvu-admin-portal .student-page-heading p { font-size:13px; color:#718096; line-height:1.6; }
+.tvu-admin-portal .admin-campus-hero { min-height:180px; padding:26px; border-radius:12px; background-size:cover; background-position:center 46%; overflow:hidden; }
+.tvu-admin-portal .admin-campus-hero h1 { color:#fff; font-size:25px; }
+.tvu-admin-portal .admin-campus-hero p { color:#eff5ff; max-width:430px; }
+.tvu-admin-portal .admin-campus-hero blockquote { color:#fff; font-size:15px; font-style:italic; margin:18px 0 0; }
+.tvu-admin-portal .admin-campus-hero .admin-eyebrow,.tvu-admin-portal .admin-campus-hero .admin-heading-icon { display:none; }
+.tvu-admin-portal .admin-panel { border:1px solid #e5eaf1; border-radius:12px; box-shadow:0 3px 12px #10213a04; background:#fff; min-width:0; }
+.tvu-admin-portal .admin-stat-grid { gap:14px; grid-template-columns:repeat(4,minmax(0,1fr)); margin-bottom:16px; }
+.tvu-admin-portal .admin-stat { padding:18px; min-height:90px; gap:14px; animation:admin-portal-enter .35s ease both; }
+.tvu-admin-portal .admin-stat:nth-child(2) { animation-delay:50ms; }
+.tvu-admin-portal .admin-stat:nth-child(3) { animation-delay:100ms; }
+.tvu-admin-portal .admin-stat:nth-child(4) { animation-delay:150ms; }
+.tvu-admin-portal .admin-stat-icon { width:40px; height:40px; font-size:21px; border-radius:10px; }
+.tvu-admin-portal .admin-stat > div { display:flex; flex-direction:column; min-width:0; }
+.tvu-admin-portal .admin-stat.admin-panel h2 { order:2; font:400 12px/1.5 'Inter',sans-serif; color:#334e7d; margin:5px 0 0; }
+.tvu-admin-portal .admin-stat strong { font-size:25px; line-height:1.2; color:#062b58; }
+.tvu-admin-portal .blue { color:#1677ff; background:#eaf2ff; }
+.tvu-admin-portal .green { color:#18a66a; background:#e9f8f0; }
+.tvu-admin-portal .orange { color:#f28b32; background:#fff2e4; }
+.tvu-admin-portal .purple { color:#7b61ff; background:#f0edff; }
+.tvu-admin-portal .admin-status-grid { gap:14px; margin-bottom:16px; }
+.tvu-admin-portal .admin-status { font-size:12px; padding:10px 16px; }
+.tvu-admin-portal .admin-status strong { font-size:20px; }
+.tvu-admin-portal .admin-chart-grid { gap:16px; margin-bottom:16px; }
+.tvu-admin-portal .admin-chart-grid > .admin-panel { padding:18px; }
+.tvu-admin-portal .admin-panel-heading { margin-bottom:16px; }
+.tvu-admin-portal .admin-panel h2 { font:600 15px/1.5 'Poppins','Inter',sans-serif; }
+.tvu-admin-portal .admin-chart-legend { gap:8px 14px; }
+.tvu-admin-portal .admin-chart-legend > div { font-size:12px; }
+.tvu-admin-portal .admin-pending { padding-top:18px; }
+.tvu-admin-portal .admin-pending .admin-panel-heading { padding-inline:18px; }
+.tvu-admin-portal .student-list-panel,.tvu-admin-portal .admin-pending { animation:admin-portal-enter .3s ease both; }
+.tvu-admin-portal .table { margin-bottom:0; min-width:760px; }
+.tvu-admin-portal .table th { background:#f8fafc; color:#10213a; font-size:12px; font-weight:600; white-space:nowrap; border-color:#e5eaf1; padding:14px 12px; }
+.tvu-admin-portal .table td { color:#334e7d; font-size:13px; padding:12px; height:50px; border-color:#f0f3f7; overflow-wrap:anywhere; max-width:240px; }
+.tvu-admin-portal .table tbody tr:hover td { background:#f8fbff; }
+.tvu-admin-portal .student-filters { gap:10px; padding:16px; border-bottom:1px solid #e5eaf1; }
+.tvu-admin-portal .student-search { flex:2 1 220px; }
+.tvu-admin-portal .student-filters .form-select { flex:1 1 125px; max-width:180px; }
+.tvu-admin-portal .student-filters .form-control,.tvu-admin-portal .student-filters .form-select { height:38px; min-height:38px; font-size:12px; border-radius:7px; border-color:#dce4ee; }
+.tvu-admin-portal .student-filters input::placeholder { font-size:12px; }
+.tvu-admin-portal .student-search > i { top:10px; }
+.tvu-admin-portal .btn { font-size:12px; border-radius:6px; padding:8px 12px; transition:transform .15s ease,background-color .15s ease; }
+.tvu-admin-portal .btn:hover:not(:disabled) { transform:translateY(-1px); }
+.tvu-admin-portal .btn-primary { background:#1677ff; border-color:#1677ff; }
+.tvu-admin-portal .student-actions { gap:5px; }
+.tvu-admin-portal .student-actions .btn { display:inline-grid; place-items:center; min-width:30px; height:30px; padding:5px 7px; border:1px solid #dce8f5; background:#fff; color:#1677ff; font-size:13px; }
+.tvu-admin-portal .student-actions .btn > span { display:none; }
+.tvu-admin-portal .student-actions .btn[title="Xóa"],.tvu-admin-portal .student-actions .btn:has(.bi-trash3),.tvu-admin-portal .student-actions .btn:has(.bi-x-circle) { color:#e15361; border-color:#f7dce0; background:#fff8f9; }
+.tvu-admin-portal .student-actions .btn:has(.bi-check-circle) { color:#18a66a; border-color:#d9efdf; background:#f5fcf8; }
+.tvu-admin-portal .student-pagination { font-size:12px; padding:14px 16px; gap:12px; }
+.tvu-admin-portal .student-pagination button { border-radius:6px; font-size:12px; height:30px; min-width:30px; }
+.tvu-admin-portal .st-status { display:inline-block; padding:4px 8px; border-radius:7px; font-size:11px; font-weight:500; white-space:nowrap; }
+.tvu-admin-portal .st-status-blue { color:#1677ff; background:#eaf2ff; }
+.tvu-admin-portal .st-status-green { color:#098559; background:#e5f7ed; }
+.tvu-admin-portal .st-status-orange { color:#c96b19; background:#fff1e3; }
+.tvu-admin-portal .st-status-purple { color:#7054df; background:#f0edff; }
+.tvu-admin-portal .st-status-red { color:#d34d5c; background:#fff0f2; }
+.tvu-admin-portal .st-status-gray { color:#718096; background:#f0f2f5; }
+.tvu-admin-portal .form-label { font-size:13px; font-weight:600; }
+.tvu-admin-portal .form-control,.tvu-admin-portal .form-select { border-color:#dce4ee; font-size:13px; }
+.tvu-admin-portal .form-control:focus,.tvu-admin-portal .form-select:focus { border-color:#1677ff; box-shadow:0 0 0 3px #1677ff18; }
+.tvu-admin-portal .form-control.is-invalid,.tvu-admin-portal .form-select.is-invalid { border-color:#dc3545; }
+.tvu-admin-portal .student-modal { border:1px solid #e5eaf1; border-radius:14px; animation:admin-portal-enter .2s ease; }
+.tvu-admin-portal .student-modal > header,.tvu-admin-portal .student-modal footer { padding:16px 22px; }
+.tvu-admin-portal .student-modal-body { padding:22px; }
+.tvu-admin-portal .student-modal h2 { font:600 20px/1.4 'Poppins','Inter',sans-serif; }
+.tvu-admin-portal .student-modal .form-control,.tvu-admin-portal .student-modal .form-select { min-height:42px; }
+.tvu-admin-portal .student-modal textarea { min-height:105px; }
+.tvu-admin-portal .admin-empty,.tvu-admin-portal .admin-loading { min-height:230px; font-size:13px; color:#718096; }
+.tvu-admin-portal .admin-reports .report-stats { grid-template-columns:repeat(3,minmax(0,1fr)); }
+.tvu-admin-portal .admin-reports > .admin-panel { padding:18px; }
+.tvu-admin-portal .admin-reports .report-search { max-width:420px; }
+@keyframes admin-portal-enter { from { opacity:0; transform:translateY(7px); } to { opacity:1; transform:translateY(0); } }
+@media(max-width:1050px) {
+ .tvu-admin-portal .admin-stat-grid,.tvu-admin-portal .admin-reports .report-stats { grid-template-columns:repeat(2,minmax(0,1fr)); }
+ .tvu-admin-portal .admin-chart-grid { grid-template-columns:minmax(0,1fr); }
+ .tvu-admin-portal .admin-content { padding:18px; }
+}
+@media(max-width:767px) {
+ .tvu-admin-portal .admin-sidebar { width:200px; transform:translateX(-100%); }
+ .tvu-admin-portal.sidebar-open .admin-sidebar { transform:translateX(0); }
+ .tvu-admin-portal .admin-main,.tvu-admin-portal.sidebar-open .admin-main { margin-left:0; }
+ .tvu-admin-portal.sidebar-open .admin-overlay { display:block; position:fixed; inset:0; background:#031f4266; z-index:1030; border:0; }
+ .tvu-admin-portal .admin-topbar { padding:10px 12px; gap:10px; }
+ .tvu-admin-portal .admin-topbar-left,.tvu-admin-portal .admin-topbar-right { gap:8px; }
+ .tvu-admin-portal .admin-user-label { display:none; }
+ .tvu-admin-portal .admin-content { padding:16px 12px; }
+ .tvu-admin-portal .admin-heading,.tvu-admin-portal .student-page-heading { flex-wrap:wrap; align-items:flex-start; }
+ .tvu-admin-portal .admin-heading h1,.tvu-admin-portal .student-page-heading h1 { font-size:22px; }
+ .tvu-admin-portal .admin-campus-hero { padding:22px 18px; min-height:180px; background-position:60% center; }
+ .tvu-admin-portal .student-filters .form-select { max-width:none; }
+ .tvu-admin-portal .student-pagination { flex-direction:column; align-items:flex-start; }
+ .tvu-admin-portal .student-modal-body,.tvu-admin-portal .student-modal > header,.tvu-admin-portal .student-modal footer { padding:16px; }
+}
+@media(max-width:480px) {
+ .tvu-admin-portal .admin-stat-grid,.tvu-admin-portal .admin-reports .report-stats { grid-template-columns:minmax(0,1fr); }
+ .tvu-admin-portal .student-filters > .student-search,.tvu-admin-portal .student-filters > .form-select { flex-basis:100%; }
+ .tvu-admin-portal .student-form-grid,.tvu-admin-portal .student-details { grid-template-columns:minmax(0,1fr); }
+}
+@media(prefers-reduced-motion:reduce) { .tvu-admin-portal .admin-stat,.tvu-admin-portal .student-list-panel,.tvu-admin-portal .admin-pending,.tvu-admin-portal .student-modal { animation:none; } .tvu-admin-portal .btn { transition:none; } .tvu-admin-portal .btn:hover:not(:disabled) { transform:none; } }
