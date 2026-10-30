@@ -12,7 +12,8 @@
     "import-tvu-reference": "node scripts/importTvuReference.js",
     "seed-demo": "node scripts/seed-demo.js",
     "seed:companies": "node scripts/seed-companies.js",
-    "clear-demo": "node scripts/clear-demo.js"
+    "clear-demo": "node scripts/clear-demo.js",
+    "test": "node --test tests/*.test.js"
   },
   "dependencies": {
     "bcryptjs": "^3.0.3",
