@@ -53,6 +53,14 @@ async function request(method,path='',data,role='ADMIN') {
 }
 function reset(value='ok'){mode=value;calls=[];released=false;}
 test('lecturer admin contracts, authorization and transactional safety',async t=>{
+  await t.test('deactivate preserves lecturer and internship history, requires ADMIN',async()=>{
+    for(const role of ['SINH_VIEN','GIANG_VIEN']){reset();assert.equal((await request('PATCH','/12/deactivate',{},role)).status,403);assert.equal(calls.length,0);}
+    reset('assigned');assert.equal((await request('PATCH','/12/deactivate',{})).status,200);
+    const update=calls.find(c=>c.sql.startsWith('UPDATE nguoi_dung'));
+    assert.match(update.sql,/dang_hoat_dong=false/);assert.deepEqual(update.params,['24']);
+    assert.ok(!calls.some(c=>c.sql.startsWith('DELETE')));assert.equal(calls.at(-1).sql,'COMMIT');
+    reset('missing');assert.equal((await request('PATCH','/12/deactivate',{})).status,404);
+  });
   await t.test('manual create persists optional fields without inserting reference catalog',async()=>{
     reset('manual');assert.equal((await request('POST','',{...body,referenceLecturerId:null,hoTen:'Nguyễn Văn An',khoaDonVi:'Khoa khác',chucVu:'Giảng viên',linhVuc:'Công nghệ thông tin'})).status,201);
     assert.ok(!calls.some(c=>c.sql.includes('danh_muc_giang_vien_tvu')&&!c.sql.startsWith('SELECT gv.id')));

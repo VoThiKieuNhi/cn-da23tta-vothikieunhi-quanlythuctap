@@ -1,3 +1,5 @@
+> Cập nhật 30/10/2026: đã bổ sung luồng demo: 5 chờ duyệt, 5 đã duyệt, 6 đang thực tập, 4 hoàn thành; 15 phân công, 20 tiến độ, 8 PDF, 4 đánh giá. Tài khoản và mật khẩu trong danh sách dưới đây giữ nguyên. Chi tiết: [Báo cáo kiểm thử nghiệp vụ](FINAL_BUSINESS_AUDIT_2026-10-30.md). Mô tả 20 đăng ký chờ duyệt bên dưới là trạng thái seed ban đầu.
+
 # Tài khoản demo 20 sinh viên / 20 giảng viên
 
 Đã áp dụng trên `quan_ly_thuc_tap`: 20 sinh viên thuộc 20 ngành, 20 giảng viên thuộc 6 đơn vị. Đã xác minh 40/40 tài khoản đăng nhập và gọi `/api/auth/me` thành công. Chạy seed lần hai không tạo trùng hoặc đổi mật khẩu. Toàn bộ 203 test backend pass.

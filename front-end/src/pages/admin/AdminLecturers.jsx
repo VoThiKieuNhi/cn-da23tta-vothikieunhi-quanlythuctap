@@ -5,7 +5,7 @@ import validLecturerName from '../../utils/lecturerName'
 import LecturerReferenceFields from '../../components/LecturerReferenceFields'
 import { emailError, isValidPhone, messages, passwordError } from '../../utils/validators'
 import { useEffect, useRef, useState } from 'react'
-import { createLecturer, deleteLecturer, getLecturerById, getLecturers, updateLecturer } from '../../services/lecturerAdminService'
+import { createLecturer, deleteLecturer, deactivateLecturer, getLecturerById, getLecturers, updateLecturer } from '../../services/lecturerAdminService'
 import '../../assets/css/student-admin.css'
 
 const emptyFilters = { search: '', boMon: '', hocVi: '', trangThai: '' }
@@ -41,6 +41,7 @@ function LecturerModal({ mode, lecturer, onClose, onSaved }) {
   const [loading, setLoading] = useState(mode === 'view' || mode === 'edit')
   const [busy, setBusy] = useState(false)
   const [error, setError] = useState('')
+  const [canDeactivate, setCanDeactivate] = useState(false)
   const [errors, setErrors] = useState({})
   const [loaded, setLoaded] = useState(mode === 'create' || mode === 'delete')
   const titles = { create: 'Thêm giảng viên', edit: 'Sửa giảng viên', view: 'Chi tiết giảng viên', delete: 'Xóa giảng viên' }
@@ -82,12 +83,20 @@ function LecturerModal({ mode, lecturer, onClose, onSaved }) {
       }
       onSaved(mode === 'delete' ? 'Xóa giảng viên thành công.' : mode === 'create' ? 'Thêm giảng viên thành công.' : 'Cập nhật giảng viên thành công.')
     } catch (e) {
+      if (mode === 'delete' && e.response?.status === 409) setCanDeactivate(true)
       setError(mode === 'delete' && e.response?.status === 409
-        ? 'Không thể xóa giảng viên đã phát sinh dữ liệu hướng dẫn hoặc đánh giá. Bạn có thể khóa tài khoản thay thế.'
+        ? 'Không thể xóa giảng viên vì đã có dữ liệu thực tập liên quan. Bạn có thể chuyển tài khoản sang trạng thái ngừng hoạt động.'
         : e.response?.data?.message || 'Không thể lưu thay đổi. Vui lòng thử lại.')
     } finally { submitting.current = false; setBusy(false) }
   }
 
+  async function deactivate() {
+    if (submitting.current) return
+    submitting.current = true; setBusy(true)
+    try { const result = await deactivateLecturer(lecturer.id); onSaved(result.message) }
+    catch (e) { setError(e.response?.data?.message || 'Không thể ngừng hoạt động tài khoản.') }
+    finally { submitting.current = false; setBusy(false) }
+  }
   return <dialog className="student-modal" ref={dialog} aria-labelledby="student-modal-title" onCancel={e => { e.preventDefault(); if (!busy) onClose() }}>
     <header><div><span>QUẢN LÝ GIẢNG VIÊN</span><h2 id="student-modal-title">{titles[mode]}</h2></div><button type="button" className="admin-icon-button" aria-label="Đóng" disabled={busy} onClick={onClose}><i className="bi bi-x-lg" /></button></header>
     <form onSubmit={save} noValidate>
@@ -98,7 +107,7 @@ function LecturerModal({ mode, lecturer, onClose, onSaved }) {
             : mode === 'view' && loaded ? <><div className="student-profile"><span><i className="bi bi-person" /></span><div><h3>{form.hoTen}</h3><p>{form.maGiangVien}</p></div></div><dl className="student-details">{fields.filter(([key]) => key !== 'password').map(([key, label]) => <div key={key}><dt>{label}</dt><dd>{form[key] || '—'}</dd></div>)}<div><dt>Trạng thái tài khoản</dt><dd>{form.dangHoatDong ? 'Đang hoạt động' : 'Đã khóa'}</dd></div><div><dt>Ngày tạo</dt><dd>{dateText(form.ngayTao)}</dd></div></dl></>
               : loaded && <><div className="student-form-grid">{manual ? <><div><span>Nhập thủ công</span><button type="button" className="btn btn-link btn-sm" disabled={busy} onClick={() => changeMode(false)}>Chọn từ danh mục TVU</button></div><ManualLecturerFaculty form={form} setForm={setForm} busy={busy} />{errors.boMon && <div className="text-danger">{errors.boMon}</div>}</> : <LecturerReferenceFields form={form} setForm={setForm} busy={busy} onReady={setReferenceReady} onManual={() => changeMode(true)} />}{fields.filter(([key]) => (!manual || key !== 'boMon') && (mode === 'create' || key !== 'password')).map(([key, label, type, max, required]) => <div key={key}><label className="form-label" htmlFor={`lecturer-${key}`}>{label}{required && <span className="text-danger"> *</span>}</label><input id={`lecturer-${key}`} className={`form-control ${errors[key] ? 'is-invalid' : ''}`} type={type} readOnly={!manual && ['hoTen', 'boMon', 'hocVi', 'chucVu', 'linhVuc'].includes(key)} maxLength={max} minLength={key === 'password' ? 8 : undefined} inputMode={key === 'soDienThoai' ? 'numeric' : undefined} value={form[key]} onChange={e => setForm({ ...form, [key]: e.target.value })} autoComplete={key === 'password' ? 'new-password' : 'off'} disabled={busy} aria-invalid={!!errors[key]} aria-describedby={errors[key] ? `error-${key}` : undefined} />{errors[key] && <div id={`error-${key}`} className="invalid-feedback d-block">{errors[key]}</div>}</div>)}</div>{mode === 'edit' && <div className="form-check form-switch mt-4"><input id="student-active" className="form-check-input" type="checkbox" checked={form.dangHoatDong} disabled={busy} onChange={e => setForm({ ...form, dangHoatDong: e.target.checked })} /><label className="form-check-label" htmlFor="student-active">Tài khoản hoạt động</label></div>}</>}
       </div>
-      <footer><button type="button" className="btn btn-light border" disabled={busy} onClick={onClose}>{mode === 'view' ? 'Đóng' : 'Hủy'}</button>{mode !== 'view' && <button type="submit" disabled={busy || loading || !loaded} className={`btn ${mode === 'delete' ? 'btn-danger' : 'btn-primary'}`}>{busy && <span className="spinner-border spinner-border-sm me-2" />}{busy ? 'Đang xử lý...' : mode === 'delete' ? 'Xóa giảng viên' : mode === 'create' ? 'Thêm giảng viên' : 'Lưu thay đổi'}</button>}</footer>
+      <footer><button type="button" className="btn btn-light border" disabled={busy} onClick={onClose}>{mode === 'view' ? 'Đóng' : 'Hủy'}</button>{canDeactivate && lecturer.dangHoatDong && <button type="button" className="btn btn-warning" disabled={busy} onClick={deactivate}>Ngừng hoạt động tài khoản</button>}{mode !== 'view' && <button type="submit" disabled={busy || loading || !loaded} className={`btn ${mode === 'delete' ? 'btn-danger' : 'btn-primary'}`}>{busy && <span className="spinner-border spinner-border-sm me-2" />}{busy ? 'Đang xử lý...' : mode === 'delete' ? 'Xóa giảng viên' : mode === 'create' ? 'Thêm giảng viên' : 'Lưu thay đổi'}</button>}</footer>
     </form>
   </dialog>
 }

@@ -10,7 +10,8 @@
     "tao-admin": "node scripts/taoAdmin.js",
     "dat-lai-mat-khau-admin": "node scripts/datLaiMatKhauAdmin.js",
     "import-tvu-reference": "node scripts/importTvuReference.js",
-    "seed-demo": "node scripts/seed-demo.js",
+    "seed-demo": "node scripts/seed-demo.js && node scripts/seed-demo-workflow.js",
+    "seed:demo-workflow": "node scripts/seed-demo-workflow.js",
     "seed:companies": "node scripts/seed-companies.js",
     "clear-demo": "node scripts/clear-demo.js",
     "test": "node --test tests/*.test.js"

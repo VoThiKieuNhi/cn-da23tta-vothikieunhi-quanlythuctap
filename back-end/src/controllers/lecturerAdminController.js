@@ -44,7 +44,7 @@ function input(body, creating) {
 function handleError(res, error) {
   if (error.status) return res.status(error.status).json({ success:false, message:error.message });
   if (error.code === '23505') return res.status(409).json({success:false,message:'Email hoặc mã giảng viên đã tồn tại.'});
-  if (error.code === '23503') return res.status(409).json({success:false,message:'Không thể xóa giảng viên đã phát sinh dữ liệu hướng dẫn hoặc đánh giá.'});
+  if (error.code === '23503') return res.status(409).json({success:false,message:'Không thể xóa giảng viên vì đã có dữ liệu thực tập liên quan. Bạn có thể chuyển tài khoản sang trạng thái ngừng hoạt động.'});
   console.error('LECTURER ADMIN ERROR:', /^[0-9A-Z]{5}$/.test(error.code || '') ? error.code : 'DB_ERROR');
   return res.status(500).json({success:false,message:'Không thể xử lý dữ liệu giảng viên. Vui lòng thử lại.'});
 }
@@ -135,11 +135,15 @@ async function remove(req,res) {
     await transaction(async client=>{
       const userId=await lockRecord(client,id);
       const related=await client.query('SELECT id FROM phan_cong_giang_vien WHERE giang_vien_id=$1 UNION ALL SELECT id FROM danh_gia_thuc_tap WHERE giang_vien_id=$1 LIMIT 1',[id]);
-      if(related.rows.length) throw fail(409,'Không thể xóa giảng viên đã phát sinh dữ liệu hướng dẫn hoặc đánh giá.');
+      if(related.rows.length) throw fail(409,'Không thể xóa giảng viên vì đã có dữ liệu thực tập liên quan. Bạn có thể chuyển tài khoản sang trạng thái ngừng hoạt động.');
       await client.query('DELETE FROM giang_vien WHERE id=$1',[id]);
       await client.query('DELETE FROM nguoi_dung WHERE id=$1 AND vai_tro=$2',[userId,'GIANG_VIEN']);
     });
     res.json({success:true,message:'Xóa giảng viên thành công.'});
   }catch(error){handleError(res,error);}
 }
-module.exports={list,detail,create,update,remove};
+async function deactivate(req,res) {
+ try { const id=idValue(req.params.id); await transaction(async client=>{const userId=await lockRecord(client,id);await client.query('UPDATE nguoi_dung SET dang_hoat_dong=false,ngay_cap_nhat=NOW() WHERE id=$1',[userId]);});res.json({success:true,message:'Đã chuyển tài khoản giảng viên sang trạng thái ngừng hoạt động.'}); }
+ catch(error){handleError(res,error);}
+}
+module.exports={list,detail,create,update,remove,deactivate};

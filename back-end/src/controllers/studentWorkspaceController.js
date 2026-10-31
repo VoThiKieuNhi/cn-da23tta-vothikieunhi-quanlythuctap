@@ -1,7 +1,7 @@
 const pool=require('../config/database');
 async function workspace(req,res){
  try {
-  const student=(await pool.query('SELECT id,ma_sinh_vien AS "maSinhVien",ho_ten AS "hoTen",lop,nganh FROM sinh_vien WHERE nguoi_dung_id=$1',[req.user.id])).rows[0];
+  const student=(await pool.query('SELECT id,ma_sinh_vien AS "maSinhVien",ho_ten AS "hoTen",lop,nganh,so_dien_thoai AS "soDienThoai",to_char(ngay_sinh,\'YYYY-MM-DD\') AS "ngaySinh",gioi_tinh AS "gioiTinh",khoa_hoc AS "khoaHoc" FROM sinh_vien WHERE nguoi_dung_id=$1',[req.user.id])).rows[0];
   if(!student)return res.status(403).json({success:false,message:'Tài khoản chưa có hồ sơ sinh viên.'});
   const registration=(await pool.query(`SELECT dk.id,dk.trang_thai AS "trangThai",dk.ly_do_tu_choi AS "lyDoTuChoi",dk.vi_tri_thuc_tap AS "viTriThucTap",
    dk.ngay_tao AS "ngayDangKy",to_char(dk.ngay_bat_dau,'YYYY-MM-DD') AS "ngayBatDau",to_char(dk.ngay_ket_thuc,'YYYY-MM-DD') AS "ngayKetThuc",
@@ -21,4 +21,12 @@ async function workspace(req,res){
   res.json({success:true,data:{student,registration,lecturers,progress,reports,evaluations}});
  }catch(error){console.error('STUDENT WORKSPACE ERROR:',/^[0-9A-Z]{5}$/.test(error.code||'')?error.code:'DB_ERROR');res.status(500).json({success:false,message:'Không thể tải thông tin thực tập. Vui lòng thử lại.'});}
 }
-module.exports={workspace};
+async function updateProfile(req,res){
+ try{
+  const input=require('../utils/studentProfileInput').profileInput(req.body);
+  const result=await pool.query('UPDATE sinh_vien SET so_dien_thoai=$1,ngay_sinh=$2,gioi_tinh=$3 WHERE nguoi_dung_id=$4 RETURNING id',[input.soDienThoai,input.ngaySinh,input.gioiTinh,req.user.id]);
+  if(!result.rows.length)return res.status(404).json({success:false,message:'Không tìm thấy hồ sơ sinh viên.'});
+  res.json({success:true,message:'Cập nhật hồ sơ thành công.'});
+ }catch(e){if(e.status===400)return res.status(400).json({success:false,message:e.message});res.status(500).json({success:false,message:'Không thể cập nhật hồ sơ. Vui lòng thử lại.'});}
+}
+module.exports={workspace,updateProfile};

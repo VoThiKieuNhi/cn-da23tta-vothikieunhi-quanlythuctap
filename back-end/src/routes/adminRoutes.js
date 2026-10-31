@@ -25,6 +25,7 @@ router.get('/lecturers', lecturers.list);
 router.get('/lecturers/:id', lecturers.detail);
 router.post('/lecturers', lecturers.create);
 router.put('/lecturers/:id', lecturers.update);
+router.patch('/lecturers/:id/deactivate', lecturers.deactivate);
 router.delete('/lecturers/:id', lecturers.remove);
 
 router.use('/companies', xacThuc, phanQuyen('ADMIN'));

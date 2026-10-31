@@ -8,7 +8,8 @@ const pool = require('./src/config/database');
 const app = express();
 const port = process.env.PORT || 5000;
 
-const allowedOrigins = [process.env.CLIENT_ORIGIN || 'http://localhost:5173'];
+// FRONTEND_URL is preferred; retain CLIENT_ORIGIN for existing deployments.
+const allowedOrigins = [process.env.FRONTEND_URL || process.env.CLIENT_ORIGIN].filter(Boolean);
 if (process.env.NODE_ENV !== 'production') {
   allowedOrigins.push(
     'http://localhost:5173',

@@ -15,3 +15,5 @@ export async function updateLecturer(id, data) {
 export async function deleteLecturer(id) {
   return (await api.delete(`/admin/lecturers/${id}`)).data
 }
+
+export async function deactivateLecturer(id) { return (await api.patch(`/admin/lecturers/${id}/deactivate`)).data }

@@ -3,6 +3,7 @@ const xacThuc=require('../middleware/xacThuc');
 const phanQuyen=require('../middleware/phanQuyen');
 const controller=require('../controllers/studentInternshipController');
 router.use(xacThuc,phanQuyen('SINH_VIEN'));
+router.put('/profile',require('../controllers/studentWorkspaceController').updateProfile);
 router.get('/evaluation',require('../controllers/evaluationController').student);
 const reports=require('../controllers/reportController');
 const reportUpload=require('../middleware/reportUpload');
