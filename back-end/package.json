@@ -12,6 +12,7 @@
     "import-tvu-reference": "node scripts/importTvuReference.js",
     "seed-demo": "node scripts/seed-demo.js && node scripts/seed-demo-workflow.js",
     "seed:demo-workflow": "node scripts/seed-demo-workflow.js",
+    "seed:diemhanh": "node scripts/seed-demo-workflow.js --diemhanh",
     "seed:companies": "node scripts/seed-companies.js",
     "clear-demo": "node scripts/clear-demo.js",
     "test": "node --test tests/*.test.js"
